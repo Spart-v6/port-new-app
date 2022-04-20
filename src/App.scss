@@ -1,0 +1,17 @@
+$primary-color : #ffd700;
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+@import 'animate.css';
+
+// @font-face {
+//   font-family: 'Nexa';
+//   src: url(../src/assets/fonts/Nexa.ttf) format('ttf');
+// }
+// @font-face {
+//   font-family: 'Fabada';
+//   src: url(../src/assets/fonts/fabada.ttf) format('ttf');
+// }
+
+input,
+textarea{
+  font-family: 'Sora', sans-serif;
+}
