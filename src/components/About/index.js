@@ -1,24 +1,15 @@
 import './index.scss';
 import { motion } from 'framer-motion';
+import PageTransition from '../PageTransition';
+import { useState } from 'react';
 
 const About = () => {
-    const animee = {
-        initial: {
-            height: "100vh",
-        },
-        animate: {
-            height: 0,
-            transition: {
-                duration: 1.5,
-                ease: [0.87, 0, 0.13, 1],
-            },
-        },
-    };
+
+    const [nameOfPage, setNameOfPage] = useState("About");
+
     return(
         <>
-        <div className="load-page">
-            <motion.div className="load-screen" initial="initial" animate="animate" variants={animee}/>
-        </div>
+        <PageTransition nameOfPage={nameOfPage}/>
         <div>
 
             <div className='container about-page'>

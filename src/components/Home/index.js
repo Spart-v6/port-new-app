@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import RGBLetters from '../RGBLetters'
 import './index.scss'
 import { motion } from 'framer-motion'
+import PageTransition from '../PageTransition'
 
 const Home = () => {
 
@@ -23,27 +24,13 @@ const Home = () => {
     // useEffect(() => {
     //     console.log("loaded");
     // },[]);
-    
 
-    const animee = {
-        initial: {
-            height: "100vh",
-        },
-        animate: {
-            height: 0,
-            transition: {
-                duration: 1.5,
-                ease: [0.87, 0, 0.13, 1],
-            },
-        },
-    };
+    const [nameOfPage, setNameOfPage] = useState("Home");
 
     return(
         <>
-                
-        <div className="load-page">
-            <motion.div className="load-screen" initial="initial" animate="animate" variants={animee}/>
-        </div>
+
+        <PageTransition nameOfPage={nameOfPage}/>
 
         <div>
             <div className='container home-page' >

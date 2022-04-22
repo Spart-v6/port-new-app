@@ -1,0 +1,46 @@
+
+.load-page{
+    position: absolute;
+    inset: 0; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+     .load-screen{
+         position: relative;
+         background: black;
+         z-index: 50;
+         width: 100%;
+ 
+         .motionSvg{
+             position: absolute;
+             z-index: 50;
+             display: flex;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%,-50%);
+
+            .svg1{
+                width: 100%;
+                height: 100%;
+                fill: currentColor;
+            }
+            .svg2{
+                width: 100%;
+                height: 100%;
+                color: gray;
+                fill: currentColor;
+            }
+            .text1{
+                font-size: 50px;
+                font-weight: bold;
+            }
+         }
+ 
+        
+       
+     }
+ }
+ 
+ 
+ 

@@ -3,12 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 
-.load-screen{
-   position: relative;
-   background: black;
-   z-index: 50;
-   width: 100%;
-}
 
 .load-page{
    position: absolute;
@@ -16,7 +10,40 @@
    display:flex;
    justify-content: center;
    align-items: center;
+   
+    .load-screen{
+        position: relative;
+        background: black;
+        z-index: 50;
+        width: 100%;
+
+        .motionSvg{
+            position: absolute;
+            z-index: 50;
+            display: flex;
+        }
+
+        .svg1{
+            width: 100%;
+            height: 100%;
+            
+            .svg2{
+                width: 100%;
+                height: 100%;
+                color: gray;
+                fill: currentColor;
+            }
+        }
+        .text1{
+            font-size: 50px;
+            font-weight: bold;
+            fill: currentColor;
+        }
+    }
 }
+
+
+
 
 // .loading-screen {
 //     position: relative;
