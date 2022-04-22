@@ -70,7 +70,7 @@ const PageTransition = (props) => {
                 </pattern>
                 <text
                     className="text1"
-                    x="50%" y="50%" text-anchor="middle"
+                    x="50%" y="50%" textAnchor="middle"
                     style={{ fill: "url(#pattern)" }}
                 >
                     {props.nameOfPage}
