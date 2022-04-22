@@ -1,0 +1,15 @@
+
+.load-screen{
+    position: relative;
+    background: black;
+    z-index: 50;
+    width: 100%;
+ }
+ 
+ .load-page{
+    position: absolute;
+    inset: 0; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
