@@ -1,7 +1,8 @@
 import PageTransition from '../PageTransition';
-import { useState, useEffect } from 'react';
-import './index.scss';
+import { useState, useEffect, useRef } from 'react';
 import RGBLetters from '../RGBLetters';
+import './index.scss';
+import emailjs, { send } from '@emailjs/browser';
 
 const Contact = () => {
     const [nameOfPage, setNameOfPage] = useState("Contact");
@@ -17,6 +18,22 @@ const Contact = () => {
         return onHover();
     }, [])
 
+
+
+
+    const refForm = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_r51pv6c', 'template_vlea9p9', refForm.current, '8AUwRY3fQK2dczNsj')
+          .then((result) => {
+              console.log(result);
+          }, (error) => {
+              console.log(error);
+          });
+      };
+
+
     return(
         <>
         <PageTransition nameOfPage={nameOfPage}/>
@@ -25,32 +42,39 @@ const Contact = () => {
             <div className='container contact-page'>
                 <div className='text-zone'>
                     <h1>
-                        <RGBLetters letterClass={letterClass} strArray={['C','o','n','t','a','c','t',' ','m','e']} idx={15}/>
+                        <RGBLetters letterClass={letterClass} strArray={['.','c','o','n','t','a','c','t','_','m','e','(',')']} idx={15}/>
                     </h1>
                     <div className='short-contact-text'>
                         <h2>Hey, nice to meet you</h2>
                         <span>Have a question or just want to get in touch? Drop a message :)</span>
                     </div>
                 </div>
+
+                <div className='socialMediaHandles'>
+                    <h2>
+                        You can find me here:
+                    </h2>
+                    <p>Put ur social media handles here</p>
+                </div>
             </div>
 
             <div className='contact-form'>
-                <form>
+                <form ref={refForm} onSubmit={sendEmail}>
                     <ul>
                         <li className='half'>
-                            <input type="text" name='name' placeholder='Name' required/>
+                            <input type="text" name='name' placeholder='Name' autoComplete='off' required/>
                         </li>
                         <li className='half'>
-                            <input type="text" name='subject' placeholder='Subject' required/>
+                            <input type="email" name='email' placeholder='Email' autoComplete='off' required/>
                         </li>
                         <li className='textInput'>
-                            <input type="email" name='email' placeholder='Email' required/>
+                            <input type="text" name='subject' placeholder='Subject' autoComplete='off' required/>
                         </li>
                         <li>
-                            <textarea name='message' placeholder='Your Message' required></textarea>
+                            <textarea name='message' placeholder='Your Message' autoComplete='off' required></textarea>
                         </li>
                         <li>
-                            <input type="submit" className='flat-button' value="Send"/>
+                            <input type="submit" className='btn' value="Send"/>
                         </li>
                     </ul>
                 </form>

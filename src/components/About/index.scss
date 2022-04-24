@@ -1,15 +1,92 @@
-
 .load-screen{
-    position: relative;
-    background: black;
-    z-index: 50;
-    width: 100%;
- }
- 
- .load-page{
-    position: absolute;
-    inset: 0; 
-    display:flex;
-    justify-content: center;
-    align-items: center;
- }
+   position: relative;
+   background: black;
+   z-index: 50;
+   width: 100%;
+}
+
+.load-page{
+   position: absolute;
+   inset: 0; 
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.about-page{
+   position: absolute;
+   left: 10%;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 35%;
+   vertical-align: middle;
+   display: table-cell;
+   max-height: 90%;
+
+   .about-back-tag{
+      position: absolute;
+      left: 9%;
+      color: #e3aeff;
+      top: 24%;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 30px;
+      font-weight: 600;
+      user-select: none;
+   }
+
+   .about-container{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+   }
+
+   .about-me{
+      width: 700px;
+      height: 500px;
+      margin: 0 auto;
+      padding: 10rem 20px 25px 20px;
+      position: relative;
+      text-align: center;
+    }
+    .about-me p{
+      font-family: 'Baloo Da 2', cursive;
+      font-size: 4rem;
+    }
+    
+    .about-me h1{
+      color: white;
+    }
+    .about-me p{
+      color: white;
+    }
+    
+    .about-1{
+      margin-top: 28vw;
+      width: 29vw;
+      height: auto;
+      position: absolute;
+      left: 56%;
+      color: white;
+    }
+    .about-2{
+      position: absolute;
+      margin-top: 58vw;
+      left: 25%;
+      color: white;
+    }
+    .about-3{
+      position: absolute;
+      margin-top: 100vw;
+      left: 22%;
+      color: white;
+    }
+    .about-4{
+      position: absolute;
+      margin-top: 134vw;
+      right: 26%;
+      color: white;
+    }
+    
+
+}

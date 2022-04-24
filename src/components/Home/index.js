@@ -34,9 +34,6 @@ const Home = () => {
 
         <div>
             <div className='container home-page' >
-                <div className='home-back-tag'>
-                    HOME
-                </div>
                 <div className='text-zone'>
                     <h1> <span style={{color:"#986ee8", fontSize:"70px"}}>H</span><span style={{fontSize:"69px"}}>i</span>,
                     <br/>  

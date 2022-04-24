@@ -1,3 +1,11 @@
+$squish-animating-time: 500ms;
+$progress-animating-time: 1000ms;
+$circle-animating-time: 200ms;
+$checkmark-animating-time: 800ms;
+$btn-width: 125px;
+$btn-height: 45px;
+
+
 .contact-page{
     position: absolute;
     left: 10%;
@@ -14,14 +22,13 @@
     }
 
     h1{
-        font-size: 54px;
-        font-family: 'PT Sans Caption', sans-serif;
-        color: #fff;
-        font-weight: 400;
+        font-family: 'Source Code Pro', monospace;
+        color: #e3aeff;
         margin-top: 0;
         position: relative;
         margin-bottom: 40px;
-        // left: 10px;
+        font-size: 30px;
+        font-weight: 600;
         user-select: none;
     }
     .short-contact-text{
@@ -33,12 +40,16 @@
 
         }
     }
+    .socialMediaHandles{
+        position: absolute;
+        top: 60%;
+    }
 }
 
 .contact-form{
     position: absolute;
     left: 45%;
-    top: 45%;
+    top: 25%;
 
     ul{
         padding: 0;
@@ -55,17 +66,23 @@
         }
 
         li.half{
-            width: 50%;
+            width: 48%;
             margin-left: 2%;
             float: left;
             clear: none;
+        }
+        li.textInput{
+            display: inline-block;
+            margin-left: 2%;
+            width: 98%;
+            margin-bottom: 1%;
         }
     }
 
     input[type='text'], input[type='email']{
         width: 100%;
         border: 0;
-        background: #151515;
+        background: #3a2846;
         height: 50px;
         font-size: 16px;
         color: #fff;
@@ -75,23 +92,155 @@
     textarea{
         width: 100%;
         border: 0;
-        background: #151515;
+        background: #3a2846;
         height: 50px;
         font-size: 16px;
         color: #fff;
         padding: 20px;
-        min-height: 150px;
         box-sizing: border-box;
+        min-height: 150px;
+        margin-left: 2%;
+        border: none;
+        resize: none;
+        outline: none;
     }
-    .flat-button{
-        color: aqua;
-        background: 0 0;
-        font: 11px;
-        letter-spacing: 3px;
-        text-decoration: none;
-        padding: 8px 10px;
-        border: 1px solid darkblue;
-        float: left;
-        border-radius: 2%;
+   
+    .btn{
+        font-family: 'Baloo Da 2', cursive;
+        position: relative;
+        left: 40%;
+        top: 90%;
+        background-color: rgb(77, 0, 128);
+        color:rgb(105, 133, 223);
+        border: none;
+        border-radius: .125em;
+        padding: 0;
+        width: $btn-width;
+        height: $btn-height;
+        font-weight: bold;
+        font-size: 22px;
+        cursor: pointer;
+        transition: .1s;
+    }
+    
+    .btn:hover{
+        background-color: #091646;
+    }
+    
+    .btn.animating{
+        background-color: transparent;
+        color: transparent;
+        user-select: none;
+        cursor: default;
+        animation: hide 0ms calc($squish-animating-time) + $progress-animating-time forwards;
+    }
+    
+    .btn::before{
+        content: "";
+        display: none;
+        position: absolute;
+        background-color: #07223d;
+        inset: 0;
+        border-radius: .125em;
+        animation: squish $squish-animating-time forwards cubic-bezier(0.01, 1.01, 0.66, 1.36);
+    }
+    
+    .btn::after{
+        content: "";
+        display: none;
+        position: absolute;
+        background-color: #aaaaaa;
+        top: 40%;
+        bottom: 40%;
+        left: 50%;
+        right: 50%;
+        border-radius: .25em;
+        animation: progress $progress-animating-time $squish-animating-time forwards;
+    }
+    
+    .btn.animating::before,
+    .btn.animating::after{
+        display: block;
+    }
+    
+    .checkmark-container{
+        width: 0;
+        height: 0;
+    }
+    
+    .btn.animating + .checkmark-container{
+        position: absolute;
+        left: 30%;
+        top: 95%;
+        /* background-color: #42ba96; */
+        border-radius: .5em;
+        width: 0;
+        height: 0;
+        animation: circle $circle-animating-time calc($squish-animating-time + $progress-animating-time) forwards cubic-bezier(0.03, 1.13, 0.78, 1.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn.animating + .checkmark-container .checkmark-svg{
+        stroke: white;
+        width: 25px;
+        stroke-dashoffset: 137.07797241210938;
+        stroke-dasharray: 137.07797241210938;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        animation: checkmark $checkmark-animating-time calc($squish-animating-time) + $progress-animating-time + $circle-animating-time forwards;
+    }
+    
+    
+    
+    @keyframes squish{
+        100%{
+        top: 40%;
+        bottom: 40%;
+        left: -50%;
+        right: -50%;
+        border-radius: .25em;
+        }
+    }
+    
+    @keyframes progress{
+        100%{
+        left: -51%;
+        right: -51%;
+        }
+    }
+    
+    @keyframes hide {
+        100%{
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        }
+    }
+    
+    
+    @keyframes circle{
+        0%{
+        width: 200.75px;
+        height: 10.8px;
+        }
+        100%{
+        width: 55px;
+        height: 55px;
+        left: 45%;
+        top: 90%;
+        /* background-color: #42ba96; */
+        border-radius: 100%;
+    
+        }
+    }
+    
+    @keyframes checkmark {
+        100%{
+        stroke-dashoffset: 0;
+        }
     }
 }
