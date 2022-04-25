@@ -13,80 +13,83 @@
    align-items: center;
 }
 
+.scrollPro{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
 
-.about-page{
-   position: absolute;
-   left: 10%;
-   top: 50%;
-   transform: translateY(-50%);
-   width: 35%;
-   vertical-align: middle;
-   display: table-cell;
-   max-height: 90%;
-
-   .about-back-tag{
+  .about-back-tag{
       position: absolute;
       left: 9%;
       color: #e3aeff;
       top: 24%;
+      margin-top: -40%;
       font-family: 'Source Code Pro', monospace;
       font-size: 30px;
       font-weight: 600;
       user-select: none;
-   }
+  }
 
-   .about-container{
+  .about-container{
       position: absolute;
-      left: 50%;
       top: 50%;
-   }
+      left: -10%;
+      width: 88vw;
 
-   .about-me{
-      width: 700px;
-      height: 500px;
-      margin: 0 auto;
-      padding: 10rem 20px 25px 20px;
-      position: relative;
-      text-align: center;
-    }
-    .about-me p{
-      font-family: 'Baloo Da 2', cursive;
-      font-size: 4rem;
-    }
+      .about-me{
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+        padding: 10rem 20px 25px 20px;
+        position: relative;
+        text-align: center;
+      }
+      .about-me p{
+        font-family: 'Baloo Da 2', cursive;
+        font-size: 4rem;
+        color: #fff;
+      }
+
+      section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88vw;
+        height: 100vh;
+
+        &:nth-of-type(1){
+          background-color: rgb(255, 43, 43);
+          h1{
+            display: block;
+            font-size: 5rem;
+          }
+          span{
+            display: block;
+            font-size: 10px;
+          }
+        }
+        &:nth-of-type(2){
+          background-color: rgb(255, 120, 147);
+        }
+        &:nth-of-type(3){
+          background-color: rgb(255, 206, 81);
+        }
+        &:nth-of-type(4){
+          background-color: rgb(191, 28, 255);
+        }
+
+      }
+  }
+
+
     
-    .about-me h1{
-      color: white;
-    }
-    .about-me p{
-      color: white;
-    }
+
     
-    .about-1{
-      margin-top: 28vw;
-      width: 29vw;
-      height: auto;
-      position: absolute;
-      left: 56%;
-      color: white;
-    }
-    .about-2{
-      position: absolute;
-      margin-top: 58vw;
-      left: 25%;
-      color: white;
-    }
-    .about-3{
-      position: absolute;
-      margin-top: 100vw;
-      left: 22%;
-      color: white;
-    }
-    .about-4{
-      position: absolute;
-      margin-top: 134vw;
-      right: 26%;
-      color: white;
-    }
     
 
 }

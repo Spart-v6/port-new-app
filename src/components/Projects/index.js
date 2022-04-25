@@ -23,14 +23,20 @@ const Projects = () => {
     return(
         <>
             <PageTransition nameOfPage={nameOfPage}/>
-            <div>
-                <div className='container projects-page'>
-                    <div className='text-zone'>
-                        <h1>
-                            <RGBLetters letterClass={letterClass} strArray={['P','r','o','j','e','c','t','s']} idx={15}/>
-                        </h1>
-                    </div>
-                </div>
+            <div className='container'>
+                <section>
+                    <h1>Main Page</h1>
+                </section>
+                <section>
+                    <h1>Project Page 1</h1>
+                </section>
+                <section>
+                    <h1>Project Page 2</h1>
+                </section>
+                <section>
+                    <h1>Project Page 3</h1>
+                </section>
+
             </div>
         </>
     )

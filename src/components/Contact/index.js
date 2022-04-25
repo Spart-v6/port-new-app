@@ -39,7 +39,7 @@ const Contact = () => {
         <PageTransition nameOfPage={nameOfPage}/>
 
         <div>
-            <div className='container contact-page'>
+            <div className='contact-page'>
                 <div className='text-zone'>
                     <h1>
                         <RGBLetters letterClass={letterClass} strArray={['.','c','o','n','t','a','c','t','_','m','e','(',')']} idx={15}/>

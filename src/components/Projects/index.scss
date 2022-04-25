@@ -1,0 +1,44 @@
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // scroll-snap-type: y mandatory;
+    // overflow-y: scroll;
+    
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        // scroll-snap-align: start;
+
+        &:nth-of-type(1){
+            background-color: rgb(28, 28, 28);
+            color: #b5b5b5;
+        }
+        &:nth-of-type(2){
+            background-color: rgb(38, 38, 38);
+            color: #b5b5b5;
+        }
+        &:nth-of-type(3){
+            background-color: rgb(48, 48, 48);
+            color: #b5b5b5;
+        }
+        &:nth-of-type(4){
+            background-color: rgb(58, 58, 58);
+            color: #b5b5b5;
+        }
+
+        h1{
+            font-family: 'Baloo Da 2', cursive;
+            font-size: 15em;
+        }
+    }
+}

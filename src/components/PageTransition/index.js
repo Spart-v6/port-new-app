@@ -75,7 +75,7 @@ const PageTransition = (props) => {
                 <text
                     className="text1"
                     x="45%" y="45%" textAnchor="middle"
-                    style={{ fill: "url(#pattern)" }}
+                    style={{ fill: "url(#pattern)", userSelect:"none" }}
                 >
                     {props.nameOfPage}
                 </text>

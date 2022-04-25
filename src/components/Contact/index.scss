@@ -7,17 +7,22 @@ $btn-height: 45px;
 
 
 .contact-page{
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     left: 10%;
     top: 50%;
     transform: translateY(-50%);
     width: 35%;
     vertical-align: middle;
-    display: table-cell;
+    display: flex;
     max-height: 90%;
+    justify-content: center;
+    align-items: center;
 
     .text-zone{
         position: absolute;
+        left: 0;
         top: 30%;
     }
 
@@ -43,6 +48,7 @@ $btn-height: 45px;
     .socialMediaHandles{
         position: absolute;
         top: 60%;
+        left: 2%;
     }
 }
 
