@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+
+.load-page {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .load-screen {
+    position: relative;
+    background: black;
+    z-index: 50;
+    width: 100%;
+
+    .motionSvg {
+      position: absolute;
+      z-index: 50;
+      display: flex;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .svg1 {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+      }
+      .svg2 {
+        width: 100%;
+        height: 100%;
+        color: gray;
+        fill: currentColor;
+      }
+      .text1 {
+        font-family: "Baloo Da 2", cursive;
+        font-size: 50px;
+        font-weight: bold;
+      }
+    }
+  }
+}
