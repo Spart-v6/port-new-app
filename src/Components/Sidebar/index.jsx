@@ -48,6 +48,10 @@ const Sidebar = ({ children }) => {
 
   const gtl = gsap.timeline();
   const gtl1 = gsap.timeline();
+  
+  const fxnHandler = ()=>{
+    setOpen(false);
+  }
 
   return (
     <>
@@ -59,27 +63,41 @@ const Sidebar = ({ children }) => {
             </div>
           </div>
 
-          <section className="routes" 
+          <section className="routes"
+          {
+            ...document.querySelector(".routes") ? 
             {
               ...isOpen ?
-                gtl1.to(".routes",{duration:.5, right:80},'+=.1')
+                gtl1.to(".routes",{duration:.5, right:80,},'+=.1')
               :
                 gtl1.to(".routes",{duration:.5, right:"-300px"},'+=.1')
-            }>
-            {routes.map((route) => (
-              <NavLink to={route.path} key={route.name} className="link" style={isOpen?{display:"block", opacity:1}:{}}>
-                <div className="link_text">{route.name}</div>
+            }
+            :
+            {}
+          }
+          >
+          {
+            routes.map((route) => (
+              <NavLink to={route.path} key={route.name} className="link">
+                <div className="link_text" onClick={()=>fxnHandler()}>{route.name}</div>
               </NavLink>
-            ))}
+            ))
+          }
           </section>
           
           <div className="menu-bg" id="menu-bg" 
+          {
+            ...document.querySelector(".menu-bg") ? 
             {
               ...isOpen ?
                 gtl.to(".menu-bg",{duration:.2, width:"500px", height:"500px", background:"#9744e9",})
               :
                 gtl.to(".menu-bg",{duration:.2, width:0, height: 0})
             }
+            :
+            {}
+          }
+            
           ></div>
 
         </motion.div>
