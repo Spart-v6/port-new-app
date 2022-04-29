@@ -27,3 +27,12 @@ body{
     background-color: white;
   }
 }
+
+.loadingNow{
+  width: 100vw;
+  height: 100vh;
+  background-color: #151515;
+  position: fixed;
+  z-index: 101;
+  right: 0;
+}
