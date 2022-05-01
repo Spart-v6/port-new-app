@@ -1,5 +1,5 @@
 import "./index.scss";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import PageTransition from "../../Components/PageTransition";
 import { useState, useEffect, useRef } from "react";
 import RGBLetters from "../../Components/RGBLetters";
@@ -20,8 +20,9 @@ function About() {
 
   return (
     <>
-
-      <PageTransition nameOfPage={nameOfPage}/>
+      {/* <AnimatePresence initial={false}> */}
+        <PageTransition nameOfPage={nameOfPage}/>
+      {/* </AnimatePresence> */}
 
       <div>
         <div className="main-about-container">

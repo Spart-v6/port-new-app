@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import PageTransition from "../../Components/PageTransition";
 import RGBLetters from "../../Components/RGBLetters";
@@ -19,7 +20,9 @@ function Projects() {
 
   return (
     <>
+    {/* <AnimatePresence initial={false}> */}
       <PageTransition nameOfPage={nameOfPage} />
+    {/* </AnimatePresence> */}
       <div className="container">
         <section>
           <h1>Main Page</h1>

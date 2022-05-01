@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import RGBLetters from "../../Components/RGBLetters";
 import "./index.scss";
 import emailjs, { send } from "@emailjs/browser";
+import { AnimatePresence } from "framer-motion";
 
 function Contact() {
   const [nameOfPage, setNameOfPage] = useState("Contact");
@@ -35,7 +36,9 @@ function Contact() {
 
   return (
     <>
+    {/* <AnimatePresence initial={false}> */}
       <PageTransition nameOfPage={nameOfPage} />
+    {/* </AnimatePresence> */}
 
       <div>
         <div className="contact-page">

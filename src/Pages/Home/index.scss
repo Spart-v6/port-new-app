@@ -31,7 +31,6 @@
         overflow: hidden;
 
         .first{
-
           span{
             display: inline-block;
             position: relative;
@@ -53,7 +52,7 @@
         bottom: 0;
         pointer-events: none;
         height: 100vh;
-        width: 50vw;
+        width: 100vw;
         background-color: #101010;
       }
     }
@@ -70,6 +69,7 @@
         height: 90px;
         left: 10%;
         cursor:default;
+        opacity: 0;
         width: 40%;
         font-size: 60px;
         font-family: "Fira Code", sans-serif;
@@ -98,17 +98,17 @@
           }
           .NAME{
             position: relative;
-            left: -26%;
+            left: -30%;
             z-index: 101;
             right: 0;
             margin: 0;
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             svg{
               pointer-events: none;
               font-family: "Baloo Da 2", cursive;
-              // position: absolute;
               width: 50%;
               height: 25%;
           
@@ -120,21 +120,13 @@
               }
             }
           }
-          @keyframes animateText {
-            0%{
-              background-position: 0%;
-            }
-            100%{
-              background-position: 400%;
-            }
-          }
           .ROLE{
             font-size: 50px;
             font-weight: 600;
           }
           .DESC{
             font-size: 20px;
-
+            color: #bbbbbb;
           }
         }
       }
@@ -156,7 +148,6 @@
       font-weight: 600;
       opacity: 0;
       background-color: #bc7aff;
-      transform: translateY(50px);
       letter-spacing: 4px;
       font-family: "Baloo Da 2", cursive;
       text-decoration: none;

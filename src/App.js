@@ -28,7 +28,8 @@ function App() {
   // })
 
   useEffect(()=>{
-    gsap.to(".loadingNow",{duration:2, delay:2, right:"100%", ease:"Expo.easeInOut"})
+    // gsap.to(".loadingNow",{duration:2, delay:2, right:"100%", ease:"Expo.easeInOut"})
+    gsap.to(".Load span",{opacity:0, duration:.5, ease:"Expo.easeOut"})
 
   },[])
 
@@ -43,9 +44,13 @@ function App() {
           <text x="50%" y="50%" dy=".30em" textAnchor="middle">AS</text>
         </svg>
     </div> */}
+
+    <div className="Load">
+      <span>Loading</span>
+    </div>
     
     <Sidebar>  
-      <AnimatePresence exitBeforeEnter >
+      <AnimatePresence exitBeforeEnter initial={false}>
         <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
