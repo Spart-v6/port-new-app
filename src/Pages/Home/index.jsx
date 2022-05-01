@@ -4,26 +4,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import RGBLetters from "../../Components/RGBLetters";
 import PageTransition from "../../Components/PageTransition";
-import { gsap } from "gsap-trial";
+import gsapTrial, { gsap } from "gsap-trial";
 import { BsArrowDown } from "react-icons/bs";
 
 function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
-  const strArray = [
-    "w",
-    "e",
-    "b",
-    " ",
-    "d",
-    "e",
-    "v",
-    "e",
-    "l",
-    "o",
-    "p",
-    "e",
-    "r",
-  ];
 
   const onHover = () => {
     setTimeout(() => {
@@ -55,25 +40,10 @@ function Home() {
     }
   });
 
-  // for down arrow
-  function useSelector() {
-    const ref = useRef();
-    const q = useMemo(() => gsap.utils.selector(ref), [ref]);
-    return [q, ref];
-  }
-  const [q, ref] = useSelector();
 
-  // useEffect(() => {
-  //   gsap.to(q("#downArrow"), {
-  //     scaleY: 0.2,
-  //     transformOrigin: "center bottom",
-  //     borderBottomLeftRadius: "40%",
-  //     ease: "Expo.easeOut",
-  //     repeat: -1,
-  //   });
-  // }, []);
+  const tl = gsap.timeline();
 
-  const slideColorRight = () => {
+  const slideRight = () => {
     if (counterDown === 1 && counterUp === 0) {
       gsap.to(".intro .greeting .color", {
         width: "100vw",
@@ -85,6 +55,21 @@ function Home() {
         duration: 1.4,
         ease: "Expo.easeInOut",
       });
+      
+      tl.to("#svgText",{
+        keyframes:{
+
+        "0%":  {fill:"#488a1400",stroke:"#fc0853", strokeDashoffset:"25%",strokeDasharray:"0 50%",strokeWidth:"5px", },
+        "25%":  {fill:"#488a1400",stroke:"#08fdd8", },
+        "50%":  {fill:"#488a1400",stroke:"#fc0853", },
+        "75%":  {fill:"#488a1400",stroke:"#08fdd8",strokeWidth:"5px", },
+        "100%":  {fill:"#fc0853",stroke:"#488a1400", strokeDashoffset:"-25%",strokeDasharray:"50% 0",strokeWidth:"0px", },
+        easeEach:"Expo.easeInOut",
+        },
+        ease:"none",
+        duration:5,
+        delay:1
+      })
       gsap.to("#text-reveal", {
         clipPath: "polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)",
         opacity: 1,
@@ -101,9 +86,11 @@ function Home() {
         delay: 1.4,
         ease: "Expo.easeOut",
       });
+
+
     }
   };
-  const slideColorLeft = () => {
+  const slideLeft = () => {
     if (counterUp === 1 && counterDown === 0) {
       gsap.to(".intro .greeting .color", {
         width: "50vw",
@@ -132,22 +119,43 @@ function Home() {
     }
   };
 
-  const tl = gsap.timeline();
 
-  // useEffect(()=>{
-  //   tl.to('#char_H',  {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.19');
-  //   tl.to('#char_E',  {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.18');
-  //   tl.to('#char_Y',  {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.17');
-  //   tl.to('#char_T',  {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.16');
-  //   tl.to('#char_H1', {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.15');
-  //   tl.to('#char_E1', {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.14');
-  //   tl.to('#char_R',  {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.13');
-  //   tl.to('#char_E2', {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.12');
-  //   tl.to('#char_',   {"stroke-dashoffset": 0, delay:0.1, duration:3, ease:"Expo.easeOut"},'-=0.11');
 
-  //   // console.log(document.getElementById("char_").getTotalLength());
+  // Hey There
+  const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
-  // },[])
+  const leftSide = {
+    hidden: { y: 0, opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay:5,
+        delayChildren: 5,
+        staggerChildren: 0.06,
+        staggerDirection: -1,
+      }
+    }
+  }
+  const rightSide = {
+    hidden: { y: 0, opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay:5,
+        delayChildren: 5,
+        staggerChildren: 0.06,
+        staggerDirection: 1,
+      }
+    }
+  }
+  
+  const item = {
+    hidden: { y: 100, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { duration: 1, ...transition },}
+  }
+
 
   return (
     <>
@@ -157,41 +165,45 @@ function Home() {
         <div className="intro">
           <section className="greeting">
             <div className="hello" id="hello">
-
-            HEY THERE
-
-
-
-
+              <motion.span variants={leftSide} initial="hidden" animate="show" className="first">
+                <motion.span variants={item}>H</motion.span>
+                <motion.span variants={item}>e</motion.span>
+                <motion.span variants={item}>y&nbsp;</motion.span>
+              </motion.span>
+              <motion.span variants={rightSide} initial="hidden" animate="show" className="first">
+                <motion.span variants={item}>T</motion.span>
+                <motion.span variants={item}>h</motion.span>
+                <motion.span variants={item}>e</motion.span>
+                <motion.span variants={item}>r</motion.span>
+                <motion.span variants={item}>e</motion.span>
+                <motion.span variants={item}>!</motion.span>
+              </motion.span>
 
             </div>
             <div className="color"></div>
-            {scrollDir ? slideColorRight() : slideColorLeft()}
+            {scrollDir ? slideRight() : slideLeft()}
           </section>
 
           <section className="home-page">
+            <div id="text-reveal" className="dotHome">
+              <RGBLetters
+                letterClass={letterClass}
+                strArray={[".", "h", "o", "m", "e", "(", ")"]}
+                idx={15}
+              />
+            </div>
+
             <div className="text-zone">
-              <h1>
-                <div id="text-reveal" className="dotHome">
-                  <RGBLetters
-                    letterClass={letterClass}
-                    strArray={[".", "h", "o", "m", "e", "(", ")"]}
-                    idx={15}
-                  />
+                <div className="home-content">
+                  <span id="text-reveal" className="IM">I'm </span>
+                  <div id="text-reveal" className="NAME">
+                    <svg viewBox="0 0 1420 300">
+                      <text id="svgText" x="50%" y="50%" dy=".30em" textAnchor="middle">Ankur</text>
+                    </svg>
+                  </div>
+                  <span id="text-reveal" className="ROLE">Web Developer</span> <br/>
+                  <span id="text-reveal" className="DESC"> Front-end Developer/ Designer/ Competitive Coder/ Gamer  </span>
                 </div>
-                <div id="text-reveal">
-                  <span style={{ color: "#986ee8", fontSize: "70px" }}>I</span>
-                  <span style={{ fontSize: "69px" }}>'m &nbsp;</span>
-                  Ankur
-                  <br />
-                </div>
-                <div id="text-reveal">
-                  <span>Web Developer</span>
-                </div>
-              </h1>
-              <h2 id="text-reveal">
-                Front-end Developer/ Designer/ Competitive Coder/ Gamer
-              </h2>
               <Link to="/contact" className="flat-button">
                 CONTACT ME
               </Link>

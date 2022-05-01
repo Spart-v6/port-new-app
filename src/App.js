@@ -9,9 +9,10 @@ import {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import {AnimatePresence} from 'framer-motion';
 import { gsap } from "gsap-trial";
+import anime from "animejs";
 
 function App() {
-
+  gsap. config({nullTargetWarn:false});
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLoading = () => { setIsLoading(false); }
@@ -27,7 +28,8 @@ function App() {
   // })
 
   useEffect(()=>{
-    gsap.to(".loadingNow",{duration:2, delay:2, right:"100%", ease:"Expo.easeInOut"})  
+    gsap.to(".loadingNow",{duration:2, delay:2, right:"100%", ease:"Expo.easeInOut"})
+
   },[])
 
   const location = useLocation();
@@ -35,11 +37,15 @@ function App() {
   return (
     <>
     {/* Do smth like take 5 seconds to load and then do fade out effect and then show the content after 5 seconds only */}
-    {/* Also add some condition when scrolling down and up, (left and right black screen) so that when u do too much scroll up, it doesn't show the content which got hidden .. so do smth like if scroll is done == 1 (once) then only hide content.. do in Home! */}
-    <div className="loadingNow"></div>
+    {/* Also add some condition when scrolling down and up, (left and right black screen) so that when u do too much scroll up, it doesn't show the content which got hidden .. so do smth like if scroll is done == 1 (once) then only hide content.. do in Home! Done!*/}
+    {/* <div className="loadingNow">
+        <svg viewBox="0 0 1320 300">
+          <text x="50%" y="50%" dy=".30em" textAnchor="middle">AS</text>
+        </svg>
+    </div> */}
     
     <Sidebar>  
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence exitBeforeEnter >
         <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
