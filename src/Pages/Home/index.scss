@@ -96,13 +96,14 @@
       }
 
       .downArrow{
-        font-size: 48px;
+        font-size: 28px;
         position: fixed;
         cursor: pointer;
-        top: 80%;
+        opacity: 1;
+        margin-top: 35px;
         left: 48%;
-        color: red;
-        animation: bounceArrow 3s infinite;
+        color: transparent;
+        animation: bounceArrow 3s infinite 2s;
 
         @keyframes bounceArrow {
           0%{top: 80%;}

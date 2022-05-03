@@ -28,25 +28,34 @@ function Home(props) {
   const [counterUp, setCounterUp] = useState(0);
   const [counterDown, setCounterDown] = useState(0);
 
+  // down arrow
+  // const [isArrowClicked,setIsArrowClicked] = useState(false);
+  // const arrHandlerTrue = ()=> setIsArrowClicked(true)
+  // const arrHandlerFalse = ()=> setIsArrowClicked(false)
+  var arrow = false;
+
   const fxn = (e)=>{
     if (e.deltaY < 0) {
+      gsap.to("#down-arrow",{opacity:1, duration:.5, delay:1, ease:"Expo.easeInOut"})
       setScrollDir(0); // scrolling up
-      setCounterUp(1);
-      setCounterDown(0);
-    } else if (e.deltaY > 0 || isArrowClicked) {
+      setCounterUp(1); setCounterDown(0);
+    } 
+    else if (e.deltaY > 0 || arrow) {
+      console.log("Hiding arrow now");
+      gsap.to("#down-arrow",{opacity:0, duration:.5, ease:"Expo.easeInOut"})
       setScrollDir(1); // scrolling down
-      setCounterDown(1);
-      setCounterUp(0);
+      setCounterDown(1); setCounterUp(0);
+      arrow = false;
     }
+
   }
 
-  ['click','wheel'].forEach(evt => 
-    window.addEventListener(evt,fxn,false)
-  );
+  // useEffect(()=>{
+    ['click','wheel'].forEach(evt => 
+      window.addEventListener(evt,fxn,false),
+    );
+  // },[])
   
-
-  const [boxWidth, setBoxWidth] = useState(0);
-
 
 
   const slideRight = () => {
@@ -139,16 +148,14 @@ function Home(props) {
 
   useEffect(()=>{
     if(props.counter <= 1){
-      gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:4, ease:"Expo.easeInOut"})
+      gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:2, ease:"Expo.easeInOut"})
     }
     else{
       gsap.set(".intro .greeting .color",{width:"50vw",scale:.9},"-=.5")
     }
   },[])
 
-  // down arrow
-  const [isArrowClicked,setIsArrowClicked] = useState(false);
-  const arrHandler = ()=> setIsArrowClicked(true)
+
 
   return (
     <>
@@ -203,8 +210,8 @@ function Home(props) {
               />
             </div>
 
-            <div className="downArrow" >
-              <CgArrowLongDown onClick={()=>setIsArrowClicked(true)} />
+            <div className="downArrow" id="down-arrow" >
+              <CgArrowLongDown onClick={()=> arrow = true} />
             </div>
 
             <div className="text-zone">
