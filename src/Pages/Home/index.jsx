@@ -1,10 +1,10 @@
 import "./index.scss";
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import RGBLetters from "../../Components/RGBLetters";
 import PageTransition from "../../Components/PageTransition";
-import gsapTrial, { gsap } from "gsap-trial";
+import { gsap } from "gsap-trial";
 import { CgArrowLongDown } from "react-icons/cg";
 
 function Home(props) {
@@ -29,9 +29,6 @@ function Home(props) {
   const [counterDown, setCounterDown] = useState(0);
 
   // down arrow
-  // const [isArrowClicked,setIsArrowClicked] = useState(false);
-  // const arrHandlerTrue = ()=> setIsArrowClicked(true)
-  // const arrHandlerFalse = ()=> setIsArrowClicked(false)
   var arrow = false;
 
   const fxn = (e)=>{
@@ -144,8 +141,6 @@ function Home(props) {
     show: { y: 0, opacity: 1, transition: { duration: 1, ...transition },}
   }
 
-  // console.log(props.counter)
-
   useEffect(()=>{
     if(props.counter <= 1){
       gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:2, ease:"Expo.easeInOut"})
@@ -153,7 +148,7 @@ function Home(props) {
     else{
       gsap.set(".intro .greeting .color",{width:"50vw",scale:.9},"-=.5")
     }
-  },[])
+  },[props.counter])
 
 
 
