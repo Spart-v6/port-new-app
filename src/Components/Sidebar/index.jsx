@@ -55,55 +55,55 @@ const Sidebar = ({ children }) => {
 
   return (
     <>
-      <div className="main-container">
-        <motion.div className="sidebar" transition={{ duration: 1, ease: "easeInOut" }} variants={inputAnimation} >
-          <div className="top_section">
-            <div className="bars">
-              <Cross toggled={isOpen} toggle={setOpen} rounded easing="ease-out" color={isOpen?"#36134b":"#be4eff"} />
-            </div>
+      
+      <motion.div className="sidebar" transition={{ duration: 1, ease: "easeInOut" }} variants={inputAnimation} >
+        <div className="top_section">
+          <div className="bars">
+            <Cross toggled={isOpen} toggle={setOpen} rounded easing="ease-out" color={isOpen?"#36134b":"#be4eff"} />
           </div>
+        </div>
 
-          <section className="routes"
+        <section className="routes"
+        {
+          ...document.querySelector(".routes") ? 
           {
-            ...document.querySelector(".routes") ? 
-            {
-              ...isOpen ?
-                gtl1.to(".routes",{duration:.5, right:80,},'+=.1')
-              :
-                gtl1.to(".routes",{duration:.5, right:"-300px"},'+=.1')
-            }
+            ...isOpen ?
+              gtl1.to(".routes",{duration:.5, right:80,},'+=.1')
             :
-            {}
+              gtl1.to(".routes",{duration:.5, right:"-300px"},'+=.1')
           }
-          >
+          :
+          {}
+        }
+        >
+        {
+          routes.map((route) => (
+            <NavLink to={route.path} key={route.name} className="link">
+              <div className="link_text" onClick={()=>fxnHandler()}>{route.name}</div>
+            </NavLink>
+          ))
+        }
+        </section>
+        
+        <div className="menu-bg" id="menu-bg" 
+        {
+          ...document.querySelector(".menu-bg") ? 
           {
-            routes.map((route) => (
-              <NavLink to={route.path} key={route.name} className="link">
-                <div className="link_text" onClick={()=>fxnHandler()}>{route.name}</div>
-              </NavLink>
-            ))
+            ...isOpen ?
+              gtl.to(".menu-bg",{duration:.2, width:"500px", height:"500px", background:"#9744e9",})
+            :
+              gtl.to(".menu-bg",{duration:.2, width:0, height: 0})
           }
-          </section>
+          :
+          {}
+        }
           
-          <div className="menu-bg" id="menu-bg" 
-          {
-            ...document.querySelector(".menu-bg") ? 
-            {
-              ...isOpen ?
-                gtl.to(".menu-bg",{duration:.2, width:"500px", height:"500px", background:"#9744e9",})
-              :
-                gtl.to(".menu-bg",{duration:.2, width:0, height: 0})
-            }
-            :
-            {}
-          }
-            
-          ></div>
+        ></div>
 
-        </motion.div>
+      </motion.div>
 
-        <main>{children}</main>
-      </div>
+      <main className="head-container">{children}</main>
+      
     </>
   );
 };

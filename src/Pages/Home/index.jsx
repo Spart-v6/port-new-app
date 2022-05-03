@@ -5,9 +5,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import RGBLetters from "../../Components/RGBLetters";
 import PageTransition from "../../Components/PageTransition";
 import gsapTrial, { gsap } from "gsap-trial";
-import { BsArrowDown } from "react-icons/bs";
+import { CgArrowLongDown } from "react-icons/cg";
 
-function Home() {
+function Home(props) {
   const [letterClass, setLetterClass] = useState("text-animate");
 
   const onHover = () => {
@@ -28,25 +28,34 @@ function Home() {
   const [counterUp, setCounterUp] = useState(0);
   const [counterDown, setCounterDown] = useState(0);
 
-  window.addEventListener("wheel", (event) => {
-    if (event.deltaY < 0) {
+  const fxn = (e)=>{
+    if (e.deltaY < 0) {
       setScrollDir(0); // scrolling up
       setCounterUp(1);
       setCounterDown(0);
-    } else if (event.deltaY > 0) {
+    } else if (e.deltaY > 0 || isArrowClicked) {
       setScrollDir(1); // scrolling down
       setCounterDown(1);
       setCounterUp(0);
     }
-  });
+  }
+
+  ['click','wheel'].forEach(evt => 
+    window.addEventListener(evt,fxn,false)
+  );
+  
+
+  const [boxWidth, setBoxWidth] = useState(0);
+
 
 
   const slideRight = () => {
     if (counterDown === 1 && counterUp === 0) {
-      gsap.to(".intro .greeting .color", { width: "100vw", scale:1, duration: 1.5, ease: "Expo.easeInOut", })
 
-      gsap.to(".intro .greeting .hello", { x: "55%", duration: 1.4,  ease: "Expo.easeInOut", })
+      gsap.to(".intro .greeting .color", { width: "100vw", scale:1, duration: 1.5, ease: "Expo.easeInOut",})
       
+      gsap.to(".intro .greeting .hello", { x: "55%", duration: 1.4,  ease: "Expo.easeInOut",})
+        
       gsap.to(".intro .home-page .dotHome",{duration:.3, opacity:1, ease:"Expo.easeInOut", delay:.5},)
 
       gsap.to("#text-reveal", { clipPath: "polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)", opacity: 1, y: 0, delay: 0.3, stagger: 0.2,duration: 1.5,ease: "Expo.easeOut",})
@@ -69,20 +78,23 @@ function Home() {
 
     }
   };
+
   const slideLeft = () => {
     if (counterUp === 1 && counterDown === 0) {
-      gsap.to(".intro .greeting .color", { width: "50vw", scale:0.9,  duration: 1.5, ease: "Expo.easeInOut", });
 
-      gsap.to(".intro .greeting .hello", { x: 0, duration: 1.4, ease: "Expo.easeInOut", });
-      
       gsap.to(".intro .home-page .dotHome",{duration:.1, opacity:0, ease:"Expo.easeInOut"})
 
-      gsap.to("#text-reveal", { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 0, y: 50, stagger: 0.1, duration: 1.5, ease: "Expo.easeOut", });
+      gsap.to("#text-reveal", { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 0, y: 50, stagger: 0.1, duration: .5, ease: "Expo.easeOut", });
 
       gsap.to(".intro .home-page .text-zone .home-content .NAME",{clipPath:"polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",duration:.2, ease:"Expo.easeOut"})
 
-      gsap.to(".intro .text-zone .flat-button", { opacity: 0, duration: 0.3, ease: "Expo.easeOut", });
+      gsap.to(".intro .text-zone .flat-button", { opacity: 0, duration: .3, ease: "Expo.easeOut", });
+
       
+      gsap.to(".intro .greeting .color", { width: "50vw", scale:0.9,  duration: 1.5, ease: "Expo.easeInOut", });
+
+      gsap.to(".intro .greeting .hello", { x: 0, duration: 1.4, ease: "Expo.easeInOut", });
+
     }
   };
 
@@ -123,10 +135,20 @@ function Home() {
     show: { y: 0, opacity: 1, transition: { duration: 1, ...transition },}
   }
 
+  // console.log(props.counter)
 
   useEffect(()=>{
-    gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:4, ease:"Expo.easeInOut"})
+    if(props.counter <= 1){
+      gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:4, ease:"Expo.easeInOut"})
+    }
+    else{
+      gsap.set(".intro .greeting .color",{width:"50vw",scale:.9},"-=.5")
+    }
   },[])
+
+  // down arrow
+  const [isArrowClicked,setIsArrowClicked] = useState(false);
+  const arrHandler = ()=> setIsArrowClicked(true)
 
   return (
     <>
@@ -134,7 +156,7 @@ function Home() {
       <PageTransition nameOfPage={nameOfPage} />
     {/* </AnimatePresence> */}
 
-      <main className="wholeContainer">
+      <main className="homeContainer">
         <div className="intro">
           <section className="greeting">
             <AnimatePresence initial={true}>
@@ -155,6 +177,7 @@ function Home() {
 
               </div>
             </AnimatePresence>
+
             <div className="color"></div>
             {/* {scrollDir ? slideRight() : slideLeft()} */}
             {
@@ -178,6 +201,10 @@ function Home() {
                 strArray={[".", "h", "o", "m", "e", "(", ")"]}
                 idx={15}
               />
+            </div>
+
+            <div className="downArrow" >
+              <CgArrowLongDown onClick={()=>setIsArrowClicked(true)} />
             </div>
 
             <div className="text-zone">

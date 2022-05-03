@@ -15,26 +15,23 @@ function App() {
   gsap. config({nullTargetWarn:false});
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLoading = () => { setIsLoading(false); }
-
-  // useEffect(()=>{
-  //  setTimeout(() => {
-  //   setIsLoading(true);
-  //   console.log("Loaded");
-  //   console.log("Running gsap")
-  //   gsap.to(".loadingNow",{duration:1, right:100,ease:"Expo.easeOut"},"-=1")
-  //   console.log("Runned gsap")
-  //  }, 5000);
-  // })
+  useEffect(()=>{
+    setTimeout(() => {
+        setIsLoading(true);
+        // console.log("Loaded");
+    }, 5500);
+  })
 
   useEffect(()=>{
-    // gsap.to(".loadingNow",{duration:2, delay:2, right:"100%", ease:"Expo.easeInOut"})
-    gsap.to(".Load span",{opacity:0, duration:.5, ease:"Expo.easeOut"})
-
+    gsap.to(".Load span",{opacity:0, duration:.5, ease:"Expo.easeOut"},'+=3')
+    gsap.to(".Load",{duration:1.5, right:"100%", ease:"Expo.easeInOut"},'+=.5')
   },[])
 
   const location = useLocation();
-
+  const [counter,setCounter] = useState(0);
+  useEffect(() => {
+    setCounter(counter+1);
+  }, [location]);
   return (
     <>
     {/* Do smth like take 5 seconds to load and then do fade out effect and then show the content after 5 seconds only */}
@@ -45,21 +42,28 @@ function App() {
         </svg>
     </div> */}
 
-    <div className="Load">
-      <span>Loading</span>
-    </div>
-    
-    <Sidebar>  
-      <AnimatePresence exitBeforeEnter initial={false}>
-        <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/project" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
-    </Sidebar>
+    {
+      !isLoading 
+      
+      ? 
+       <div className="Load">
+        <span>Loading</span>
+      </div>
+      
+      :
+      
+      <Sidebar>  
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<Home counter={counter}/>} />
+              <Route path="/about" element={<About />} />
+              <Route path="/project" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
+      </Sidebar>
 
+    }
   
     </>
   );

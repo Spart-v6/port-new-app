@@ -57,8 +57,8 @@ const PageTransition = (props) => {
                 initial="initial"
                 animate="animate"
                 variants={blackBox}
-                onAnimationStart={() => console.log("Started")}
-                onAnimationComplete={() => console.log("Done")}
+                // onAnimationStart={() => console.log("Started")}
+                // onAnimationComplete={() => console.log("Done")}
             >
 
             <motion.svg variants={textContainer}  className="motionSvg">
