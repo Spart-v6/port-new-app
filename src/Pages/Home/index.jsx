@@ -33,13 +33,13 @@ function Home(props) {
 
   const fxn = (e)=>{
     if (e.deltaY < 0) {
-      gsap.to("#down-arrow",{opacity:1, duration:.5, delay:1, ease:"Expo.easeInOut"})
+      gsap.to("#down-arrow",{display:"block", opacity:1, duration:.5, delay:1, ease:"Expo.easeInOut"})
       setScrollDir(0); // scrolling up
       setCounterUp(1); setCounterDown(0);
     } 
     else if (e.deltaY > 0 || arrow) {
       console.log("Hiding arrow now");
-      gsap.to("#down-arrow",{opacity:0, duration:.5, ease:"Expo.easeInOut"})
+      gsap.to("#down-arrow",{opacity:0, display:"none", duration:.5, ease:"Expo.easeInOut"})
       setScrollDir(1); // scrolling down
       setCounterDown(1); setCounterUp(0);
       arrow = false;
@@ -47,11 +47,10 @@ function Home(props) {
 
   }
 
-  // useEffect(()=>{
-    ['click','wheel'].forEach(evt => 
-      window.addEventListener(evt,fxn,false),
-    );
-  // },[])
+
+  ['click','wheel'].forEach(evt => 
+    window.addEventListener(evt,fxn,false),
+  );
   
 
 
@@ -115,8 +114,8 @@ function Home(props) {
       y: 0,
       opacity: 1,
       transition: {
-        delay:3,
-        delayChildren: 3,
+        delay:2.3,
+        delayChildren: 2.3,
         staggerChildren: 0.06,
         staggerDirection: -1,
       }
@@ -128,8 +127,8 @@ function Home(props) {
       y: 0,
       opacity: 1,
       transition: {
-        delay:3,
-        delayChildren: 3,
+        delay:2.3,
+        delayChildren: 2.3,
         staggerChildren: 0.06,
         staggerDirection: 1,
       }
