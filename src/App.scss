@@ -28,8 +28,29 @@ body{
     z-index: 101;
     opacity: 1;
     pointer-events: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 50px;
     font-family: "Baloo Da 2", cursive;
+    background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    white-space: nowrap;
+
+    @keyframes shine{
+      0%{
+        background-position: 0;
+      }
+      60%{
+        background-position: 180px;
+      }
+      100%{
+        background-position: 180px;
+      }
+    }
   }
 }
