@@ -111,6 +111,50 @@
           100%{top:80%}
         }
       }
+      .shapes{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .layer{
+          position: absolute !important;
+        }
+        .svg1{
+          top: 4% !important; left: 15% !important;
+          img{width: 50%;}
+        }
+        .svg3{
+          top: 33% !important; left: 35% !important;
+          img{width: 50%;}
+        }
+        .svg5{
+          top: 86% !important; left: 25% !important;
+          img{width: 50%;}
+        }
+        .svg7{
+          top: 28% !important; left: 16% !important;
+          img{width: 50%;}
+        }
+        .svg10{
+          top: 62% !important; left: 31% !important;
+          img{width: 50%;}
+        }
+        .svg11{
+          top: 25% !important; left: 65% !important;
+          img{width: 50%;}
+        }
+        .svg12{
+          top: 77% !important; left: 80% !important;
+          img{width: 50%;}
+        }
+        .svg13{
+          top: 54% !important; left: 51% !important;
+          img{width: 50%;}
+        }
+        .svg14{
+          top: 48% !important; left: 35% !important;
+          img{width: 50%;}
+        }
+      }
 
       .text-zone {
         position: relative;

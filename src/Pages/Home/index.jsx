@@ -1,12 +1,13 @@
 import "./index.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import RGBLetters from "../../Components/RGBLetters";
 import PageTransition from "../../Components/PageTransition";
 import { gsap } from "gsap-trial";
 import { CgArrowLongDown } from "react-icons/cg";
-import {svg1, svg2} from '../../Assets'
+import {svg1, svg2, svg3, svg4, svg5, svg6, svg7, svg8, svg9, svg10, svg11, svg12, svg13, svg14} from '../../Assets'
+import Parallax from "parallax-js";
 
 function Home(props) {
   const [nameOfPage, setNameOfPage] = useState("Home");
@@ -165,6 +166,18 @@ function Home(props) {
   //#endregion
 
 
+  const sceneEl = useRef(null);
+  useEffect(() => {
+    const parallaxInstance = new Parallax(sceneEl.current, {
+      relativeInput: true,
+      hoverOnly: true
+    })
+
+    parallaxInstance.enable();
+
+    return () => parallaxInstance.disable();
+  }, [])
+
   return (
     <>
     {/* <AnimatePresence initial={false}> */}
@@ -222,8 +235,16 @@ function Home(props) {
               <CgArrowLongDown onClick={()=> arrow = true} />
             </div>
 
-            <div className="shapes">
-                <img src={svg1} />
+            <div className="shapes" ref={sceneEl} data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+               <div className="layer svg1" data-depth='0.1'><img src={svg1} /></div>
+               <div className="layer svg3" data-depth='0.3'><img src={svg3} /></div>
+               <div className="layer svg5" data-depth='0.1'><img src={svg5} /></div>
+               <div className="layer svg7" data-depth='0.5'><img src={svg7} /></div>
+               <div className="layer svg10" data-depth='0.1'><img src={svg10} /></div>
+               <div className="layer svg11" data-depth='0.2'><img src={svg11} /></div>
+               <div className="layer svg12" data-depth='0.3'><img src={svg12} /></div>
+               <div className="layer svg13" data-depth='0.4'><img src={svg13} /></div>
+               <div className="layer svg14" data-depth='0.1'><img src={svg14} /></div>
             </div>
 
             <div className="text-zone">
@@ -238,7 +259,7 @@ function Home(props) {
                   <span id="text-reveal" className="DESC"> Front-end Developer || Designer || Competitive Coder || Gamer</span>
                 </div>
               <Link to="/contact" className="flat-button">
-                CONTACT ME
+                Say Hi!
               </Link>
             </div>
           </section>
