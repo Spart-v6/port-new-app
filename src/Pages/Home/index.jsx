@@ -6,8 +6,12 @@ import RGBLetters from "../../Components/RGBLetters";
 import PageTransition from "../../Components/PageTransition";
 import { gsap } from "gsap-trial";
 import { CgArrowLongDown } from "react-icons/cg";
+import {svg1, svg2} from '../../Assets'
 
 function Home(props) {
+  const [nameOfPage, setNameOfPage] = useState("Home");
+
+  // #region //< ---------------------------------------------------  Text Color Animate ------------------------------------------
   const [letterClass, setLetterClass] = useState("text-animate");
 
   const onHover = () => {
@@ -20,15 +24,19 @@ function Home(props) {
     return onHover();
   }, []);
 
-  const [nameOfPage, setNameOfPage] = useState("Home");
+  //#endregion
 
+
+  // #region //< ---------------------------------------------------  Scroll dir useStates -----------------------------------------
   const [scrollDir, setScrollDir] = useState(0);
   // Scrolling up -> left -> 0
   // Scrolling dwn -> right -> 1
   const [counterUp, setCounterUp] = useState(0);
   const [counterDown, setCounterDown] = useState(0);
+  //#endregion
 
-  // down arrow
+
+  // #region //< ----------------------------------------------------  Down arrow --------------------------------------------------
   var arrow = false;
 
   const fxn = (e)=>{
@@ -52,8 +60,10 @@ function Home(props) {
     window.addEventListener(evt,fxn,false),
   );
   
+  //#endregion
 
 
+  // #region //< -------------------------------------------------- Slide left and right -------------------------------------------
   const slideRight = () => {
     if (counterDown === 1 && counterUp === 0) {
 
@@ -103,9 +113,10 @@ function Home(props) {
     }
   };
 
+  // #endregion
 
 
-  // Hey There
+  // #region //< --------------------------------------------------   Hey There  ----------------------------------------------------
   const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
   const leftSide = {
@@ -116,7 +127,7 @@ function Home(props) {
       transition: {
         delay:2.3,
         delayChildren: 2.3,
-        staggerChildren: 0.06,
+        staggerChildren: 0.04,
         staggerDirection: -1,
       }
     }
@@ -129,7 +140,7 @@ function Home(props) {
       transition: {
         delay:2.3,
         delayChildren: 2.3,
-        staggerChildren: 0.06,
+        staggerChildren: 0.02,
         staggerDirection: 1,
       }
     }
@@ -140,6 +151,9 @@ function Home(props) {
     show: { y: 0, opacity: 1, transition: { duration: 1, ...transition },}
   }
 
+  //#endregion
+
+  //#region //< ------------------------------------------------- Initial black color screen ----------------------------------------
   useEffect(()=>{
     if(props.counter <= 1){
       gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:2, ease:"Expo.easeInOut"})
@@ -148,7 +162,7 @@ function Home(props) {
       gsap.set(".intro .greeting .color",{width:"50vw",scale:.9},"-=.5")
     }
   },[props.counter])
-
+  //#endregion
 
 
   return (
@@ -206,6 +220,10 @@ function Home(props) {
 
             <div className="downArrow" id="down-arrow" >
               <CgArrowLongDown onClick={()=> arrow = true} />
+            </div>
+
+            <div className="shapes">
+                <img src={svg1} />
             </div>
 
             <div className="text-zone">
