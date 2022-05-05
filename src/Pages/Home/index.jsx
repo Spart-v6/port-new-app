@@ -47,7 +47,7 @@ function Home(props) {
       setCounterUp(1); setCounterDown(0);
     } 
     else if (e.deltaY > 0 || arrow) {
-      console.log("Hiding arrow now");
+      // console.log("Hiding arrow now");
       gsap.to("#down-arrow",{opacity:0, display:"none", duration:.5, ease:"Expo.easeInOut"})
       setScrollDir(1); // scrolling down
       setCounterDown(1); setCounterUp(0);
@@ -65,51 +65,57 @@ function Home(props) {
 
 
   // #region //< -------------------------------------------------- Slide left and right -------------------------------------------
+  // var criticalSection = 1;
   const slideRight = () => {
     if (counterDown === 1 && counterUp === 0) {
-
-      gsap.to(".intro .greeting .color", { width: "100vw", scale:1, duration: 1.5, ease: "Expo.easeInOut",})
-      
-      gsap.to(".intro .greeting .hello", { x: "55%", duration: 1.4,  ease: "Expo.easeInOut",})
+      // while(criticalSection == 0){
+        gsap.to(".intro .greeting .color", { width: "100vw", scale:1, duration: 1.5, ease: "Expo.easeInOut",})
         
-      gsap.to(".intro .home-page .dotHome",{duration:.3, opacity:1, ease:"Expo.easeInOut", delay:.5},)
+        gsap.to(".intro .greeting .hello", { x: "55%", duration: 1.4,  ease: "Expo.easeInOut",})
+          
+        gsap.to(".intro .home-page .dotHome",{duration:.3, opacity:1, ease:"Expo.easeInOut", delay:.5},)
 
-      gsap.to("#text-reveal", { clipPath: "polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)", opacity: 1, y: 0, delay: 0.3, stagger: 0.2,duration: 1.5,ease: "Expo.easeOut",})
+        gsap.to("#text-reveal", { clipPath: "polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)", opacity: 1, y: 0, delay: 0.3, stagger: 0.2,duration: 1.5,ease: "Expo.easeOut",})
 
-      gsap.to(".intro .home-page .text-zone .home-content .NAME",{clipPath:"polygon(0 100%, 100% 100%, 96% 0, 0 0)",duration:.5, ease:"Expo.easeOut"})
+        gsap.to(".intro .home-page .text-zone .home-content .NAME",{clipPath:"polygon(0 100%, 100% 100%, 96% 0, 0 0)",duration:.5, ease:"Expo.easeOut"})
 
-      gsap.to("#svgText",{ keyframes:{
-          "0%":  {fill:"#488a1400",stroke:"#fc0853", strokeDashoffset:"25%",strokeDasharray:"0 50%",strokeWidth:"5px", },
-          "25%":  {fill:"#488a1400",stroke:"#08fdd8", },
-          "50%":  {fill:"#488a1400",stroke:"#fc0853", },
-          "75%":  {fill:"#488a1400",stroke:"#08fdd8",strokeWidth:"5px", },
-          "100%":  {fill:"#fc0853",stroke:"#488a1400", strokeDashoffset:"-25%",strokeDasharray:"50% 0",strokeWidth:"0px", },
-          easeEach:"Expo.easeInOut",
-        },
-        ease:"none",
-        duration:5,
-      })
+        gsap.to("#svgText",{ keyframes:{
+            "0%":  {fill:"#488a1400",stroke:"#fc0853", strokeDashoffset:"25%",strokeDasharray:"0 50%",strokeWidth:"5px", },
+            "25%":  {fill:"#488a1400",stroke:"#08fdd8", },
+            "50%":  {fill:"#488a1400",stroke:"#fc0853", },
+            "75%":  {fill:"#488a1400",stroke:"#08fdd8",strokeWidth:"5px", },
+            "100%":  {fill:"#fc0853",stroke:"#488a1400", strokeDashoffset:"-25%",strokeDasharray:"50% 0",strokeWidth:"0px", },
+            easeEach:"Expo.easeInOut",
+          },
+          ease:"none",
+          duration:5,
+        })
 
-      gsap.to(".intro .text-zone .flat-button", { opacity: 1, duration: 0.6, delay: 1, ease: "Expo.easeInOut", });
+        gsap.to(".intro .text-zone .flat-button", { opacity: 1, duration: 0.6, delay: 1, ease: "Expo.easeInOut", });
+        // criticalSection -= 1;
+      // }
 
     }
   };
 
   const slideLeft = () => {
     if (counterUp === 1 && counterDown === 0) {
+      // while(criticalSection == 1){
 
-      gsap.to(".intro .home-page .dotHome",{duration:.1, opacity:0, ease:"Expo.easeInOut"})
+        gsap.to(".intro .home-page .dotHome",{duration:.1, opacity:0, ease:"Expo.easeInOut"})
 
-      gsap.to("#text-reveal", { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 0, y: 50, stagger: 0.1, duration: .5, ease: "Expo.easeOut", });
+        gsap.to("#text-reveal", { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)", opacity: 0, y: 50, stagger: 0.1, duration: .5, ease: "Expo.easeOut", });
 
-      gsap.to(".intro .home-page .text-zone .home-content .NAME",{clipPath:"polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",duration:.2, ease:"Expo.easeOut"})
+        gsap.to(".intro .home-page .text-zone .home-content .NAME",{clipPath:"polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",duration:.2, ease:"Expo.easeOut"})
 
-      gsap.to(".intro .text-zone .flat-button", { opacity: 0, duration: .3, ease: "Expo.easeOut", });
+        gsap.to(".intro .text-zone .flat-button", { opacity: 0, duration: .3, ease: "Expo.easeOut", });
 
-      
-      gsap.to(".intro .greeting .color", { width: "50vw", scale:0.9,  duration: 1.5, ease: "Expo.easeInOut", });
+        
+        gsap.to(".intro .greeting .color", { width: "50vw", scale:0.9,  duration: 1.5, ease: "Expo.easeInOut", });
 
-      gsap.to(".intro .greeting .hello", { x: 0, duration: 1.4, ease: "Expo.easeInOut", });
+        gsap.to(".intro .greeting .hello", { x: 0, duration: 1.4, ease: "Expo.easeInOut", });
+        // criticalSection += 1;
+      // }
 
     }
   };
@@ -154,6 +160,7 @@ function Home(props) {
 
   //#endregion
 
+
   //#region //< ------------------------------------------------- Initial black color screen ----------------------------------------
   useEffect(()=>{
     if(props.counter <= 1){
@@ -166,17 +173,39 @@ function Home(props) {
   //#endregion
 
 
-  const sceneEl = useRef(null);
-  useEffect(() => {
-    const parallaxInstance = new Parallax(sceneEl.current, {
-      relativeInput: true,
-      hoverOnly: true
-    })
+  //#region //< -------------------------------------------------  Parallax icons ---------------------------------------------------
+  
+  // const sceneEl = useRef(null);
+  //   useEffect(() => {
+  //     setTimeout(() => {
+        
+  //       const parallaxInstance = new Parallax(sceneEl.current, {
+  //         relativeInput: true,
+  //         hoverOnly: true
+  //       })
+        
+  //       parallaxInstance.enable();
+        
+  //       return () => parallaxInstance.disable();
+  //     }, 1000);
+  // }, [])
 
-    parallaxInstance.enable();
+  
+    
+  // gsap.to("#svg1",{duration:2, delay:5, opacity:1,  left: "4%", top:"4%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg3",{duration:2, delay:5, opacity:1,  left: "4%", top:"40%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg5",{duration:2, delay:5, opacity:1,  left: "83%", top:"15%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg7",{duration:2, delay:5, opacity:1,  left: "29%", top:"9%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg10",{duration:2, delay:5, opacity:1,  left: "75%", top:"38%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg11",{duration:2, delay:5, opacity:1,  left: "24%", top:"60%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg12",{duration:2, delay:5, opacity:1,  left: "76%", top:"79%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg13",{duration:2, delay:5, opacity:1,  left: "35%", top:"35%", ease:"Expo.easeInOut"})
+  // gsap.to("#svg14",{duration:2, delay:5, opacity:1,  left: "50%", top:"44%", ease:"Expo.easeInOut"})
 
-    return () => parallaxInstance.disable();
-  }, [])
+  //#endregion
+
+
+  
 
   return (
     <>
@@ -206,7 +235,15 @@ function Home(props) {
               </div>
             </AnimatePresence>
 
-            <div className="color"></div>
+            {/* <div className="scene" > */}
+              <div className="color" >
+                <div className="shape1"></div>
+                <div className="shape2"></div>
+                <div className="shape3"></div>
+                <div className="shape4"></div>
+                <div className="shape5"></div>
+              </div>
+            {/* </div> */}
             {/* {scrollDir ? slideRight() : slideLeft()} */}
             {
               useEffect(()=>{
@@ -235,17 +272,6 @@ function Home(props) {
               <CgArrowLongDown onClick={()=> arrow = true} />
             </div>
 
-            <div className="shapes" ref={sceneEl} data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
-               <div className="layer svg1" data-depth='0.1'><img src={svg1} /></div>
-               <div className="layer svg3" data-depth='0.3'><img src={svg3} /></div>
-               <div className="layer svg5" data-depth='0.1'><img src={svg5} /></div>
-               <div className="layer svg7" data-depth='0.5'><img src={svg7} /></div>
-               <div className="layer svg10" data-depth='0.1'><img src={svg10} /></div>
-               <div className="layer svg11" data-depth='0.2'><img src={svg11} /></div>
-               <div className="layer svg12" data-depth='0.3'><img src={svg12} /></div>
-               <div className="layer svg13" data-depth='0.4'><img src={svg13} /></div>
-               <div className="layer svg14" data-depth='0.1'><img src={svg14} /></div>
-            </div>
 
             <div className="text-zone">
                 <div className="home-content">
@@ -270,3 +296,25 @@ function Home(props) {
 }
 
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+            {/* <div className="shapes" ref={sceneEl} data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+               <div className="layer svg1"  id="svg1"  data-depth='0.1'><img src={svg1} /></div>
+               <div className="layer svg3"  id="svg3"  data-depth='0.3'><img src={svg3} /></div>
+               <div className="layer svg5"  id="svg5"  data-depth='0.1'><img src={svg5} /></div>
+               <div className="layer svg7"  id="svg7"  data-depth='0.5'><img src={svg7} /></div>
+               <div className="layer svg10" id="svg10"  data-depth='0.1'><img src={svg10} /></div>
+               <div className="layer svg11" id="svg11"  data-depth='0.2'><img src={svg11} /></div>
+               <div className="layer svg12" id="svg12"  data-depth='0.3'><img src={svg12} /></div>
+               <div className="layer svg13" id="svg13"  data-depth='0.4'><img src={svg13} /></div>
+               <div className="layer svg14" id="svg14"  data-depth='0.1'><img src={svg14} /></div>
+            </div> */}

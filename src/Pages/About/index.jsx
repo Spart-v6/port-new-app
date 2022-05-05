@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import PageTransition from "../../Components/PageTransition";
 import { useState, useEffect, useRef } from "react";
 import RGBLetters from "../../Components/RGBLetters";
+import LocomotiveScroll from 'locomotive-scroll';
 
 function About() {
   const [nameOfPage, setNameOfPage] = useState("About");
@@ -17,6 +18,7 @@ function About() {
   useEffect(() => {
     return onHover();
   }, []);
+  
 
   return (
     <>
