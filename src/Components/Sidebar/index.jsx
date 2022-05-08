@@ -5,6 +5,7 @@ import { useState } from "react";
 import { gsap } from "gsap-trial";
 import "./style.scss";
 
+
 const routes = [
   {
     path: "/",
@@ -59,7 +60,9 @@ const Sidebar = ({ children }) => {
       <motion.div className="sidebar" transition={{ duration: 1, ease: "easeInOut" }} variants={inputAnimation} >
         <div className="top_section">
           <div className="bars">
-            <Cross toggled={isOpen} toggle={setOpen} rounded easing="ease-out" color={isOpen?"#36134b":"#be4eff"} />
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.7 }}>
+              <Cross toggled={isOpen} toggle={setOpen} rounded easing="ease-out" color={isOpen?"#00aaff":"#000"} />
+            </motion.div>
           </div>
         </div>
 
@@ -90,7 +93,7 @@ const Sidebar = ({ children }) => {
           ...document.querySelector(".menu-bg") ? 
           {
             ...isOpen ?
-              gtl.to(".menu-bg",{duration:.2, width:"500px", height:"500px", background:"#9744e9",})
+              gtl.to(".menu-bg",{duration:.2, width:"500px", height:"500px", background:"#001733",})
             :
               gtl.to(".menu-bg",{duration:.2, width:0, height: 0})
           }

@@ -7,7 +7,10 @@ body{
     height: 100vh;
     width: 100vw;
 }
-.about-sec{
-    height: 100vh;
-    padding: 10em;
+.hero-about{
+    background: #005dff;
+    .about-sec{
+        height: 100vh;
+        padding: 10em;
+    }
 }

@@ -50,7 +50,7 @@ function Home(props) {
   const slideRight = () => {
     if (counterDown === 1 && counterUp === 0) {
       // while(criticalSection == 0){
-        gsap.to(".intro .greeting .color", { width: "100vw", scale:1, duration: 1.5, ease: "Expo.easeInOut",})
+        gsap.to(".intro .greeting .color", { width: "100vw", scale:.98, duration: 1.5, ease: "Expo.easeInOut",})
         
         gsap.to(".intro .greeting .hello", { x: "55%", duration: 1.4,  ease: "Expo.easeInOut",})
           
@@ -182,7 +182,6 @@ function Home(props) {
             </AnimatePresence>
 
               <div className="color" ></div>
-            {/* {scrollDir ? slideRight() : slideLeft()} */}
             {
               useEffect(()=>{
                 if(scrollDir){

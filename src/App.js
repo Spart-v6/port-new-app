@@ -8,7 +8,7 @@ import {useState, useEffect} from 'react';
 import {AnimatePresence} from 'framer-motion';
 import { gsap } from "gsap-trial";
 import './App.scss';
-
+// import { ReactComponent as Logo} from './Assets/drawing-2.svg';
 
 function App() {
   gsap.config({nullTargetWarn:false});
@@ -19,19 +19,24 @@ function App() {
   useEffect(()=>{
     setTimeout(() => {
         setIsLoading(true);
-    }, 5500);
+    }, 6000);
   })
 
   useEffect(()=>{
-    gsap.to(".Load span",{opacity:0, duration:.5, ease:"Expo.easeOut"},'+=3')
-    gsap.to(".Load",{duration:1.5, right:"100%", ease:"Expo.easeInOut"},'+=.5')
+    const tl = gsap.timeline();
+    tl.to("#work",{strokeDashoffset:0, duration:2, ease:"Circ.easeInOut"},"+=1")
+    .to("#circ",{y:"10",opacity:1,duration:1, ease:"Expo.easeInOut"},'-=.5')
+    .to("#circ",{y:0, opacity:1, duration:1, ease:"Expo.easeInOut"},)
+    .to("#workP",{scale:0, duration:.5,ease:"Circ.easeInOut"})
+    .to("#circ",{scale:0, duration:.5,ease:"Circ.easeInOut"},"-=.5")
+    .to(".Load",{duration:1.5, right:"100%", delay:1, ease:"Expo.easeInOut"},)
   },[])
 
   useEffect(() => {
     setCounter(counter+1);
   }, [location]);
 
-
+  
 
   return (
     <>
@@ -39,7 +44,19 @@ function App() {
       !isLoading 
       ?
       <div className="Load">
-        <span>Loading</span>
+
+      <svg id="workP" width="68" height="77" viewBox="0 0 68 77" fill="none" >
+        <path id="work" d="M48.7676 58.4996C36.5292 65.5003 11.1942 63.637 5.60239 38.4978C2.82246 26 9.28781 5 32.8908 5C47.0853 5 63 13.5 63 37.5029V63" stroke="#3A59FF" strokeWidth="9" strokeLinecap="round"/>
+      </svg>
+      <svg width="68" height="97" viewBox="0 0 68 77" fill="none" style={{position:"fixed"}}>
+        <circle id="circ" cx="63.5" cy="72.5" r="4.5" fill="#3A59FF" style={{transform: "translateY(-10px)", opacity:0}}/>
+      </svg>
+
+
+
+
+    
+
       </div>
       
       :
