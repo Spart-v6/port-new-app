@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap-trial";
 import "./style.scss";
+import Particls from "../../Components/Particls";
 
 function Home(props) {
   const [nameOfPage, setNameOfPage] = useState("Home");
@@ -145,7 +146,7 @@ function Home(props) {
   //#region //< ------------------------------------------------- Initial black color screen ----------------------------------------
   useEffect(()=>{
     if(props.counter <= 1){
-      gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:2, ease:"Expo.easeInOut"})
+      gsap.to(".intro .greeting .color",{width:"50vw", scale:"0.9", duration:1.5, ease:"Expo.easeInOut"})
     }
     else{
       gsap.set(".intro .greeting .color",{width:"50vw",scale:.9},"-=.5")
@@ -181,7 +182,8 @@ function Home(props) {
               </div>
             </AnimatePresence>
 
-              <div className="color" ></div>
+              <div className="color" >
+              </div>
             {
               useEffect(()=>{
                 if(scrollDir){

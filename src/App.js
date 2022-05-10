@@ -8,7 +8,6 @@ import {useState, useEffect} from 'react';
 import {AnimatePresence} from 'framer-motion';
 import { gsap } from "gsap-trial";
 import './App.scss';
-// import { ReactComponent as Logo} from './Assets/drawing-2.svg';
 
 function App() {
   gsap.config({nullTargetWarn:false});
@@ -45,14 +44,12 @@ function App() {
       ?
       <div className="Load">
 
-      <svg id="workP" width="68" height="77" viewBox="0 0 68 77" fill="none" >
-        <path id="work" d="M48.7676 58.4996C36.5292 65.5003 11.1942 63.637 5.60239 38.4978C2.82246 26 9.28781 5 32.8908 5C47.0853 5 63 13.5 63 37.5029V63" stroke="#3A59FF" strokeWidth="9" strokeLinecap="round"/>
-      </svg>
-      <svg width="68" height="97" viewBox="0 0 68 77" fill="none" style={{position:"fixed"}}>
-        <circle id="circ" cx="63.5" cy="72.5" r="4.5" fill="#3A59FF" style={{transform: "translateY(-10px)", opacity:0}}/>
-      </svg>
-
-
+        <svg id="workP" width="68" height="77" viewBox="0 0 68 77" fill="none" >
+          <path id="work" d="M48.7676 58.4996C36.5292 65.5003 11.1942 63.637 5.60239 38.4978C2.82246 26 9.28781 5 32.8908 5C47.0853 5 63 13.5 63 37.5029V63" stroke="#3A59FF" strokeWidth="9" strokeLinecap="round"/>
+        </svg>
+        <svg width="68" height="97" viewBox="0 0 68 77" fill="none" style={{position:"fixed"}}>
+          <circle id="circ" cx="63.5" cy="72.5" r="4.5" fill="#3A59FF" style={{transform: "translateY(-10px)", opacity:0}}/>
+        </svg>
 
 
     
