@@ -219,9 +219,11 @@ function Home(props) {
                   <span id="text-reveal" className="ROLE">Web Developer</span> <br/>
                   <span id="text-reveal" className="DESC"> Front-end Developer || Designer || Competitive Coder || Gamer</span>
                 </div>
-              <Link to="/contact" className="flat-button">
-                Say Hi!
-              </Link>
+              <motion.div  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} style={{width: "7vw", height: "5vh"}}>
+                <Link to="/contact" className="flat-button">
+                  Say Hi!
+                </Link>
+              </motion.div>
             </div>
           </section>
         </div>

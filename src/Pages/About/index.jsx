@@ -3,40 +3,58 @@ import PageTransition from '../../Components/PageTransition';
 import locomotiveScroll from "locomotive-scroll";
 import "./style.scss";
 import './base.scss';
+import { gsap } from "gsap-trial";
 
 export default function About() {
     const [nameOfPage, setNameOfPage] = useState("About");
-  useEffect(()=>{
 
-      const scroll = new locomotiveScroll({
-          el: document.querySelector("[data-scroll-container]"),
-          smooth: true
+    useEffect(()=>{
+
+        const scroll = new locomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true
         });
+
+        scroll.on('scroll',e=>{
+            if(e.scroll.y > 400) {
+                gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#252627"})
+                gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#fff"})
+            }
+            else{
+                gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#cf1313"})
+                gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#252627"})
+            }
+        })
+
+
     },[])  
     
+
+
+
     return (
     <>
         <PageTransition nameOfPage={nameOfPage} />
 
-        <div data-scroll-container className="hero-about">
+        <div data-scroll-container className="hero-about" id="hero-about">
             <section className="about-sec first-about" data-scroll-section>
-                <h1 data-scroll>.about_me()</h1>
+                <h1 data-scroll>.about()</h1>
                 <div data-scroll className="about-me">
-                    <p>
+                    <p data-scroll data-scroll-speed="8">
                     I'm a front-end developer, designer, competitive programmer and
                     a gamer from India
                     </p>
                 </div>
             </section>
             <section className="about-sec smth-about-me" data-scroll-section>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-14" data-scroll-class="appear" data-scroll-repeat="true" > Something about me</h2>
+                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" data-scroll-class="appear" data-scroll-repeat="true" > me</h2>
                 <p data-scroll data-scroll-speed="2">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa cumque quos itaque iste suscipit odio ratione quas culpa exercitationem laudantium quidem vel commodi eveniet quis optio ullam nihil fugit, et non molestiae. Totam, atque quos itaque quaerat vero id et corrupti dolorum, excepturi blanditiis officia laboriosam? Nobis officiis totam laboriosam cumque aperiam, maiores deleniti illo a eos ad sequi, repudiandae laborum porro. Quaerat similique at perferendis, tempore saepe, hic impedit quae dicta dolore vero dolorem numquam eos illo sequi nihil minima culpa voluptatum veniam? Magni a ratione enim laudantium animi neque. Voluptates fugiat sapiente ipsum, rem sint est commodi nisi.
 
                 </p>
             </section>
 
-            <section id="threeD" class="threeD" data-scroll-section>
+            <section id="threeD" className="threeD" data-scroll-section>
                 <h2>
                     <span data-scroll data-scroll-repeat data-scroll-speed="5">3</span>
                     <span data-scroll data-scroll-repeat data-scroll-speed="2">D</span>
@@ -46,31 +64,31 @@ export default function About() {
                     <span data-scroll data-scroll-repeat data-scroll-speed="4">e</span>
                     <span data-scroll data-scroll-repeat data-scroll-speed="2">s</span>
                 </h2>
-                <div class="skewsec">
-                <div
-                    data-scroll
-                    data-scroll-direction="horizontal"
-                    data-scroll-speed="20"
-                    data-scroll-target="#threeD"
-                >
-                    <span>Love the way you live</span>
+                <div className="skewsec">
+                    <div
+                        data-scroll
+                        data-scroll-direction="horizontal"
+                        data-scroll-speed="20"
+                        data-scroll-target="#threeD"
+                    >
+                        <span>Love the way you live</span>
+                    </div>
                 </div>
-                </div>
-                <div class="skewsec">
-                <div
-                    data-scroll
-                    data-scroll-direction="horizontal"
-                    data-scroll-speed="-20"
-                    data-scroll-target="#threeD"
-                >
-                    <span class="">Live the way you love</span>
-                </div>
+                <div className="skewsec">
+                    <div
+                        data-scroll
+                        data-scroll-direction="horizontal"
+                        data-scroll-speed="-20"
+                        data-scroll-target="#threeD"
+                    >
+                        <span>Live the way you love</span>
+                    </div>
                 </div>
             </section>
 
             <section className="about-sec second-about" data-scroll-section>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-14" data-scroll-class="appear" data-scroll-repeat="true" > Skills</h2>
-                <p data-scroll data-scroll-speed="2">
+                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-5" data-scroll-class="appear" data-scroll-repeat="true" > Skills</h2>
+                <p data-scroll data-scroll-speed="4">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa cumque quos itaque iste suscipit odio ratione quas culpa exercitationem laudantium quidem vel commodi eveniet quis optio ullam nihil fugit, et non molestiae. Totam, atque quos itaque quaerat vero id et corrupti dolorum, excepturi blanditiis officia laboriosam? Nobis officiis totam laboriosam cumque aperiam, maiores deleniti illo a eos ad sequi, repudiandae laborum porro. Quaerat similique at perferendis, tempore saepe, hic impedit quae dicta dolore vero dolorem numquam eos illo sequi nihil minima culpa voluptatum veniam? Magni a ratione enim laudantium animi neque. Voluptates fugiat sapiente ipsum, rem sint est commodi nisi.
                     <br/>
                     JavaScript, CSS, HTML, GSAP, Nodejs <br />
@@ -85,7 +103,7 @@ export default function About() {
                     VS Code <br />
                     Adobe Photoshop
                 </p>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="10" data-scroll-class="appear" data-scroll-repeat="true">Tools</h2>
+                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="12" data-scroll-class="appear" data-scroll-repeat="true">Tools</h2>
             </section>
         
             <section className="about-sec fourth-about" data-scroll-section>
@@ -100,26 +118,26 @@ export default function About() {
                 </p>
             </section>
 
-            <div className="footer">
-                <h2>
-                    <span>T</span>
-                    <span>h</span>
-                    <span>a</span>
-                    <span>t</span>
-                    <span>'</span>
-                    <span>s</span>
-                    <span>&nbsp;</span>
-                    <span>a</span>
-                    <span>l</span>
-                    <span>l</span>
-                    <span>&nbsp;</span>
-                    <span>f</span>
-                    <span>o</span>
-                    <span>l</span>
-                    <span>k</span>
-                    <span>s</span>
+            <section className="foot" data-scroll-section>
+                <h2 data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.200"  data-scroll-speed="5">T</span>
+                <span data-scroll data-scroll-delay="0.195" data-scroll-speed="5">H</span>
+                <span data-scroll data-scroll-delay="0.185" data-scroll-speed="5">A</span>
+                <span data-scroll data-scroll-delay="0.175" data-scroll-speed="5">T</span>
+                <span data-scroll data-scroll-delay="0.165" data-scroll-speed="5">'</span>
+                <span data-scroll data-scroll-delay="0.155" data-scroll-speed="5">S</span>
+                <span data-scroll data-scroll-delay="0.145" data-scroll-speed="5">&nbsp;</span>
+                <span data-scroll data-scroll-delay="0.135" data-scroll-speed="5">A</span>
+                <span data-scroll data-scroll-delay="0.125" data-scroll-speed="5">L</span>
+                <span data-scroll data-scroll-delay="0.115" data-scroll-speed="5">L</span>
+                <span data-scroll data-scroll-delay="0.100" data-scroll-speed="5">&nbsp;</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="5">F</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="5">O</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="5">L</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="5">K</span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="5">S</span>
                 </h2>
-            </div>
+            </section>
         
         </div>
     </>

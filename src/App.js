@@ -21,14 +21,14 @@ function App() {
     }, 6000);
   })
 
+  const tl = gsap.timeline();
   useEffect(()=>{
-    const tl = gsap.timeline();
-    tl.to("#work",{strokeDashoffset:0, duration:2, ease:"Circ.easeInOut"},"+=1")
+    tl.to("#work",{strokeDashoffset:0, duration:2, ease:"Circ.easeInOut"},"+=.5")
     .to("#circ",{y:"10",opacity:1,duration:1, ease:"Expo.easeInOut"},'-=.5')
     .to("#circ",{y:0, opacity:1, duration:1, ease:"Expo.easeInOut"},)
     .to("#workP",{scale:0, duration:.5,ease:"Circ.easeInOut"})
-    .to("#circ",{scale:0, duration:.5,ease:"Circ.easeInOut"},"-=.5")
-    .to(".Load",{duration:1.5, right:"100%", delay:1, ease:"Expo.easeInOut"},)
+    .to("#circ",{scale:0, duration:.5,ease:"Circ.easeInOut"},"-=.2")
+    .to(".Load",{duration:1.5, right:"100%", delay:1, ease:"Expo.easeInOut"},'-=1')
   },[])
 
   useEffect(() => {
