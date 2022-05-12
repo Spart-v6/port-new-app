@@ -11,6 +11,25 @@ body{
     background: #cf1313;
     font-family: 'Poppins';
 
+
+    .rightBar{
+        position: fixed;
+        top: 60%;
+        right: 4%;
+
+        ul{
+            text-decoration: none;
+            list-style: none;
+            li{
+                height: 20px;
+                width: 20px;
+                border: 3px solid #ff6262;
+                margin-top: 17px;
+            }
+        }
+    }
+
+
     .about-sec{
         height: 100vh;
         padding: 10em;

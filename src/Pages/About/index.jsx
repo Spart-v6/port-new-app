@@ -16,7 +16,89 @@ export default function About() {
         });
 
         scroll.on('scroll',e=>{
-            if(e.scroll.y > 400) {
+            var scr = e.scroll.y;
+            /*
+            0th : 0 to 449
+
+            1st 450 to 1200
+
+            2nd 1201 to 1950
+
+            3rd 1951 to 2850
+
+            4th 2851 to 3600
+
+            5th 3601 to 4500
+
+            6th 4501 to 4840
+
+            */
+
+            if(scr >= 0 && scr <= 449){ //s1
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+            else if(scr >= 450 && scr <= 1200){ //s2
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+            else if(scr >= 1201 && scr <= 1950){ //s3
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+            else if(scr >= 1951 && scr <= 2850){ //s4
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+            else if(scr >= 2851 && scr <= 3600){ //s5
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+            else if(scr >= 1951 && scr <= 2850){ //s6
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+            else if(scr >= 1951 && scr <= 2850){ //s7
+                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#ff6262"})
+                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #ff6262", background: "transparent"})
+            }
+
+            if(scr > 400) {
                 gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#252627"})
                 gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#fff"})
             }
@@ -25,7 +107,7 @@ export default function About() {
                 gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#252627"})
             }
         })
-
+        
 
     },[])  
     
@@ -37,6 +119,35 @@ export default function About() {
         <PageTransition nameOfPage={nameOfPage} />
 
         <div data-scroll-container className="hero-about" id="hero-about">
+
+            <nav className="rightBar">
+                <ul>
+                    <li id="s1">
+                        <div></div>
+                    </li>
+                    <li id="s2">
+                        <div></div>
+                    </li>
+                    <li id="s3">
+                        <div></div>
+                    </li>
+                    <li id="s4">
+                        <div></div>
+                    </li>
+                    <li id="s5">
+                        <div></div>
+                    </li>
+                    <li id="s6">
+                        <div></div>
+                    </li>
+                    <li id="s7">
+                        <div></div>
+                    </li>
+                </ul>
+            </nav>
+
+
+
             <section className="about-sec first-about" data-scroll-section>
                 <h1 data-scroll>.about()</h1>
                 <div data-scroll className="about-me">
@@ -46,6 +157,7 @@ export default function About() {
                     </p>
                 </div>
             </section>
+            
             <section className="about-sec smth-about-me" data-scroll-section>
                 <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" data-scroll-class="appear" data-scroll-repeat="true" > me</h2>
                 <p data-scroll data-scroll-speed="2">
@@ -95,6 +207,7 @@ export default function About() {
                     C++, Python, Java
                 </p>
             </section>
+            
             <section className="about-sec third-about" data-scroll-section>
                 <p data-scroll data-scroll-speed="2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at dolor tenetur, voluptatem obcaecati alias quis adipisci dolores commodi labore nisi maiores, recusandae, quidem maxime hic ratione placeat fuga perspiciatis earum iure rerum veniam quae consequuntur minima! Voluptate sunt, possimus provident quaerat adipisci necessitatibus beatae est amet sint neque ipsa unde ratione pariatur mollitia eveniet facere recusandae nisi officia aut soluta! Eveniet quasi eos nulla eligendi consequatur doloribus reiciendis nemo error aut perspiciatis soluta ab consectetur animi harum nesciunt commodi officiis incidunt omnis sequi, nam architecto, hic et odio! Dolorum repellat debitis quod. Similique obcaecati consequatur sed quas! Obcaecati, asperiores.
