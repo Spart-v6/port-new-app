@@ -39,10 +39,21 @@ body{
         display: flex;
         h2{
             font-size: 7em;
-            width: 100%;
+            padding-left: 9%;
+            /* width: 100%; */
+            padding-right: 30%;
+        }
+        div{
+            position: absolute;
         }
         p{
             width: 75%;
+            text-align: justify;
+        }
+        .horizonLine{
+            position: absolute;
+            left: 65%;
+            top: 20%;
         }
     }
     .first-about{
@@ -66,6 +77,11 @@ body{
             text-align: center;
             height: 23%;
             font-size: 35px;
+        }
+        svg{
+            position: absolute;
+            left: 0;
+            top: 43%;
         }
     }
     .second-about{
