@@ -1,7 +1,9 @@
 import PageTransition from "../../Components/PageTransition";
 import { useState, useEffect, useRef } from "react";
 import emailjs, { send } from "@emailjs/browser";
+import CustomCursor from '../../Components/CustomCursor';
 import "./style.scss";
+import {motion} from "framer-motion";
 
 function Contact() {
   const [nameOfPage, setNameOfPage] = useState("Contact");
@@ -25,48 +27,51 @@ function Contact() {
   return (
     <>
       <PageTransition nameOfPage={nameOfPage} />
+      {/* <CustomCursor/> */}
 
-      <div>
-        <div className="contact-page">
-          <div className="text-zone">
-            <h1>
-              .contact_me()
-            </h1>
-            <div className="short-contact-text">
-              <h2>Hey, nice to meet you</h2>
-              <span>
-                Have a question or just want to get in touch? Drop a message :)
-              </span>
-            </div>
-          </div>
-
-          <div className="socialMediaHandles">
-            <h2>You can find me here:</h2>
-            <p>Put ur social media handles here</p>
-          </div>
-        </div>
+      <div className="hero-contact">
 
         <div className="contact-form">
           <form ref={refForm} onSubmit={sendEmail}>
-            <ul>
-              <li className="half">
-                <input type="text" name="name" placeholder="Name" autoComplete="off" required/>
-              </li>
-              <li className="half">
-                <input type="email" name="email" placeholder="Email" autoComplete="off" required/>
-              </li>
-              <li className="textInput">
-                <input type="text" name="subject" placeholder="Subject" autoComplete="off" required />
-              </li>
-              <li>
-                <textarea name="message" placeholder="Your Message" autoComplete="off" required ></textarea>
-              </li>
-              <li>
-                <input type="submit" className="btn" value="Send" />
-              </li>
-            </ul>
+
+            <div className="input-info">
+              <h2>Let's talk. </h2>
+              <span>Enter your details.</span>
+            </div>
+
+            <div className="input-container">
+
+              <div className="input-field-name">
+                <input type="text" id="name" className="form__input" required autoComplete="off" placeholder=" " />
+                <label htmlFor="name" className="form__label">Name</label>
+              </div>
+
+              <div className="input-field-email">
+                <input type="email" id="email" className="form__input" required autoComplete="off" placeholder=" "/>
+                <label htmlFor="email" className="form__label">Email</label>
+              </div>
+            
+              <div className="input-field-msg">
+                <textarea type="text" name="msg" className="form__input" id="msg" autoComplete="off"  placeholder=" "/>
+                <label htmlFor="msg" className="form__label">Message</label>
+              </div>
+
+
+
+            </div>
+
+            <motion.div whileTap={{scale: 0.8}} className="BtnParent">
+              <button class="up">Send</button>
+            </motion.div>
           </form>
+
+          <div className="leftDetails">
+            Message
+          </div>
+
         </div>
+
+        
       </div>
     </>
   );
