@@ -1,10 +1,10 @@
 import { Cross } from "hamburger-react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap-trial";
 import "./style.scss";
-
+import $ from "jquery";
 
 const routes = [
   {
@@ -47,66 +47,69 @@ const Sidebar = ({ children }) => {
     },
   };
 
-  const gtl = gsap.timeline();
-  const gtl1 = gsap.timeline();
-  
-  const fxnHandler = ()=>{
-    setOpen(false);
-  }
+
+
+  var t1 = gsap.timeline({ paused: true });
+
+  t1.to(".nav-container", { left: "0%", ease: "Expo.easeInOut", duration:1, });
+
+  t1.to(".menu .menu__item",{opacity: 1, y:20, duration:.5, stagger:.1, ease: "Expo.easeOut"},);
+
+  // t1.from( ".menu .menu__item-link",  { y: 100, opacity: 0, ease: "Expo.easeOut", stagger:"0.3" },"-=0.4");
+
+  // t1.from( ".socials",  { y: 100, opacity: 0, ease: "Expo.easeOut", stagger:"0.5" },"-=0.6");
+
+  t1.reverse();
+  $(document).on("click", ".menu-open", ()=> t1.reversed( !t1.reversed() ));
+  $(document).on("click", ".menu-close", ()=> t1.reversed( !t1.reversed() ));
+  $(document).on("click", ".link_text", ()=> t1.reversed(!t1.reversed()));
+
+
 
   return (
     <>
-      
-      <motion.div className="sidebar" transition={{ duration: 1, ease: "easeInOut" }} variants={inputAnimation} >
-        <div className="top_section">
-          <div className="bars">
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.7 }}>
-              <Cross toggled={isOpen} toggle={setOpen} rounded easing="ease-out" color={isOpen?"#00aaff":"#000"} />
-            </motion.div>
+      <div className="sidebar">
+        <div className="menu-open">menu</div>
+        <div className="nav-container">
+          <div className="menu-close">close</div>
+          <div className="socials">
+            <span>github</span>
+            <span>linkedin</span>
           </div>
+          <nav className="menu">
+            <section className="menu__item">
+            {
+                <NavLink to="/" key="Home" className="link">
+                  <div className="link_text">Home</div>
+                </NavLink>
+            }
+            </section>
+            <section className="menu__item">
+            {
+                <NavLink to="/about" key="About" className="link">
+                  <div className="link_text">About</div>
+                </NavLink>
+            }
+            </section>
+            <section className="menu__item">
+            {
+                <NavLink to="/project" key="Project" className="link">
+                  <div className="link_text">Project</div>
+                </NavLink>
+            }
+            </section>
+            <section className="menu__item">
+            {
+                <NavLink to="/contact" key="Contact" className="link">
+                  <div className="link_text">Contact</div>
+                </NavLink>
+            }
+            </section>
+          </nav>
         </div>
-
-        <section className="routes"
-        {
-          ...document.querySelector(".routes") ? 
-          {
-            ...isOpen ?
-              gtl1.to(".routes",{duration:.5, right:80,},'+=.1')
-            :
-              gtl1.to(".routes",{duration:.5, right:"-300px"},'+=.1')
-          }
-          :
-          {}
-        }
-        >
-        {
-          routes.map((route) => (
-            <NavLink to={route.path} key={route.name} className="link">
-              <div className="link_text" onClick={()=>fxnHandler()}>{route.name}</div>
-            </NavLink>
-          ))
-        }
-        </section>
-        
-        <div className="menu-bg" id="menu-bg" 
-        {
-          ...document.querySelector(".menu-bg") ? 
-          {
-            ...isOpen ?
-              gtl.to(".menu-bg",{duration:.2, width:"500px", height:"500px", background:"#001733",})
-            :
-              gtl.to(".menu-bg",{duration:.2, width:0, height: 0})
-          }
-          :
-          {}
-        }
-          
-        ></div>
-
-      </motion.div>
+      </div>
 
       <main className="head-container">{children}</main>
-      
     </>
   );
 };

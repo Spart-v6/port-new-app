@@ -87,7 +87,7 @@ function Contact() {
             </div>
 
             <motion.div whileTap={{scale: 0.8}} className="BtnParent">
-              <button className="up">Send</button>
+              <button className="up">Send Message</button>
             </motion.div>
           </form>
 
