@@ -1,189 +1,124 @@
-.homeContainer {
-  background: radial-gradient(circle at right top, #884dff , #44358a);
+.hero-home{
+  font-family: 'Poppins';
+  background-color: #131517;
+  height: 100vh;
+  width: 100vw;
 
-  font-family: "Poppins";
-
-  .color {
-    // z-index: -100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    height: 100vh;
-    width: 100vw;
-    background-color: #070707;
+  .initial-hello{
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
-  }
-
-  .downArrow {
-    z-index:1;
-    font-size: 28px;
-    position: fixed;
-    cursor: pointer;
-    opacity: 1;
-    margin-top: 35px;
-    left: 48%;
-    color: transparent;
-    animation: bounceArrow 3s infinite 2s;
-
-    @keyframes bounceArrow {
-      0% {
-        top: 80%;
-      }
-      50% {
-        top: 87%;
-        color: #fff;
-      }
-      100% {
-        top: 80%;
-      }
-    }
-  }
-
-  .upperPart {
-    width: 100vw;
-    height: 100vh;
-
-    .hello {
-      height: 100vh;
-      color: #d4d4d4;
-      width: 97.6vw;
-      font-family: "Poppins", cursive;
-      padding: 17vw 30vh;
+    user-select: none;
+    flex-direction: column;
+    .content{
       display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      @media screen and (max-width: 370px) {
-        padding: 5vw;
-      }
-      @media screen and (min-width: 370px) and (max-width: 480px) {
-        padding: 10vw;
-      }
-      @media screen and (min-width: 480px) and (max-width: 964px) {
-        padding: 6vw 10vh;
-      }
+      flex-direction: column;
 
-      .first {
-        span {
-          display: inline-block;
-          position: relative;
-          font-weight: 800;
-          font-family: "Montserrat", sans-serif;
-          @media screen and (max-width: 370px) {
-            font-size: 42px;
-          }
-          @media screen and (min-width: 370px) and (max-width: 480px) {
-            font-size: 46px;
-          }
-          @media screen and (min-width: 480px) and (max-width: 960px) {
-            font-size: 48px;
-          }
-          @media (min-width: 965px) {
-            font-size: 80px;
-          }
-        }
-      }
-    }
-  }
-  .lowerPart {
-    position: absolute;
-    top: 35%;
-    left: 10%;
-    // opacity: 0;
-    width: 100vw;
-
-    .dotHome {
-      position: fixed;
-      top: 8%;
-      height: 90px;
-      left: 10%;
-      color: #a4a4a4;
-      cursor: default;
-      opacity: 0;
-      width: 40%;
-      font-size: 4em;
-      font-family: "Roboto Mono", monospace;
-    }
-    .text-zone {
-      user-select: none;
-      max-height: 90%;
-
-      .home-content {
+      .midHello{
         width: 100%;
-        height: 100%;
-        display: grid;
-        grid-auto-rows: 1fr;
-        font-family: "Baloo Da 2", cursive;
-        color: #cacaca;
-        
-        .IM {
-          font-size: 50px;
-          font-weight: 600;
-          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-          transform: scale(1.1) translate(50px, 2px);
-        }
-        .NAME {
-          display: flex;
-          svg {
-            pointer-events: none;
-            font-family: "Baloo Da 2", cursive;
-            width: 25%;
-            position: relative;
-            left: -2%;
+      }
 
-            text {
-              // text-transform: uppercase;
-              stroke-width: 5px;
-              stroke: #7a08fc;
-              font-size: 28em;
-            }
-          }
-        }
-        .ROLE {
-          font-size: 50px;
-          font-weight: 600;
-          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-          transform: scale(1.1) translate(50px, 2px);
-        }
-        .DESC {
-          font-size: 20px;
-          color: #bbbbbb;
-          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-          transform: scale(1.1) translate(50px, 2px);
-        }
+      svg{
+        width: 100%;
+        padding-right: 4px;
+      }
+      .hii1{
+        transform: translateY(177px);
+        opacity: 0;
+      }
+      .hii2{
+        transform: translateY(87px);
+        opacity: 0;
+      }
+      .hii3{
+        transform: translateY(-93px);
+        opacity: 0;
+      }
+      .hii4{
+        transform: translateY(-183px);
+        opacity: 0;
       }
     }
   }
 
-  .flat-button {
-    color: #000000;
-    font-size: 13px;
-    font-weight: 600;
-    opacity: 0;
-    background-color: #00aaff;
-    letter-spacing: 4px;
-    font-family: "Baloo Da 2", cursive;
-    text-decoration: none;
-    padding: 10px 18px;
-    margin-top: 25px;
-    float: left;
-    animation: fadeIn 1s 1s backwards;
-    white-space: nowrap;
+  // .title{
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-direction: column;
+  //   position: absolute;
+  //   top: 35%;
+  //   left: 10%;
+  //   width: 40%;
 
-    &:hover {
-      background: #0044ff;
-      color: rgb(215, 215, 215);
-    }
-  }
+  //   h2{
+  //     color: #fff;
+  //     font-size: 3em;
+  //   }
+  //   h2:nth-child(2){
+  //     color: #7C2CFF;
+  //   }
+  //   span{
+  //     font-size: 1em;
+  //     color: #fff;
+  //   }
+  // }
 
-  .noUse {
-    margin-top: -10px;
-    height: 2vh;
-    width: 100vw;
-  }
+  // .hero-home-shapes{
+  //   height: 100%;
+  //   width: 100%;
+
+  //   .svg1{
+  //     width: 40%;
+  //     position: relative;
+  //     top: 44%;
+  //     left: 60%;
+  //   }
+
+  //   .svg2{
+  //     width: 24%;
+  //     position: relative;
+  //     left: 34%;
+  //     top: -10%;
+  //   }
+  //   .svg3{
+  //     width: 35%;
+  //     position: relative;
+  //     left: -25%;
+  //     top: 4%;
+  //   }
+
+  //   .svg4{
+  //     width: 15%;
+  //     position: absolute;
+  //     top: 0%;
+  //     left: 0%;
+  //   }
+  // } 
+
+  // .hero-home-btn {
+  //   color: #000000;
+  //   font-size: 13px;
+  //   font-weight: 600;
+  //   background-color: #00aaff;
+  //   letter-spacing: 4px;
+  //   font-family: "Baloo Da 2", cursive;
+  //   text-decoration: none;
+  //   padding: 10px 18px;
+  //   margin-top: 25px;
+  //   float: left;
+  //   white-space: nowrap;
+
+  //   &:hover {
+  //     background: #0044ff;
+  //     color: rgb(215, 215, 215);
+  //   }
+  // }
+
 }
