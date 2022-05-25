@@ -54,13 +54,13 @@ const Particls = () => {
                   enable: true,
                   area: 1800,
                 },
-                value: 80,
+                value: 50,
               },
               opacity: {
                 value: 0.5,
               },
               shape: {
-                type: "circle",
+                type: "triangle",
               },
               size: {
                 value: { min: 1, max: 5 },

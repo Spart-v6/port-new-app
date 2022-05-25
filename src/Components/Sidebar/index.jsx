@@ -6,107 +6,63 @@ import { gsap } from "gsap-trial";
 import "./style.scss";
 import $ from "jquery";
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-  },
-  {
-    path: "/about",
-    name: "About",
-  },
-  {
-    path: "/project",
-    name: "Project",
-  },
-  {
-    path: "/contact",
-    name: "Contact",
-  },
-];
 
 const Sidebar = ({ children }) => {
-  const [isOpen, setOpen] = useState(false);
 
-  const inputAnimation = {
-    hidden: {
-      margin: 0,
-      width: 0,
-      right: 0,
-      padding: 0,
-      opacity: 0,
-    },
-    show: {
-      width: "140px",
-      right: "2%",
-      padding: "5px 15px",
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
+  const [isLinkClicked, setIsLinkClicked] = useState(false);
 
+  const tl = gsap.timeline({paused:"true"});
+  tl.to(".menu",{duration:1, x:"0%",ease:"Expo.easeInOut"});
+  tl.fromTo(".li",{y:"-100%",opacity:0}, {duration:.5, opacity:1, y:"0%",stagger:.25});
+  tl.fromTo(".social-li",{y:"-50%",opacity:0,},{duration: .4, opacity:1, stagger:.25,ease:"Expo.easeInOut"}, "-=.5");
 
+  const openM = ()=> tl.play()
+  const closeM = ()=> tl.reverse();
 
-  var t1 = gsap.timeline({ paused: true });
-
-  t1.to(".nav-container", { left: "0%", ease: "Expo.easeInOut", duration:1, });
-
-  t1.to(".menu .menu__item",{opacity: 1, y:20, duration:.5, stagger:.1, ease: "Expo.easeOut"},);
-
-  // t1.from( ".menu .menu__item-link",  { y: 100, opacity: 0, ease: "Expo.easeOut", stagger:"0.3" },"-=0.4");
-
-  // t1.from( ".socials",  { y: 100, opacity: 0, ease: "Expo.easeOut", stagger:"0.5" },"-=0.6");
-
-  t1.reverse();
-  $(document).on("click", ".menu-open", ()=> t1.reversed( !t1.reversed() ));
-  $(document).on("click", ".menu-close", ()=> t1.reversed( !t1.reversed() ));
-  $(document).on("click", ".link_text", ()=> t1.reversed(!t1.reversed()));
-
+  if(isLinkClicked){
+    gsap.to(".menu",{x:"-100%", duration:-1})
+  }
 
 
   return (
     <>
-      <div className="sidebar">
-        <div className="menu-open">menu</div>
-        <div className="nav-container">
-          <div className="menu-close">close</div>
-          <div className="socials">
-            <span>github</span>
-            <span>linkedin</span>
-          </div>
-          <nav className="menu">
-            <section className="menu__item">
-            {
-                <NavLink to="/" key="Home" className="link">
-                  <div className="link_text">Home</div>
-                </NavLink>
-            }
-            </section>
-            <section className="menu__item">
-            {
-                <NavLink to="/about" key="About" className="link">
-                  <div className="link_text">About</div>
-                </NavLink>
-            }
-            </section>
-            <section className="menu__item">
-            {
-                <NavLink to="/project" key="Project" className="link">
-                  <div className="link_text">Project</div>
-                </NavLink>
-            }
-            </section>
-            <section className="menu__item">
-            {
-                <NavLink to="/contact" key="Contact" className="link">
-                  <div className="link_text">Contact</div>
-                </NavLink>
-            }
-            </section>
-          </nav>
+
+      <div className="container">
+        <div className="button" onClick={()=>openM()}>MENU</div>
+      </div>
+      <div className="menu">
+        <div className="button" onClick={()=>closeM()}>CLOSE</div>
+
+        <ul className="ul">
+          <li className="li1 li">
+            <NavLink to="/" key="Home" className="link">
+              <div className="link_text" onClick={()=>setIsLinkClicked(true)}>Home</div>
+            </NavLink>
+          </li>
+          <li className="li2 li">
+           <NavLink to="/about" key="About" className="link">
+              <div className="link_text" onClick={()=>setIsLinkClicked(true)}>About</div>
+            </NavLink>
+          </li>
+          <li className="li3 li">
+            <NavLink to="/project" key="Project" className="link">
+              <div className="link_text" onClick={()=>setIsLinkClicked(true)}>Project</div>
+            </NavLink>
+          </li>
+          <li className="li4 li">
+            <NavLink to="/contact" key="Contact" className="link">
+              <div className="link_text" onClick={()=>setIsLinkClicked(true)}>Contact</div>
+            </NavLink>
+          </li>
+        </ul>
+
+        <div className="social">
+          <ul>
+            <li className="social-li"><a href="#">github</a></li>
+            <li className="social-li"><a href="#">linkedin</a></li>
+          </ul>
         </div>
+
       </div>
 
       <main className="head-container">{children}</main>

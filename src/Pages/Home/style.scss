@@ -1,6 +1,6 @@
 .hero-home{
   font-family: 'Poppins';
-  background-color: #131517;
+  background-color: #0B0A0F;
   height: 100vh;
   width: 100vw;
 
@@ -48,77 +48,106 @@
     }
   }
 
-  // .title{
-  //   display: flex;
-  //   justify-content: center;
-  //   flex-direction: column;
-  //   position: absolute;
-  //   top: 35%;
-  //   left: 10%;
-  //   width: 40%;
+  .title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    width: 40%;
+    z-index: 2;
 
-  //   h2{
-  //     color: #fff;
-  //     font-size: 3em;
-  //   }
-  //   h2:nth-child(2){
-  //     color: #7C2CFF;
-  //   }
-  //   span{
-  //     font-size: 1em;
-  //     color: #fff;
-  //   }
-  // }
+    h4{
+      color: #fff;
+      font-size: 1rem;
+    }
+    h2{
+      font-size: 3em;
+      color: #a753ec;
+    }
+    .role{
+      font-size: 2em;
+      color: #fff;
+    }
+    .desc{
+      font-size: 1em;
+      color: #fff;
+    }
+  }
 
-  // .hero-home-shapes{
-  //   height: 100%;
-  //   width: 100%;
 
-  //   .svg1{
-  //     width: 40%;
-  //     position: relative;
-  //     top: 44%;
-  //     left: 60%;
-  //   }
+  .hero-home-btn {
+    .up:hover,
+    .up:focus {
+      box-shadow: inset 0 -3.25em 0 0 var(--hover);
+      cursor: pointer;
+    }
+  }
 
-  //   .svg2{
-  //     width: 24%;
-  //     position: relative;
-  //     left: 34%;
-  //     top: -10%;
-  //   }
-  //   .svg3{
-  //     width: 35%;
-  //     position: relative;
-  //     left: -25%;
-  //     top: 4%;
-  //   }
+  .shapes{
+    width: 100%;
+    height: 100vh;
 
-  //   .svg4{
-  //     width: 15%;
-  //     position: absolute;
-  //     top: 0%;
-  //     left: 0%;
-  //   }
-  // } 
+    .sideLine{
+      position: absolute;
+      top: 32%;
+      left: 8%;
+      height: 40%;
+    }
 
-  // .hero-home-btn {
-  //   color: #000000;
-  //   font-size: 13px;
-  //   font-weight: 600;
-  //   background-color: #00aaff;
-  //   letter-spacing: 4px;
-  //   font-family: "Baloo Da 2", cursive;
-  //   text-decoration: none;
-  //   padding: 10px 18px;
-  //   margin-top: 25px;
-  //   float: left;
-  //   white-space: nowrap;
+    .bigCir{
+      position: absolute;
+      top: 50%;
+      left: 38%;
+      height: 20%;
+    }
+    .svg3{
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      height: 8%;
+    }
+    .svg4{
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      height: 8%;
+    }
+    .svg5{
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      height: 8%;
+    }
+  }
 
-  //   &:hover {
-  //     background: #0044ff;
-  //     color: rgb(215, 215, 215);
-  //   }
-  // }
+}
 
+$colors: (
+  up: #e4cb58, 
+);
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #ec5367;
+    --hover: #ec5367;
+  }
+}
+button {  
+  color: var(--color);
+  transition: 0.25s;
+  
+  &:hover,
+  &:focus { 
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  padding: 1em 2em;
 }
