@@ -3,15 +3,12 @@ import { loadFull } from "tsparticles";
 
 const Particls = () => {
   const particlesInit = async (main) => {
-    console.log(main);
+    // console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(main);
   };
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
 
   return (
@@ -23,7 +20,7 @@ const Particls = () => {
         options={{
             background: {
               color: {
-                value: "#070707",
+                value: "#0B0A0F",
               },
             },
             fpsLimit: 120,
@@ -35,7 +32,7 @@ const Particls = () => {
               links: {
                 color: "#ffffff",
                 distance: 150,
-                enable: true,
+                enable: false,
                 opacity: 0.5,
                 width: 1,
               },
@@ -54,13 +51,13 @@ const Particls = () => {
                   enable: true,
                   area: 1800,
                 },
-                value: 50,
+                value: 30,
               },
               opacity: {
                 value: 0.5,
               },
               shape: {
-                type: "triangle",
+                type: "circle",
               },
               size: {
                 value: { min: 1, max: 5 },
