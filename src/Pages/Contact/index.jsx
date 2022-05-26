@@ -40,14 +40,21 @@ function Contact() {
   };
 
   useEffect(() => {
-    gsap.to("#path1", {strokeDashoffset: 0, duration: 1, ease:"Circ.easeInOut"})
-    gsap.to("#path2", {strokeDashoffset: 0, duration: 1, ease:"Circ.easeInOut"})
-    gsap.to("#path2", {transform:"scale(1, -1) translate(0%, -3%)", delay:1, duration:1, ease: "Expo.easeInOut"});
-    gsap.to("#circ1",{duration:1, transform:"translate(0,0)", opacity:1, delay:1,  ease:"Expo.easeInOut"},);
-    gsap.to("#circ2",{duration:1, transform:"translate(0,0)", opacity:1, delay:1,  ease:"Expo.easeInOut"},);
 
-    gsap.to("#leftBigCirc",{top: 0, left: 0,opacity:1, duration:1, delay:1, ease:"Expo.easeInOut"})
-    gsap.to("#rightBigCirc",{bottom:0, right: 0,opacity:1, duration:1, delay:1, ease:"Expo.easeInOut"})
+    gsap.to(".contact-form",{scale:1, duration:1, ease:"Power4.easeOut"});
+
+    gsap.to("#path1", {strokeDashoffset: 0, delay:.1, duration: 1, ease:"Circ.easeInOut"})
+    gsap.to("#path2", {strokeDashoffset: 0, delay:.1, duration: 1, ease:"Circ.easeInOut"})
+    gsap.to("#path2", {transform:"scale(1, -1) translate(0%, -3%)", delay:2, duration:1, ease: "Expo.easeInOut"});
+    gsap.to("#circ1",{duration:1, transform:"translate(0,0)", opacity:1, delay:2,  ease:"Expo.easeInOut"},);
+    gsap.to("#circ2",{duration:1, transform:"translate(0,0)", opacity:1, delay:2,  ease:"Expo.easeInOut"},);
+
+    gsap.to("#leftBigCirc",{top: 0, left: 0,opacity:1, duration:1, delay:2, ease:"Expo.easeInOut"})
+    gsap.to("#rightBigCirc",{bottom:0, right: 0,opacity:1, duration:1, delay:2, ease:"Expo.easeInOut"})
+
+
+    gsap.to("#animateMe",{y:0, opacity:1, delay:1, duration:1, stagger:.1, ease:"Expo.easeInOut"})
+
   },[])
 
   return (
@@ -61,23 +68,23 @@ function Contact() {
           <form ref={refForm} onSubmit={sendEmail}>
 
             <div className="input-info">
-              <h2>Let's talk. </h2>
-              <span>Drop a message :)</span>
+              <h2 id="animateMe">Let's talk. </h2>
+              <h4 id="animateMe">Drop a message :)</h4>
             </div>
 
             <div className="input-container">
 
-              <div className="input-field-name">
+              <div className="input-field-name" id="animateMe">
                 <input type="text" id="name" name="name" className="form__input" required autoComplete="off" placeholder=" " />
                 <label htmlFor="name" className="form__label">Name</label>
               </div>
 
-              <div className="input-field-email">
+              <div className="input-field-email" id="animateMe">
                 <input type="email" id="email" name="email" className="form__input" required autoComplete="off" placeholder=" "/>
                 <label htmlFor="email" className="form__label">Email</label>
               </div>
             
-              <div className="input-field-msg">
+              <div className="input-field-msg" id="animateMe">
                 <textarea type="text" name="message" className="form__input" id="msg" autoComplete="off"  placeholder=" "/>
                 <label htmlFor="msg" className="form__label">Message</label>
               </div>
@@ -86,9 +93,13 @@ function Contact() {
 
             </div>
 
-            <motion.div whileTap={{scale: 0.8}} className="BtnParent">
-              <button className="up">Send Message</button>
-            </motion.div>
+            <div className="BtnParent">
+              <motion.div whileTap={{scale: 0.8}}>
+                <button className="up" type="submit" id="animateMe">Send Message</button>
+              </motion.div>
+              <h4 id="animateMe">ankur.atwork24@gmail.com</h4>
+            </div>
+
           </form>
 
           <div className="leftDetails">
