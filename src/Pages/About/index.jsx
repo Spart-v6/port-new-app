@@ -18,78 +18,78 @@ function About() {
         scroll.on('scroll',e=>{
             var scr = e.scroll.y;
 
-            if(scr >= 0 && scr <= 449){ //s1
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
-            else if(scr >= 450 && scr <= 1200){ //s2
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
-            else if(scr >= 1201 && scr <= 1950){ //s3
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
-            else if(scr >= 1951 && scr <= 2850){ //s4
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
-            else if(scr >= 2851 && scr <= 3600){ //s5
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
-            else if(scr >= 3601 && scr <= 4350){ //s6
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
-            else if(scr >= 4351){ //s7
-                gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
-                gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-                gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
-            }
+            // if(scr >= 0 && scr <= 449){ //s1
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
+            // else if(scr >= 450 && scr <= 1200){ //s2
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
+            // else if(scr >= 1201 && scr <= 1950){ //s3
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
+            // else if(scr >= 1951 && scr <= 2850){ //s4
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
+            // else if(scr >= 2851 && scr <= 3600){ //s5
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
+            // else if(scr >= 3601 && scr <= 4350){ //s6
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
+            // else if(scr >= 4351){ //s7
+            //     gsap.to("#s7",{duration:.9, ease:"Power4.easeOut",rotation:"45", background: "#c88aff"})
+            //     gsap.to("#s1",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s2",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s3",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s4",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s5",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            //     gsap.to("#s6",{duration:.9, ease:"Power4.easeOut",rotation:"0", border:"3px solid #c88aff", background: "transparent"})
+            // }
 
-            if(scr > 400) {
-                gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#231433"})
-                gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#fff"})
-            }
-            else{
-                gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#884dff"})
-                gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#252627"})
-            }
+            // if(scr > 400) {
+            //     gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#231433"})
+            //     gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#fff"})
+            // }
+            // else{
+            //     gsap.to("#hero-about",{duration:1.5, ease:"Power4.easeOut", background:"#884dff"})
+            //     gsap.to(".about-sec",{duration:1.5, ease:"Power4.easeOut", color:"#252627"})
+            // }
         })
         
 
@@ -103,232 +103,110 @@ function About() {
         <PageTransition nameOfPage={nameOfPage} />
 
         <div data-scroll-container className="hero-about" id="hero-about">
-
-            <nav className="rightBar">
-                <ul>
-                    <li id="s1">
-                        <div></div>
-                    </li>
-                    <li id="s2">
-                        <div></div>
-                    </li>
-                    <li id="s3">
-                        <div></div>
-                    </li>
-                    <li id="s4">
-                        <div></div>
-                    </li>
-                    <li id="s5">
-                        <div></div>
-                    </li>
-                    <li id="s6">
-                        <div></div>
-                    </li>
-                    <li id="s7">
-                        <div></div>
-                    </li>
-                </ul>
-            </nav>
-            
-
+        
             <section className="about-sec first-about" data-scroll-section>
                 <h1 data-scroll>.about()</h1>
                 <div data-scroll className="about-me">
                     <p data-scroll data-scroll-speed="8">
-                    I'm a front-end developer, designer, competitive programmer and
-                    a gamer from India <span style={{position: "absolute"}}> . </span>
+                    I'm a  web developer based in India, having an attitude for creating elegant solutions. Passionate about learning new things.
                     </p>
                 </div>
-                <svg width="155" height="732" viewBox="0 0 155 732" fill="none">
-                    <path d="M1 1C62.0553 6.38394 175.669 56.6092 107.889 194.822C50.1788 312.499 32.6149 387.875 55.197 434.792C84.0341 494.704 191.389 520.474 140.507 663.225C112.642 741.4 41.051 741.4 1 719.371" stroke="#D0A6A6"/>
-                </svg>
 
-                <div className="container" data-scroll data-scroll-speed="5">
+                <div className="img-container" data-scroll data-scroll-speed="5">
                     <div className="featured-img">
                         <img src="https://picsum.photos/id/237/536/354"/>
                     </div>
                 </div>
 
-                <div data-scroll data-scroll-speed="2" style={{position:"fixed", left:"50%"}}>
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" >
-                        <path d="M43 2L42.1583 13.82L29.33 15.6697L28.4984 27.4897L15.6701 29.3395L14.8284 41.1594L2 43" stroke="#B980FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                </div>
+                <svg viewBox="0 0 7 223" fill="none" className="line line1">
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="219.5" stroke="#FD4157" stroke-width="7" stroke-linecap="round"/>
+                </svg>
 
-                <div data-scroll data-scroll-speed="3" style={{position:"fixed", left:"65%", top:"75%"}}>
-                    <svg width="65" height="16" viewBox="0 0 65 16" fill="none" >
-                    <path d="M2.40975 5.54613C2.09906 6.36194 1.95333 7.2312 1.9809 8.10355C1.96676 8.97623 2.12584 9.84314 2.44906 10.6541C2.77575 11.4738 3.26348 12.2196 3.88341 12.8475C4.50334 13.4754 5.24289 13.9726 6.0583 14.3097C6.87371 14.6468 7.74845 14.8171 8.63082 14.8103C9.51315 14.8035 10.3852 14.6199 11.1953 14.2702C12.0055 13.9206 12.7373 13.4121 13.3475 12.7747C13.9577 12.1373 14.4339 11.384 14.7479 10.5594C15.0586 9.7436 15.2043 8.87435 15.1767 8.002C15.1909 7.12932 15.0318 6.2624 14.7086 5.45146C14.3819 4.63179 13.8942 3.88597 13.2742 3.25807C12.6543 2.63016 11.9148 2.13295 11.0993 1.79582C10.2839 1.45869 9.40919 1.28846 8.52682 1.29524C7.64449 1.30203 6.77246 1.48567 5.96232 1.83532C5.15215 2.18497 4.42035 2.69357 3.81018 3.33092C3.19999 3.96828 2.72379 4.72153 2.40975 5.54613ZM18.4114 5.42628C18.1007 6.24209 17.9549 7.11135 17.9825 7.9837C17.9684 8.85638 18.1275 9.72329 18.4507 10.5342C18.7774 11.3539 19.2651 12.0998 19.885 12.7277C20.505 13.3556 21.2445 13.8528 22.0599 14.1899C22.8754 14.5271 23.7501 14.6972 24.6324 14.6904C25.5148 14.6837 26.3868 14.5 27.1969 14.1504C28.0071 13.8007 28.7389 13.2922 29.3491 12.6548C29.9593 12.0175 30.4355 11.2642 30.7495 10.4396C31.0602 9.62381 31.2059 8.75455 31.1784 7.88219C31.1925 7.00952 31.0334 6.14261 30.7102 5.33167C30.3835 4.51203 29.8958 3.76615 29.2758 3.13823C28.6559 2.51032 27.9164 2.01311 27.101 1.67597C26.2855 1.33882 25.4107 1.16867 24.5284 1.17546C23.6461 1.18225 22.7741 1.36588 21.9639 1.71553C21.1538 2.06517 20.422 2.57369 19.8118 3.21107C19.2016 3.84844 18.7254 4.60168 18.4114 5.42628ZM34.4134 5.29649C34.1027 6.11231 33.957 6.98157 33.9846 7.85393C33.9704 8.7266 34.1295 9.59351 34.4527 10.4044C34.7794 11.2241 35.2672 11.9699 35.8871 12.5978C36.507 13.2257 37.2466 13.723 38.062 14.0601C38.8774 14.3972 39.7521 14.5675 40.6345 14.5607C41.5168 14.5539 42.3889 14.3702 43.199 14.0206C44.0091 13.671 44.7409 13.1624 45.3511 12.5251C45.9614 11.8877 46.4375 11.1344 46.7516 10.3098C47.0623 9.49396 47.208 8.6247 47.1804 7.75234C47.1946 6.87967 47.0355 6.01276 46.7123 5.20183C46.3856 4.38215 45.8978 3.63634 45.2779 3.00844C44.658 2.38053 43.9184 1.88332 43.103 1.54619C42.2876 1.20906 41.4129 1.03882 40.5305 1.04561C39.6482 1.0524 38.7761 1.23604 37.966 1.58568C37.1558 1.93534 36.424 2.44394 35.8139 3.08128C35.2037 3.71865 34.7275 4.47189 34.4134 5.29649ZM49.9765 7.73357C49.9899 9.48468 50.6984 11.1588 51.9461 12.3875C52.5639 12.996 53.2955 13.4767 54.0991 13.8024C54.9026 14.1281 55.7625 14.2923 56.6296 14.2857C57.4967 14.2791 58.354 14.1017 59.1525 13.7638C59.951 13.4258 60.6751 12.9339 61.2835 12.3161C61.892 11.6983 62.3727 10.9668 62.6984 10.1632C63.0241 9.35957 63.1883 8.49968 63.1817 7.63262C63.1751 6.76555 62.9977 5.90829 62.6598 5.10977C62.3218 4.31126 61.8299 3.58709 61.2121 2.97867C59.9645 1.74991 58.2797 1.06712 56.5286 1.08052C54.7775 1.09391 53.1034 1.80236 51.8747 3.05006C50.6459 4.29775 49.9631 5.98246 49.9765 7.73357Z" stroke="#B980FF" strokeWidth="2"/>
-                    <path d="M2.40975 5.54613C2.09906 6.36194 1.95333 7.2312 1.9809 8.10355C1.96676 8.97623 2.12584 9.84314 2.44906 10.6541C2.77575 11.4738 3.26348 12.2196 3.88341 12.8475C4.50334 13.4754 5.24289 13.9726 6.0583 14.3097C6.87371 14.6468 7.74845 14.8171 8.63082 14.8103C9.51315 14.8035 10.3852 14.6199 11.1953 14.2702C12.0055 13.9206 12.7373 13.4121 13.3475 12.7747C13.9577 12.1373 14.4339 11.384 14.7479 10.5594C15.0586 9.7436 15.2043 8.87435 15.1767 8.002C15.1909 7.12932 15.0318 6.2624 14.7086 5.45146C14.3819 4.63179 13.8942 3.88597 13.2742 3.25807C12.6543 2.63016 11.9148 2.13295 11.0993 1.79582C10.2839 1.45869 9.40919 1.28846 8.52682 1.29524C7.64449 1.30203 6.77246 1.48567 5.96232 1.83532C5.15215 2.18497 4.42035 2.69357 3.81018 3.33092C3.19999 3.96828 2.72379 4.72153 2.40975 5.54613ZM18.4114 5.42628C18.1007 6.24209 17.9549 7.11135 17.9825 7.9837C17.9684 8.85638 18.1275 9.72329 18.4507 10.5342C18.7774 11.3539 19.2651 12.0998 19.885 12.7277C20.505 13.3556 21.2445 13.8528 22.0599 14.1899C22.8754 14.5271 23.7501 14.6972 24.6324 14.6904C25.5148 14.6837 26.3868 14.5 27.1969 14.1504C28.0071 13.8007 28.7389 13.2922 29.3491 12.6548C29.9593 12.0175 30.4355 11.2642 30.7495 10.4396C31.0602 9.62381 31.2059 8.75455 31.1784 7.88219C31.1925 7.00952 31.0334 6.14261 30.7102 5.33167C30.3835 4.51203 29.8958 3.76615 29.2758 3.13823C28.6559 2.51032 27.9164 2.01311 27.101 1.67597C26.2855 1.33882 25.4107 1.16867 24.5284 1.17546C23.6461 1.18225 22.7741 1.36588 21.9639 1.71553C21.1538 2.06517 20.422 2.57369 19.8118 3.21107C19.2016 3.84844 18.7254 4.60168 18.4114 5.42628ZM34.4134 5.29649C34.1027 6.11231 33.957 6.98157 33.9846 7.85393C33.9704 8.7266 34.1295 9.59351 34.4527 10.4044C34.7794 11.2241 35.2672 11.9699 35.8871 12.5978C36.507 13.2257 37.2466 13.723 38.062 14.0601C38.8774 14.3972 39.7521 14.5675 40.6345 14.5607C41.5168 14.5539 42.3889 14.3702 43.199 14.0206C44.0091 13.671 44.7409 13.1624 45.3511 12.5251C45.9614 11.8877 46.4375 11.1344 46.7516 10.3098C47.0623 9.49396 47.208 8.6247 47.1804 7.75234C47.1946 6.87967 47.0355 6.01276 46.7123 5.20183C46.3856 4.38215 45.8978 3.63634 45.2779 3.00844C44.658 2.38053 43.9184 1.88332 43.103 1.54619C42.2876 1.20906 41.4129 1.03882 40.5305 1.04561C39.6482 1.0524 38.7761 1.23604 37.966 1.58568C37.1558 1.93534 36.424 2.44394 35.8139 3.08128C35.2037 3.71865 34.7275 4.47189 34.4134 5.29649ZM49.9765 7.73357C49.9899 9.48468 50.6984 11.1588 51.9461 12.3875C52.5639 12.996 53.2955 13.4767 54.0991 13.8024C54.9026 14.1281 55.7625 14.2923 56.6296 14.2857C57.4967 14.2791 58.354 14.1017 59.1525 13.7638C59.951 13.4258 60.6751 12.9339 61.2835 12.3161C61.892 11.6983 62.3727 10.9668 62.6984 10.1632C63.0241 9.35957 63.1883 8.49968 63.1817 7.63262C63.1751 6.76555 62.9977 5.90829 62.6598 5.10977C62.3218 4.31126 61.8299 3.58709 61.2121 2.97867C59.9645 1.74991 58.2797 1.06712 56.5286 1.08052C54.7775 1.09391 53.1034 1.80236 51.8747 3.05006C50.6459 4.29775 49.9631 5.98246 49.9765 7.73357Z" stroke="#B980FF" strokeWidth="2"/>
-                    </svg>
-                </div>
+                <svg viewBox="0 0 7 235" fill="none" className="line line2">
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="231.5" stroke="#E7AF5B" stroke-opacity="0.91" stroke-width="7" stroke-linecap="round"/>
+                </svg>
 
-                <div data-scroll data-scroll-speed="3" style={{position:"fixed" ,left:"83%", top:"33%", zIndex:"-1"}}>
-                    <svg width="84" height="84" viewBox="0 0 84 84" fill="none" >
-                        <path d="M0.999999 83L1.84166 71.18L14.67 69.3303L15.5016 57.5103L28.3299 55.6605L29.1716 43.8406L42 42" stroke="#B980FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M42 42L42.8417 30.18L55.67 28.3303L56.5016 16.5103L69.3299 14.6605L70.1716 2.84056L83 1" stroke="#B980FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                </div>
-
-                <div data-scroll data-scroll-speed="3" style={{position:"fixed", left:"29%", top:"60%"}}>
-                    <svg width="97" height="17" viewBox="0 0 97 17" fill="none" >
-                    <path d="M2.40975 6.54613C2.09906 7.36194 1.95333 8.2312 1.9809 9.10355C1.96676 9.97623 2.12584 10.8431 2.44906 11.6541C2.77575 12.4738 3.26348 13.2196 3.88341 13.8475C4.50334 14.4754 5.24289 14.9726 6.0583 15.3097C6.87371 15.6468 7.74845 15.8171 8.63082 15.8103C9.51315 15.8035 10.3852 15.6199 11.1953 15.2702C12.0055 14.9206 12.7373 14.4121 13.3475 13.7747C13.9577 13.1373 14.4339 12.384 14.7479 11.5594C15.0586 10.7436 15.2043 9.87435 15.1767 9.002C15.1909 8.12932 15.0318 7.2624 14.7086 6.45146C14.3819 5.63179 13.8942 4.88597 13.2742 4.25807C12.6543 3.63016 11.9148 3.13295 11.0993 2.79582C10.2839 2.45869 9.40919 2.28846 8.52682 2.29524C7.64449 2.30203 6.77246 2.48567 5.96232 2.83532C5.15215 3.18497 4.42035 3.69357 3.81018 4.33092C3.19999 4.96828 2.72379 5.72153 2.40975 6.54613ZM18.4114 6.42628C18.1007 7.24209 17.9549 8.11135 17.9825 8.9837C17.9684 9.85638 18.1275 10.7233 18.4507 11.5342C18.7774 12.3539 19.2651 13.0998 19.885 13.7277C20.505 14.3556 21.2445 14.8528 22.0599 15.1899C22.8754 15.5271 23.7501 15.6972 24.6324 15.6904C25.5148 15.6837 26.3868 15.5 27.1969 15.1504C28.0071 14.8007 28.7389 14.2922 29.3491 13.6548C29.9593 13.0175 30.4355 12.2642 30.7495 11.4396C31.0602 10.6238 31.2059 9.75455 31.1784 8.88219C31.1925 8.00952 31.0334 7.14261 30.7102 6.33167C30.3835 5.51203 29.8958 4.76615 29.2758 4.13823C28.6559 3.51032 27.9164 3.01311 27.101 2.67597C26.2855 2.33882 25.4107 2.16867 24.5284 2.17546C23.6461 2.18225 22.7741 2.36588 21.9639 2.71553C21.1538 3.06517 20.422 3.57369 19.8118 4.21107C19.2016 4.84844 18.7254 5.60168 18.4114 6.42628ZM34.4134 6.29649C34.1027 7.11231 33.957 7.98157 33.9846 8.85393C33.9704 9.7266 34.1295 10.5935 34.4527 11.4044C34.7794 12.2241 35.2672 12.9699 35.8871 13.5978C36.507 14.2257 37.2466 14.723 38.062 15.0601C38.8774 15.3972 39.7521 15.5675 40.6345 15.5607C41.5168 15.5539 42.3889 15.3702 43.199 15.0206C44.0091 14.671 44.7409 14.1624 45.3511 13.5251C45.9614 12.8877 46.4375 12.1344 46.7516 11.3098C47.0623 10.494 47.208 9.6247 47.1804 8.75234C47.1946 7.87967 47.0355 7.01276 46.7123 6.20183C46.3856 5.38215 45.8978 4.63634 45.2779 4.00844C44.658 3.38053 43.9184 2.88332 43.103 2.54619C42.2876 2.20906 41.4129 2.03882 40.5305 2.04561C39.6482 2.0524 38.7761 2.23604 37.966 2.58568C37.1558 2.93534 36.424 3.44394 35.8139 4.08128C35.2037 4.71865 34.7275 5.47189 34.4134 6.29649ZM49.9765 8.73357C49.9899 10.4847 50.6984 12.1588 51.9461 13.3875C52.5639 13.996 53.2955 14.4767 54.0991 14.8024C54.9026 15.1281 55.7625 15.2923 56.6296 15.2857C57.4967 15.2791 58.354 15.1017 59.1525 14.7638C59.951 14.4258 60.6751 13.9339 61.2835 13.3161C61.892 12.6983 62.3727 11.9668 62.6984 11.1632C63.0241 10.3596 63.1883 9.49968 63.1817 8.63262C63.1751 7.76555 62.9977 6.90829 62.6598 6.10977C62.3218 5.31126 61.8299 4.58709 61.2121 3.97867C59.9645 2.74991 58.2797 2.06712 56.5286 2.08052C54.7775 2.09391 53.1034 2.80236 51.8747 4.05006C50.6459 5.29775 49.9631 6.98246 49.9765 8.73357Z" stroke="#B980FF" strokeWidth="2"/>
-                    <path d="M2.40975 6.54613C2.09906 7.36194 1.95333 8.2312 1.9809 9.10355C1.96676 9.97623 2.12584 10.8431 2.44906 11.6541C2.77575 12.4738 3.26348 13.2196 3.88341 13.8475C4.50334 14.4754 5.24289 14.9726 6.0583 15.3097C6.87371 15.6468 7.74845 15.8171 8.63082 15.8103C9.51315 15.8035 10.3852 15.6199 11.1953 15.2702C12.0055 14.9206 12.7373 14.4121 13.3475 13.7747C13.9577 13.1373 14.4339 12.384 14.7479 11.5594C15.0586 10.7436 15.2043 9.87435 15.1767 9.002C15.1909 8.12932 15.0318 7.2624 14.7086 6.45146C14.3819 5.63179 13.8942 4.88597 13.2742 4.25807C12.6543 3.63016 11.9148 3.13295 11.0993 2.79582C10.2839 2.45869 9.40919 2.28846 8.52682 2.29524C7.64449 2.30203 6.77246 2.48567 5.96232 2.83532C5.15215 3.18497 4.42035 3.69357 3.81018 4.33092C3.19999 4.96828 2.72379 5.72153 2.40975 6.54613ZM18.4114 6.42628C18.1007 7.24209 17.9549 8.11135 17.9825 8.9837C17.9684 9.85638 18.1275 10.7233 18.4507 11.5342C18.7774 12.3539 19.2651 13.0998 19.885 13.7277C20.505 14.3556 21.2445 14.8528 22.0599 15.1899C22.8754 15.5271 23.7501 15.6972 24.6324 15.6904C25.5148 15.6837 26.3868 15.5 27.1969 15.1504C28.0071 14.8007 28.7389 14.2922 29.3491 13.6548C29.9593 13.0175 30.4355 12.2642 30.7495 11.4396C31.0602 10.6238 31.2059 9.75455 31.1784 8.88219C31.1925 8.00952 31.0334 7.14261 30.7102 6.33167C30.3835 5.51203 29.8958 4.76615 29.2758 4.13823C28.6559 3.51032 27.9164 3.01311 27.101 2.67597C26.2855 2.33882 25.4107 2.16867 24.5284 2.17546C23.6461 2.18225 22.7741 2.36588 21.9639 2.71553C21.1538 3.06517 20.422 3.57369 19.8118 4.21107C19.2016 4.84844 18.7254 5.60168 18.4114 6.42628ZM34.4134 6.29649C34.1027 7.11231 33.957 7.98157 33.9846 8.85393C33.9704 9.7266 34.1295 10.5935 34.4527 11.4044C34.7794 12.2241 35.2672 12.9699 35.8871 13.5978C36.507 14.2257 37.2466 14.723 38.062 15.0601C38.8774 15.3972 39.7521 15.5675 40.6345 15.5607C41.5168 15.5539 42.3889 15.3702 43.199 15.0206C44.0091 14.671 44.7409 14.1624 45.3511 13.5251C45.9614 12.8877 46.4375 12.1344 46.7516 11.3098C47.0623 10.494 47.208 9.6247 47.1804 8.75234C47.1946 7.87967 47.0355 7.01276 46.7123 6.20183C46.3856 5.38215 45.8978 4.63634 45.2779 4.00844C44.658 3.38053 43.9184 2.88332 43.103 2.54619C42.2876 2.20906 41.4129 2.03882 40.5305 2.04561C39.6482 2.0524 38.7761 2.23604 37.966 2.58568C37.1558 2.93534 36.424 3.44394 35.8139 4.08128C35.2037 4.71865 34.7275 5.47189 34.4134 6.29649ZM49.9765 8.73357C49.9899 10.4847 50.6984 12.1588 51.9461 13.3875C52.5639 13.996 53.2955 14.4767 54.0991 14.8024C54.9026 15.1281 55.7625 15.2923 56.6296 15.2857C57.4967 15.2791 58.354 15.1017 59.1525 14.7638C59.951 14.4258 60.6751 13.9339 61.2835 13.3161C61.892 12.6983 62.3727 11.9668 62.6984 11.1632C63.0241 10.3596 63.1883 9.49968 63.1817 8.63262C63.1751 7.76555 62.9977 6.90829 62.6598 6.10977C62.3218 5.31126 61.8299 4.58709 61.2121 3.97867C59.9645 2.74991 58.2797 2.06712 56.5286 2.08052C54.7775 2.09391 53.1034 2.80236 51.8747 4.05006C50.6459 5.29775 49.9631 6.98246 49.9765 8.73357Z" stroke="#B980FF" strokeWidth="2"/>
-                    <path d="M34.6927 5.87034C34.382 6.68616 34.2363 7.55542 34.2639 8.42777C34.2497 9.30045 34.4088 10.1674 34.732 10.9783C35.0587 11.798 35.5464 12.5438 36.1664 13.1717C36.7863 13.7996 37.5258 14.2968 38.3413 14.6339C39.1567 14.9711 40.0314 15.1413 40.9138 15.1345C41.7961 15.1277 42.6681 14.9441 43.4783 14.5944C44.2884 14.2448 45.0202 13.7363 45.6304 13.0989C46.2406 12.4615 46.7168 11.7082 47.0308 10.8836C47.3415 10.0678 47.4873 9.19857 47.4597 8.32621C47.4738 7.45354 47.3148 6.58662 46.9915 5.77568C46.6649 4.956 46.1771 4.21019 45.5572 3.58229C44.9373 2.95438 44.1977 2.45717 43.3823 2.12004C42.5669 1.78291 41.6921 1.61267 40.8098 1.61946C39.9274 1.62625 39.0554 1.80989 38.2453 2.15953C37.4351 2.50919 36.7033 3.01779 36.0931 3.65514C35.4829 4.2925 35.0067 5.04575 34.6927 5.87034ZM50.6943 5.7505C50.3836 6.56631 50.2379 7.43556 50.2655 8.30792C50.2513 9.18059 50.4104 10.0475 50.7336 10.8585C51.0603 11.6781 51.548 12.424 52.168 13.0519C52.7879 13.6798 53.5275 14.177 54.3429 14.5142C55.1583 14.8513 56.0331 15.0215 56.9154 15.0147C57.7977 15.0079 58.6698 14.8242 59.4799 14.4746C60.29 14.125 61.0218 13.6164 61.632 12.9791C62.2422 12.3417 62.7184 11.5884 63.0325 10.7638C63.3432 9.94803 63.4889 9.07877 63.4613 8.20641C63.4755 7.33374 63.3164 6.46683 62.9932 5.65589C62.6665 4.83625 62.1788 4.09036 61.5588 3.46244C60.9389 2.83454 60.1993 2.33733 59.3839 2.00019C58.5685 1.66304 57.6937 1.49289 56.8114 1.49968C55.9291 1.50647 55.057 1.6901 54.2469 2.03975C53.4368 2.38939 52.705 2.89791 52.0948 3.53529C51.4846 4.17266 51.0084 4.9259 50.6943 5.7505ZM66.6964 5.62071C66.3857 6.43653 66.24 7.30579 66.2675 8.17815C66.2534 9.05082 66.4125 9.91773 66.7357 10.7287C67.0624 11.5483 67.5501 12.2942 68.17 12.9221C68.79 13.55 69.5295 14.0472 70.3449 14.3843C71.1603 14.7214 72.0351 14.8917 72.9175 14.8849C73.7998 14.8781 74.6718 14.6945 75.482 14.3448C76.2921 13.9952 77.0239 13.4866 77.6341 12.8493C78.2443 12.2119 78.7205 11.4586 79.0345 10.634C79.3452 9.81818 79.4909 8.94892 79.4634 8.07656C79.4775 7.20389 79.3184 6.33698 78.9952 5.52604C78.6685 4.70637 78.1808 3.96056 77.5609 3.33266C76.9409 2.70475 76.2014 2.20754 75.386 1.87041C74.5706 1.53328 73.6958 1.36304 72.8135 1.36983C71.9311 1.37662 71.0591 1.56025 70.249 1.9099C69.4388 2.25956 68.707 2.76816 68.0968 3.4055C67.4866 4.04287 67.0104 4.79611 66.6964 5.62071ZM82.2595 8.05779C82.2729 9.8089 82.9814 11.483 84.2291 12.7117C84.8469 13.3202 85.5784 13.8009 86.382 14.1266C87.1856 14.4523 88.0455 14.6166 88.9126 14.6099C89.7797 14.6033 90.6369 14.4259 91.4354 14.088C92.2339 13.75 92.9581 13.2582 93.5665 12.6404C94.1749 12.0226 94.6557 11.291 94.9814 10.4874C95.3071 9.68379 95.4713 8.8239 95.4647 7.95684C95.458 7.08977 95.2807 6.23251 94.9427 5.43399C94.6048 4.63548 94.1129 3.91131 93.4951 3.30289C92.2474 2.07413 90.5627 1.39134 88.8116 1.40473C87.0605 1.41813 85.3864 2.12658 84.1576 3.37428C82.9289 4.62197 82.2461 6.30668 82.2595 8.05779Z" stroke="#B980FF" strokeWidth="2"/>
-                    <path d="M34.6927 5.87034C34.382 6.68616 34.2363 7.55542 34.2639 8.42777C34.2497 9.30045 34.4088 10.1674 34.732 10.9783C35.0587 11.798 35.5464 12.5438 36.1664 13.1717C36.7863 13.7996 37.5258 14.2968 38.3413 14.6339C39.1567 14.9711 40.0314 15.1413 40.9138 15.1345C41.7961 15.1277 42.6681 14.9441 43.4783 14.5944C44.2884 14.2448 45.0202 13.7363 45.6304 13.0989C46.2406 12.4615 46.7168 11.7082 47.0308 10.8836C47.3415 10.0678 47.4873 9.19857 47.4597 8.32621C47.4738 7.45354 47.3148 6.58662 46.9915 5.77568C46.6649 4.956 46.1771 4.21019 45.5572 3.58229C44.9373 2.95438 44.1977 2.45717 43.3823 2.12004C42.5669 1.78291 41.6921 1.61267 40.8098 1.61946C39.9274 1.62625 39.0554 1.80989 38.2453 2.15953C37.4351 2.50919 36.7033 3.01779 36.0931 3.65514C35.4829 4.2925 35.0067 5.04575 34.6927 5.87034ZM50.6943 5.7505C50.3836 6.56631 50.2379 7.43556 50.2655 8.30792C50.2513 9.18059 50.4104 10.0475 50.7336 10.8585C51.0603 11.6781 51.548 12.424 52.168 13.0519C52.7879 13.6798 53.5275 14.177 54.3429 14.5142C55.1583 14.8513 56.0331 15.0215 56.9154 15.0147C57.7977 15.0079 58.6698 14.8242 59.4799 14.4746C60.29 14.125 61.0218 13.6164 61.632 12.9791C62.2422 12.3417 62.7184 11.5884 63.0325 10.7638C63.3432 9.94803 63.4889 9.07877 63.4613 8.20641C63.4755 7.33374 63.3164 6.46683 62.9932 5.65589C62.6665 4.83625 62.1788 4.09036 61.5588 3.46244C60.9389 2.83454 60.1993 2.33733 59.3839 2.00019C58.5685 1.66304 57.6937 1.49289 56.8114 1.49968C55.9291 1.50647 55.057 1.6901 54.2469 2.03975C53.4368 2.38939 52.705 2.89791 52.0948 3.53529C51.4846 4.17266 51.0084 4.9259 50.6943 5.7505ZM66.6964 5.62071C66.3857 6.43653 66.24 7.30579 66.2675 8.17815C66.2534 9.05082 66.4125 9.91773 66.7357 10.7287C67.0624 11.5483 67.5501 12.2942 68.17 12.9221C68.79 13.55 69.5295 14.0472 70.3449 14.3843C71.1603 14.7214 72.0351 14.8917 72.9175 14.8849C73.7998 14.8781 74.6718 14.6945 75.482 14.3448C76.2921 13.9952 77.0239 13.4866 77.6341 12.8493C78.2443 12.2119 78.7205 11.4586 79.0345 10.634C79.3452 9.81818 79.4909 8.94892 79.4634 8.07656C79.4775 7.20389 79.3184 6.33698 78.9952 5.52604C78.6685 4.70637 78.1808 3.96056 77.5609 3.33266C76.9409 2.70475 76.2014 2.20754 75.386 1.87041C74.5706 1.53328 73.6958 1.36304 72.8135 1.36983C71.9311 1.37662 71.0591 1.56025 70.249 1.9099C69.4388 2.25956 68.707 2.76816 68.0968 3.4055C67.4866 4.04287 67.0104 4.79611 66.6964 5.62071ZM82.2595 8.05779C82.2729 9.8089 82.9814 11.483 84.2291 12.7117C84.8469 13.3202 85.5784 13.8009 86.382 14.1266C87.1856 14.4523 88.0455 14.6166 88.9126 14.6099C89.7797 14.6033 90.6369 14.4259 91.4354 14.088C92.2339 13.75 92.9581 13.2582 93.5665 12.6404C94.1749 12.0226 94.6557 11.291 94.9814 10.4874C95.3071 9.68379 95.4713 8.8239 95.4647 7.95684C95.458 7.08977 95.2807 6.23251 94.9427 5.43399C94.6048 4.63548 94.1129 3.91131 93.4951 3.30289C92.2474 2.07413 90.5627 1.39134 88.8116 1.40473C87.0605 1.41813 85.3864 2.12658 84.1576 3.37428C82.9289 4.62197 82.2461 6.30668 82.2595 8.05779Z" stroke="#B980FF" strokeWidth="2"/>
-                    </svg>
-                </div>
-
-
-
-
-
-            </section>
-            
-            <section className="about-sec smth-about-me" data-scroll-section>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="5" data-scroll-class="appear" data-scroll-repeat="true" > me</h2>
-                <div data-scroll data-scroll-speed="16">
-                    <svg width="19" height="333" viewBox="0 0 19 333" fill="none">
-                        <line x1="2" y1="57" x2="1.99999" y2="331" stroke="#F3ABFF" strokeWidth="4" strokeLinecap="round"/>
-                    </svg>
-                </div>
-                <div data-scroll data-scroll-speed="11">
-                    <svg width="19" height="333" viewBox="0 0 19 333" fill="none">
-                        <line x1="17" y1="2" x2="17" y2="278" stroke="#F3ABFF" strokeWidth="4" strokeLinecap="round"/>
-                    </svg>
-                </div>
-
-                <svg width="107" height="35" viewBox="0 0 107 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M39.7771 5.27031C39.6211 6.10392 39.6309 6.96015 39.8058 7.78999C39.9807 8.61984 40.3173 9.4071 40.7965 10.1068C41.2756 10.8066 41.888 11.4051 42.5985 11.8682C43.3089 12.3313 44.1036 12.6499 44.9372 12.8059C45.7708 12.9619 46.6271 12.9521 47.457 12.7772C48.2868 12.6023 49.074 12.2656 49.7737 11.7865C50.4735 11.3073 51.072 10.695 51.5351 9.98452C51.9982 9.27405 52.3168 8.47933 52.4728 7.64571C52.6288 6.8121 52.619 5.95595 52.4441 5.1261C52.2692 4.29626 51.9326 3.509 51.4534 2.80926C50.9743 2.10951 50.362 1.51096 49.6516 1.04785C48.9411 0.584742 48.1463 0.266147 47.3127 0.110175C46.4791 -0.045796 45.6229 -0.0360914 44.7931 0.13882C43.9632 0.313732 43.1759 0.650397 42.4761 1.12956C41.7764 1.60873 41.1779 2.22104 40.7148 2.93151C40.2517 3.64198 39.933 4.4367 39.7771 5.27031ZM57.9041 8.66045C57.7481 9.49407 57.7577 10.3502 57.9326 11.1801C58.1075 12.0099 58.4443 12.7972 58.9234 13.497C59.4026 14.1967 60.0148 14.7952 60.7253 15.2583C61.4358 15.7214 62.2306 16.0401 63.0642 16.1961C63.8978 16.352 64.754 16.3423 65.5838 16.1673C66.4136 15.9924 67.2008 15.6558 67.9006 15.1766C68.6003 14.6974 69.1989 14.0851 69.6621 13.3747C70.1252 12.6642 70.4437 11.8695 70.5997 11.0359C70.7556 10.2022 70.746 9.34609 70.5711 8.51625C70.3962 7.6864 70.0594 6.89914 69.5803 6.1994C69.1011 5.49966 68.4889 4.9011 67.7784 4.43799C67.0679 3.97489 66.2731 3.65629 65.4395 3.50032C64.6059 3.34435 63.7498 3.35405 62.9199 3.52896C62.0901 3.70388 61.3029 4.04054 60.6031 4.51971C59.9034 4.99887 59.3048 5.61118 58.8417 6.32165C58.3786 7.03212 58.06 7.82684 57.9041 8.66045ZM76.0424 12.0621C75.8762 12.9002 75.8778 13.7629 76.0474 14.6003C76.2169 15.4377 76.551 16.2332 77.0302 16.9405C77.5094 17.6479 78.1241 18.2531 78.8389 18.7212C79.5537 19.1892 80.3543 19.5107 81.1943 19.6671C82.0342 19.8235 82.897 19.8117 83.7323 19.6323C84.5677 19.4529 85.3591 19.1095 86.0608 18.622C86.7625 18.1345 87.3604 17.5126 87.82 16.7923C88.2796 16.0721 88.5917 15.2677 88.7382 14.426C88.9045 13.5879 88.9027 12.7252 88.7331 11.8878C88.5636 11.0504 88.2295 10.255 87.7503 9.5476C87.2711 8.84023 86.6564 8.23502 85.9416 7.76698C85.2268 7.29894 84.4262 6.97739 83.5862 6.821C82.7463 6.6646 81.8837 6.67643 81.0483 6.85584C80.213 7.03524 79.4214 7.37865 78.7197 7.86614C78.018 8.35364 77.4202 8.97556 76.9606 9.69582C76.501 10.4161 76.1889 11.2204 76.0424 12.0621ZM94.1808 15.4523C94.0146 16.2903 94.0162 17.1531 94.1858 17.9905C94.3553 18.8279 94.6894 19.6233 95.1685 20.3307C95.6477 21.0381 96.2627 21.6433 96.9775 22.1113C97.6923 22.5793 98.4928 22.9009 99.3328 23.0573C100.173 23.2137 101.035 23.2019 101.871 23.0224C102.706 22.843 103.498 22.4996 104.199 22.0121C104.901 21.5246 105.499 20.9027 105.958 20.1825C106.418 19.4622 106.73 18.6579 106.877 17.8161C107.043 16.9781 107.041 16.1154 106.872 15.278C106.702 14.4405 106.368 13.6451 105.889 12.9377C105.41 12.2304 104.795 11.6252 104.08 11.1571C103.365 10.6891 102.565 10.3675 101.725 10.2111C100.885 10.0547 100.022 10.0666 99.1867 10.246C98.3513 10.4254 97.5599 10.7688 96.8582 11.2563C96.1566 11.7438 95.5586 12.3657 95.099 13.086C94.6394 13.8062 94.3273 14.6105 94.1808 15.4523ZM0.110143 16.6285C-0.0458282 17.4621 -0.0360531 18.3182 0.138858 19.1481C0.31377 19.9779 0.650365 20.7652 1.12953 21.4649C1.6087 22.1647 2.221 22.7632 2.93147 23.2263C3.64195 23.6895 4.43667 24.008 5.27028 24.164C6.10389 24.32 6.96012 24.3102 7.78996 24.1353C8.61981 23.9604 9.40707 23.6238 10.1068 23.1446C10.8066 22.6655 11.405 22.0532 11.8681 21.3427C12.3313 20.6322 12.6499 19.8375 12.8059 19.0039C12.9619 18.1703 12.9521 17.314 12.7772 16.4842C12.6023 15.6544 12.2656 14.8671 11.7864 14.1674C11.3073 13.4676 10.695 12.8691 9.98456 12.406C9.27409 11.9429 8.4793 11.6242 7.64568 11.4683C6.81207 11.3123 5.95592 11.3221 5.12607 11.497C4.29622 11.6719 3.50897 12.0086 2.80922 12.4877C2.10948 12.9669 1.511 13.5791 1.04789 14.2896C0.58478 15.0001 0.266115 15.7949 0.110143 16.6285V16.6285ZM18.2486 20.0186C18.0926 20.8522 18.1023 21.7084 18.2772 22.5382C18.4521 23.3681 18.7888 24.1553 19.268 24.8551C19.7472 25.5548 20.3594 26.1533 21.0699 26.6164C21.7803 27.0795 22.5751 27.3982 23.4087 27.5542C24.2424 27.7101 25.0985 27.7004 25.9284 27.5254C26.7582 27.3505 27.5455 27.0139 28.2453 26.5348C28.945 26.0556 29.5435 25.4433 30.0066 24.7328C30.4697 24.0224 30.7884 23.2276 30.9443 22.394C31.1003 21.5604 31.0905 20.7042 30.9156 19.8743C30.7407 19.0445 30.404 18.2572 29.9248 17.5575C29.4457 16.8578 28.8334 16.2593 28.1229 15.7962C27.4125 15.3331 26.6177 15.0144 25.7841 14.8584C24.9505 14.7024 24.0943 14.7122 23.2645 14.8871C22.4346 15.062 21.6474 15.3987 20.9477 15.8779C20.2479 16.357 19.6493 16.9693 19.1862 17.6797C18.7231 18.3902 18.4046 19.185 18.2486 20.0186ZM36.387 23.4088C36.231 24.2424 36.2408 25.0985 36.4157 25.9284C36.5906 26.7582 36.9272 27.5455 37.4064 28.2452C37.8855 28.945 38.4978 29.5434 39.2083 30.0066C39.9187 30.4697 40.7135 30.7883 41.5471 30.9443C42.3807 31.1003 43.2369 31.0905 44.0667 30.9156C44.8966 30.7407 45.6839 30.4041 46.3837 29.9249C47.0834 29.4458 47.6819 28.8334 48.145 28.123C48.6081 27.4125 48.9268 26.6178 49.0827 25.7842C49.2387 24.9506 49.2289 24.0943 49.054 23.2645C48.8791 22.4346 48.5425 21.6474 48.0634 20.9476C47.5842 20.2479 46.9718 19.6494 46.2613 19.1863C45.5509 18.7232 44.7562 18.4045 43.9226 18.2486C43.089 18.0926 42.2327 18.1024 41.4029 18.2773C40.573 18.4522 39.7858 18.7889 39.0861 19.268C38.3863 19.7472 37.7878 20.3594 37.3247 21.0699C36.8616 21.7804 36.543 22.5752 36.387 23.4088ZM54.5138 26.7989C54.3579 27.6325 54.3676 28.4887 54.5426 29.3185C54.7175 30.1484 55.0541 30.9356 55.5332 31.6354C56.0124 32.3351 56.6248 32.9336 57.3352 33.3967C58.0457 33.8598 58.8404 34.1785 59.674 34.3344C60.5076 34.4904 61.3637 34.4806 62.1936 34.3057C63.0234 34.1308 63.8108 33.7942 64.5105 33.3151C65.2102 32.8359 65.8087 32.2236 66.2718 31.5131C66.7349 30.8026 67.0536 30.0079 67.2096 29.1743C67.3656 28.3407 67.3558 27.4845 67.1809 26.6546C67.006 25.8248 66.6694 25.0375 66.1902 24.3378C65.711 23.638 65.0987 23.0396 64.3882 22.5765C63.6777 22.1133 62.8831 21.7947 62.0494 21.6387C61.2158 21.4827 60.3597 21.4925 59.5298 21.6674C58.7 21.8423 57.9127 22.179 57.2129 22.6582C56.5132 23.1373 55.9147 23.7496 55.4516 24.46C54.9885 25.1705 54.6698 25.9653 54.5138 26.7989Z" fill="#FF1F57"/>
+                <svg viewBox="0 0 7 232" fill="none" className="line line3">
+                    <line x1="3.5" y1="3.5" x2="3.5" y2="228.5" stroke="#7379FF" stroke-opacity="0.89" stroke-width="7" stroke-linecap="round"/>
                 </svg>
 
 
-                <div id="horizonLine" data-scroll data-scroll-speed="1">
-                    <svg width="373" height="18" viewBox="0 0 373 18" fill="none">
-                        <line x1="371.5" y1="1.50006" x2="1.5" y2="1.50003" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                        <line x1="371.5" y1="16.5001" x2="162.5" y2="16.5001" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                    </svg>
-                </div>
-
-
-
-                <p data-scroll data-scroll-speed="2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa cumque quos itaque iste suscipit odio ratione quas culpa exercitationem laudantium quidem vel commodi eveniet quis optio ullam nihil fugit, et non molestiae. Totam, atque quos itaque quaerat vero id et corrupti dolorum, excepturi blanditiis officia laboriosam? Nobis officiis totam laboriosam cumque aperiam, maiores deleniti illo a eos ad sequi, repudiandae laborum porro. Quaerat similique at perferendis, tempore saepe, hic impedit quae dicta dolore vero dolorem numquam eos illo sequi nihil minima culpa voluptatum veniam? Magni a ratione enim laudantium animi neque. Voluptates fugiat sapiente ipsum, rem sint est commodi nisi.
-                </p>
-
-
 
             </section>
 
-            <section id="threeD" className="threeD" data-scroll-section>
-                <h2>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="5">3</span>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="2">D</span>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="3">V</span>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="5">i</span>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="2">b</span>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="4">e</span>
-                    <span data-scroll data-scroll-repeat data-scroll-speed="2">s</span>
-                </h2>
-                <div className="skewsec">
-                    <div
-                        data-scroll
-                        data-scroll-direction="horizontal"
-                        data-scroll-speed="20"
-                        data-scroll-target="#threeD"
-                    >
-                        <span>Love the way you live</span>
+            <section className="second-about" data-scroll-section>
+
+                <svg viewBox="0 0 7 173" fill="none" className="line line4">
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="169.5" stroke="#F55858" stroke-opacity="0.91" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+
+
+                <svg viewBox="0 0 7 157" fill="none" className="line line5">
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="153.5" stroke="#50FF33" stroke-opacity="0.82" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+
+                <svg viewBox="0 0 7 169" fill="none" className="line line6">
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="165.5" stroke="#FFDE33" stroke-opacity="0.86" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+
+
+                <div className="information">
+                    <div className="skills">
+                        <h2>Skills | year</h2>
+                        <div className="sk">
+                            <h6>Front-end development | 2 years</h6>
+                            <h6>Back-end development | 1 year</h6>
+                            <h6>UI design | 1 year</h6>
+                        </div>
+                    </div>
+                    <div className="tools">
+                        <h2>Tools | years</h2>
+                        <div className="main-grid">
+                            <div className="grid1">
+                                <h6>Javascript | ~1 year</h6>
+                                <h6>HTML/CSS | ~2 years</h6>
+                                <h6>React.js |  &lt; 1 year</h6>
+                                <h6>Node.js |  &lt; 1 year</h6>
+                            </div>
+                            <div className="grid2">
+                                <h6>Python | ~2 years</h6>
+                                <h6>C/C++ | ~2 years</h6>
+                                <h6>Java | ~2 years</h6>
+                            </div>
+                            <div className="grid3">
+                                <h6>Figma | ~1 year</h6>
+                                <h6>Adobe Photoshop | ~1 year</h6>
+                                <h6>Visual Studio Code | ~2 years</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="exp">
+                        <h2>Experience</h2>
+                        <p>
+                            Intern | Full stack developer <br/>
+                            @High Radius <br/>
+                            Jan 2022 - May 2022
+                        </p>
+                    </div>
+                    <div className="sometimes">
+                        <h2>And sometimes</h2>
+                        <div className="smt">
+                            <h6>Badminton </h6>
+                            <h6>Chess </h6>
+                            <h6>Video games </h6>
+                            <h6>Sci-fi / Adventure movies </h6>
+                            <h6>CP </h6>
+                        </div>
                     </div>
                 </div>
-                <div className="skewsec">
-                    <div
-                        data-scroll
-                        data-scroll-direction="horizontal"
-                        data-scroll-speed="-20"
-                        data-scroll-target="#threeD"
-                    >
-                        <span>Live the way you love</span>
-                    </div>
-                </div>
+
+                <svg viewBox="0 0 218 218" fill="none" className="Circ_">
+                    <circle cx="109" cy="109" r="97" stroke="#4536F1" stroke-width="24"/>
+                </svg>
+
+
             </section>
 
-            <section className="about-sec second-about" data-scroll-section>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-5" data-scroll-class="appear" data-scroll-repeat="true" > Skills</h2>
-
-                <div id="horizonLine" data-scroll data-scroll-speed="1">
-                    <svg width="373" height="18" viewBox="0 0 373 18" fill="none">
-                        <line x1="371.5" y1="1.50006" x2="1.5" y2="1.50003" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                        <line x1="371.5" y1="16.5001" x2="162.5" y2="16.5001" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                    </svg>
-                </div>
-
-                <p data-scroll data-scroll-speed="4">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa cumque quos itaque iste suscipit odio ratione quas culpa exercitationem laudantium quidem vel commodi eveniet quis optio ullam nihil fugit, et non molestiae. Totam, atque quos itaque quaerat vero id et corrupti dolorum, excepturi blanditiis officia laboriosam? Nobis officiis totam laboriosam cumque aperiam, maiores deleniti illo a eos ad sequi, repudiandae laborum porro. Quaerat similique at perferendis, tempore saepe, hic impedit quae dicta dolore vero dolorem numquam eos illo sequi nihil minima culpa voluptatum veniam? Magni a ratione enim laudantium animi neque. Voluptates fugiat sapiente ipsum, rem sint est commodi nisi.
-                    <br/>
-                    JavaScript, CSS, HTML, GSAP, Nodejs <br />
-                    C++, Python, Java
-                </p>
-            </section>
-            
-            <section className="about-sec third-about" data-scroll-section>
-
-                <div data-scroll data-scroll-speed="1" style={{position:"absolute", top:"20%", left:"10%"}}>
-                    <svg width="373" height="18" viewBox="0 0 373 18" fill="none">
-                        <line x1="371.5" y1="1.50006" x2="1.5" y2="1.50003" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                        <line x1="210.5" y1="16.5001" x2="1.5" y2="16.5001" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                    </svg>
-                </div>
-
-                <p data-scroll data-scroll-speed="2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae at dolor tenetur, voluptatem obcaecati alias quis adipisci dolores commodi labore nisi maiores, recusandae, quidem maxime hic ratione placeat fuga perspiciatis earum iure rerum veniam quae consequuntur minima! Voluptate sunt, possimus provident quaerat adipisci necessitatibus beatae est amet sint neque ipsa unde ratione pariatur mollitia eveniet facere recusandae nisi officia aut soluta! Eveniet quasi eos nulla eligendi consequatur doloribus reiciendis nemo error aut perspiciatis soluta ab consectetur animi harum nesciunt commodi officiis incidunt omnis sequi, nam architecto, hic et odio! Dolorum repellat debitis quod. Similique obcaecati consequatur sed quas! Obcaecati, asperiores.
-                    <br/>   
-                    Sublime, Visual Studio <br />
-                    VS Code <br />
-                    Adobe Photoshop
-                </p>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="12" data-scroll-class="appear" data-scroll-repeat="true">Tools</h2>
-            </section>
-        
-            <section className="about-sec fourth-about" data-scroll-section>
-                <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-10" data-scroll-class="appear" data-scroll-repeat="true">And of course</h2>
-
-                <div id="horizonLine" data-scroll data-scroll-speed="1">
-                    <svg width="373" height="18" viewBox="0 0 373 18" fill="none">
-                        <line x1="371.5" y1="1.50006" x2="1.5" y2="1.50003" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                        <line x1="371.5" y1="16.5001" x2="162.5" y2="16.5001" stroke="#FF6CAA" strokeWidth="3" strokeLinecap="round"/>
-                    </svg>
-                </div>
-
-                <p data-scroll data-scroll-speed="2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos ratione, itaque, est in molestiae sapiente quos veritatis illum, fugiat maiores. Itaque nam animi, excepturi veniam, alias cupiditate ducimus quos asperiores iste libero incidunt deserunt debitis. Fuga quam repudiandae iste optio et rem reiciendis quae sapiente ab debitis sequi facere, nostrum quaerat quisquam. Vitae exercitationem nisi ullam nostrum voluptatem aliquid, laudantium illum, inventore temporibus, voluptatum assumenda deleniti ipsa. Saepe magnam ipsam, sit doloribus aspernatur itaque rem ex dolore. Deserunt nihil, atque sequi soluta incidunt, architecto dicta expedita natus consequuntur facere consectetur quidem! Id modi, obcaecati soluta beatae error magnam alias.
-                    <br/>
-                    Video Games <br />
-                    Competitive Programming <br />
-                    Badminton <br />
-                    Chess
-                </p>
-            </section>
-
-            <section className="foot" data-scroll-section>
-                <h2 data-scroll data-scroll-repeat>
-                <span data-scroll data-scroll-delay="0.200"  data-scroll-speed="5">T</span>
-                <span data-scroll data-scroll-delay="0.195" data-scroll-speed="5">H</span>
-                <span data-scroll data-scroll-delay="0.185" data-scroll-speed="5">A</span>
-                <span data-scroll data-scroll-delay="0.175" data-scroll-speed="5">T</span>
-                <span data-scroll data-scroll-delay="0.165" data-scroll-speed="5">'</span>
-                <span data-scroll data-scroll-delay="0.155" data-scroll-speed="5">S</span>
-                <span data-scroll data-scroll-delay="0.145" data-scroll-speed="5">&nbsp;</span>
-                <span data-scroll data-scroll-delay="0.135" data-scroll-speed="5">A</span>
-                <span data-scroll data-scroll-delay="0.125" data-scroll-speed="5">L</span>
-                <span data-scroll data-scroll-delay="0.115" data-scroll-speed="5">L</span>
-                <span data-scroll data-scroll-delay="0.100" data-scroll-speed="5">&nbsp;</span>
-                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="5">F</span>
-                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="5">O</span>
-                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="5">L</span>
-                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="5">K</span>
-                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="5">S</span>
-                </h2>
-            </section>
-        
         </div>
     </>
 

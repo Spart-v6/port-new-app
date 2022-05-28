@@ -1,7 +1,7 @@
 .projects-wrapper{
     background-color: #202020;
     font-family: 'Poppins';
-    height: 400vh;
+    height: 600vh;
 
 
     .project-heading{
@@ -31,60 +31,128 @@
         flex-direction: column;
         height: 100vh;
 
-        h2{
-            position: relative;
-            left: -25%;
-            top: 0%;
-            font-size: 4em;
-            color: #a71aff;
+        .pOne{
+            position: absolute;
+            right: 10%;
+            top: 10%;
+
+            h2{
+                font-size: 15em;
+                color: #a71aff;
+            }
         }
         .image-one{
             position: absolute;
-            top: 40%;
-            mix-blend-mode: difference;
+            top: 44%;
+            left: 32%;
+            h2{
+                position: absolute;
+                right: 30%;
+                top: 25%;
+                font-size: 3em;
+                color: #a71aff;
+                user-select: none;
+            }
             img{
                 width: 50%;
             }
         }
-        p{
-            position: absolute;
-            right: 0;
-            top: 60%;
-            width: 45%;
-            padding: 32px;
-            font-size: 1em;
-            color: #fff;
+        .detailsOne{
+            p{
+                position: absolute;
+                left: 5%;
+                top: 95%;
+                width: 26%;
+                color: #ddd;
+            }
         }
     }
-    
+
     .second-project{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 20%;
         height: 100vh;
-        h2{
-            font-size: 4em;
-            color: #a71aff;
-            // mix-blend-mode: difference;
+        margin-top: 30%;
+        .pTwo{
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            
+            h2{
+                font-size: 15em;
+                color: #a71aff;
+            }
         }
         .image-two{
             position: absolute;
-            top: 40%;
-            mix-blend-mode: difference;
+            top: 44%;
+            left: 30%;
+            h2{
+                position: absolute;
+                left: -15%;
+                top: 25%;
+                font-size: 3em;
+                color: #a71aff;
+                user-select: none;
+            }
             img{
                 width: 50%;
             }
         }
-        p{
+        .detailsTwo{
+            p{
+                position: absolute;
+                left: 66%;
+                top: 95%;
+                width: 26%;
+                color: #ddd;
+            }
+        }
+    }
+    
+    .third-project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30%;
+        height: 100vh;
+        
+        .pThree{
             position: absolute;
-            right: 0;
-            top: 60%;
-            width: 45%;
-            padding: 32px;
-            font-size: 1em;
-            color: #fff;
+            right: 10%;
+            top: 10%;
+            h2{
+                font-size: 15em;
+                color: #a71aff;
+            }
+        }
+        .image-three{
+            position: absolute;
+            top: 43%;
+            left: 32%;
+            h2{
+                position: absolute;
+                top: 18%;
+                right: 35%;
+                font-size: 3em;
+                color: #a71aff;
+                user-select: none;
+            }
+            img{
+                width: 50%;
+            }
+        }
+        .detailsThree{
+            p{
+                position: absolute;
+                left: 5%;
+                top: 98%;
+                width: 26%;
+                color: #ddd;
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-$dark-color: #231433;
+$dark-color: #0b0a0f;
 $secondary-color: #44358a;
 $primary-color: #884dff;
 
@@ -12,78 +12,64 @@ body {
   width: 100vw;
 }
 .hero-about {
-  background: $primary-color;
+  background: $dark-color;
   font-family: "Poppins";
+  height: 200vh;
 
-  .rightBar {
-    position: fixed;
-    top: 60%;
-    right: 4%;
-
-    ul {
-      text-decoration: none;
-      list-style: none;
-      li {
-        height: 20px;
-        width: 20px;
-        border: 3px solid #c88aff;
-        margin-top: 17px;
-      }
-    }
-  }
-
-  .about-sec {
-    height: 100vh;
-    padding: 10em;
-  }
-
-  .smth-about-me {
-    display: flex;
-    h2 {
-      font-size: 7em;
-      padding-left: 9%;
-      /* width: 100%; */
-      padding-right: 30%;
-    }
-    div {
-      position: absolute;
-    }
-    p {
-      width: 75%;
-      text-align: justify;
-    }
-  }
   .first-about {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100%;
+
     h1 {
-      position: relative;
-      top: -52%;
-      left: -25%;
-      font-size: 8em;
-      color: #c38bffd1;
-      user-select: none;
-      font-family: "Roboto Mono", monospace;
+      position: absolute;
+      left: 11%;
+      top: 10%;
+      
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 158px;
+      
+      background: linear-gradient(84.88deg, #7825FF 4.31%, #FF3E9B 134.64%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
     }
     .about-me {
-        position: absolute;
-        width: 37%;
-        left: 12%;
-        top: 42%;
-        text-align: center;
-        font-size: 30px;
-    }
-    svg {
       position: absolute;
-      left: 0;
-      top: 43%;
+      width: 37%;
+      left: 12%;
+      top: 42%;
+      text-align: center;
+      font-size: 30px;
+      color: #d7d7d7;
+    }
+    .line{
+      width: 1%;
+      height: 40%;
+    }
+    .line1{
+      position: absolute;
+      left: 2%;
+      top: 67%;
+    }
+    .line2{
+      position: absolute;
+      top: 60%;
+      left: 5%;
+    }
+    .line3{
+      position: absolute;
+      top: 52%;
+      left: 8%;
     }
 
-    .container {
-        position: absolute;
-        top: 38%;
-        right: 15%;
+    .img-container {
+      position: absolute;
+      top: 38%;
+      right: 15%;
 
       .featured-img {
         position: relative;
@@ -106,7 +92,8 @@ body {
           }
         }
 
-        &:before,&:after {
+        &:before,
+        &:after {
           content: "";
           position: absolute;
           width: 100%;
@@ -130,96 +117,90 @@ body {
       }
     }
   }
-  .second-about {
-    display: flex;
-    h2 {
-      font-size: 7em;
-      width: 100%;
-    }
-    p {
-      width: 75%;
-    }
-  }
-  .third-about {
-    display: flex;
-    h2 {
-      font-size: 7em;
-      width: 100%;
-    }
-    p {
-      width: 75%;
-    }
-  }
-  .fourth-about {
-    display: flex;
-    h2 {
-      font-size: 7em;
-      width: 100%;
-    }
-    p {
-      width: 75%;
-    }
-  }
 
-  .threeD {
-    width: 100%;
+  .second-about{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
-    display: grid;
-    place-items: center;
-    place-content: center;
-    position: relative;
-    margin-top: 10vh;
-    h2 {
-      width: 100%;
-      font-size: 12em;
-      font-weight: bold;
-      margin-top: 10px;
+    position: absolute;
+    .information{
+      position: relative;
+      left: 25%;
+      color: #d2d2d2;
+
+      .skills{
+        h2{
+          font-size: 40px;
+        }
+        .sk{
+          margin-left: 20px;
+          font-size: 30px;
+        }
+      }
+      .tools{
+        margin-top: 2%;
+        h2{
+          font-size: 40px;
+        }
+        .main-grid{
+          margin-left: 20px;
+          display: grid;
+          align-items: center;
+          grid-template-columns: repeat(4, 1fr);
+          font-size: 30px;
+        }
+      }
+      .exp{
+        margin-top: 2%;
+        h2{
+          font-size: 40px;
+        }
+        p{
+          margin-left: 20px;
+          font-size: 22px;
+        }
+      }
+      .sometimes{
+        margin-top: 2%;
+        h2{
+          font-size: 40px;
+        }
+        .smt{
+          margin-left: 20px;
+          font-size: 30px;
+          display: grid;
+          grid-template-columns: 1fr .6fr 1.1fr 1.6fr 1.8fr;
+        }
+      }
+    }
+
+    .line{
+      width: 1%;
+      height: 40%;
+    }
+
+    .Circ_{
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      span {
-        display: inline-block;
-      }
+      bottom: 10%;
+      left: 3%;
+      height: 25%;
+    }
+    .line4{
+      position: absolute;
+      left: 3%;
+      top: 10%;
+    }
+    .line5{
+      position: absolute;
+      left: 7%;
+      top: 15%;
+    }
+    .line6{
+      position: absolute;
+      left: 11%;
+      top: 23%;
     }
   }
 
-  .skewsec {
-    transform: skew(15deg) rotate(6deg);
-    span {
-      display: inline-block;
-      background-color: cornflowerblue;
-      padding: 13px 100px;
-      font-size: 3.5em;
-    }
-    &:last-child {
-      transform: skew(-15deg) rotate(-6deg);
-      margin-top: 33vh;
-    }
-  }
-
-  .foot {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    place-items: center;
-    text-align: center;
-    h2 {
-      width: 100%;
-      font-size: 6em;
-      font-weight: bold;
-      letter-spacing: 1%;
-      span {
-        display: inline-block;
-      }
-    }
-  }
-}
-
-#horizonLine {
-  position: absolute;
-  left: 65%;
-  top: 20%;
 }
