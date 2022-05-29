@@ -29,7 +29,7 @@ function Project() {
         <section className="p-sec project-heading" data-scroll-section>
             <h1 data-scroll>.projects()</h1>
             <span data-scroll className="about-me" data-scroll-speed="3">
-              Here are some of my projects.
+              Over the course of my career, i've worked on several projects. Here are some of them:
             </span>
         </section>
 
@@ -45,7 +45,12 @@ function Project() {
 
             <div className="detailsOne">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem neque libero ullam nesciunt quisquam aut dicta ipsam deleniti provident mollitia. Maxime doloremque molestias aperiam aut laudantium quis quidem officiis expedita recusandae nemo esse aliquam asperiores, iure earum nesciunt quos necessitatibus!
+                // Concept
+                This project was a part of High Radius internship program, and the idea was to build an AI-Enabled FinTech B2B Invoice Management Application.
+                The project is a web app to help the people working in the Accounts Receivable departments in their day-to-day activities.
+
+                // My role
+                I was responsible for creating full-stack application which utilizes the power of React and for backend, Java and Machine Learning.
                 </p>
             </div>
         </section>
@@ -63,8 +68,11 @@ function Project() {
 
             <div className="detailsTwo">
               <p>
-                  Role of this project is to be able to draw anything on screen by capturing the motion of hands with a camera and gesture recognition feature.
-                  It was team-based project, where my role was to design the front-end and some part in training the model.
+              // Concept
+              The main aim was to be able to draw anything on screen by capturing the motion of hands with a webcam and an additional gesture recognition feature.
+
+              // My role
+              I was responsible majorily for front-end to design the whole canvas using Python, Mediapipe and OpenCV and some part in training the model for gesture recognition.
               </p>
             </div>
         </section>
@@ -82,7 +90,11 @@ function Project() {
 
             <div className="detailsThree">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet aspernatur tenetur ea laborum explicabo perspiciatis voluptatum architecto, velit rem veritatis atque? Delectus nobis animi earum, enim quae accusantium fuga perspiciatis, modi magnam alias asperiores assumenda natus nostrum cumque sint iusto.
+              // Concept
+              The goal was to create a simple and secure messaging app from scratch. 
+
+              // My role
+              I was solely responsible for designing and creating the application. This is desktop application which is built  using C# and WPF and for storing messages, Firebase. For encryption/decryption, AES.
               </p>
             </div>
         </section>

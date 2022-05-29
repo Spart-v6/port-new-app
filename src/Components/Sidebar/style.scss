@@ -1,102 +1,141 @@
-.container {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100vh;
+a{
+  text-decoration: none;
+  color: #ddd;
+}
+li{
+  list-style: none;
+}
 
-  .button {
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    text-decoration: none;
-    color: #ececec;
-    font-family: "Poppins";
-    font-size: 15px;
-    font-weight: 500;
+.burger{
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  z-index: 4;
+
+  .ham {
     cursor: pointer;
-    z-index: 3;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
   }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#a456f3;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  .ham8 .top {
+    stroke-dasharray: 40 160;
+  }
+  .ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+  .ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+  .ham8.active .top {
+    stroke-dashoffset: -64px;
+  }
+  .ham8.active .middle {
+    transform: rotate(90deg);
+  }
+  .ham8.active .bottom {
+    stroke-dashoffset: -64px;
+  }
+  
 }
 
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  transform: translateX(-100%);
-  z-index: 101;
+.navbar{
+  position: fixed;
+  background-color: #2e2e2e;
+  right: 2%;
+  top: 2%;
+  z-index: 3;
+  display: grid;
+  padding: 4em;
+  font-family: 'Poppins';
+  transform-origin: top right;
+  transform: scale(0);
+  -webkit-box-shadow: -6px 6px 32px -1px rgba(0,0,0,0.51);
+  -moz-box-shadow: -6px 6px 32px -1px rgba(0,0,0,0.51);
+  box-shadow: -6px 6px 32px -1px rgba(0,0,0,0.51);
 
-  .button {
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    text-decoration: none;
-    color: white;
-    font-family: "Poppins";
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
+  .nav-items{
+    margin: -10% 0 0% 0;
 
-  }
-  .ul {
-    position: absolute;
-    left: 20%;
-    display: flex;
-    width: 300px;
-    justify-content: center;
-    align-items: flex-start;
-    list-style: none;
-    height: 100vh;
-    flex-direction: column;
-
-    li {
-      margin: 20px 0;
-      z-index: 2;
-      a {
-        text-decoration: none;
-        color: white;
-        transition: 2s;
-        font-family: "Poppins";
-        font-size: 50px;
-        text-transform: uppercase;
-        font-weight: 500;
-        mix-blend-mode: difference;
-      }
-    }
-  }
-  .social {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    height: 80px;
-    width: 100%;
-
-    ul {
-      margin-left: 50px;
+    .li{
+      padding: 7% 0 7% 0;
       display: flex;
-      list-style: none;
-
-      li {
-        margin: 0px 10px;
-
-        a {
-          text-decoration: none;
-          color: white;
-          font-family: "Poppins";
-          font-size: 18px;
-          text-transform: uppercase;
-          font-weight: lighter;
-        }
+      a{
+        font-size: 25px;
+      }
+      a.effect-underline:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        border-bottom: 8px solid #a456f3;
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0,1);
+        transform: scale(0, 1);
+      }
+      
+      a.effect-underline:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      a.link1::after{
+        left: 19%;
+        width: 20%;
+        top: 17%;
+      }
+      a.link2::after{
+        left: 19%;
+        width: 20%;
+        top: 31%;
+      }
+      a.link3::after{
+        left: 19%;
+        width: 23%;
+        top: 46%;
+      }
+      a.link4::after{
+        left: 19%;
+        width: 28%;
+        top: 60%;
       }
     }
   }
-}
+  .nav-info{
+    margin:2%;
+    span{
+      color: #222;
+      font-size: 22px;
+    }
+  }
+  .nav-social{
+    margin: 2%;
+    ul{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-.head-container {
-  width: 100vw;
-  height: 100vh;
 }

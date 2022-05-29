@@ -45,12 +45,12 @@ function Contact() {
 
     gsap.to("#path1", {strokeDashoffset: 0, delay:.1, duration: 1, ease:"Circ.easeInOut"})
     gsap.to("#path2", {strokeDashoffset: 0, delay:.1, duration: 1, ease:"Circ.easeInOut"})
-    gsap.to("#path2", {transform:"scale(1, -1) translate(0%, -3%)", delay:2, duration:1, ease: "Expo.easeInOut"});
-    gsap.to("#circ1",{duration:1, transform:"translate(0,0)", opacity:1, delay:2,  ease:"Expo.easeInOut"},);
-    gsap.to("#circ2",{duration:1, transform:"translate(0,0)", opacity:1, delay:2,  ease:"Expo.easeInOut"},);
+    gsap.to("#path2", {transform:"scale(1, -1) translate(0%, -3%)", delay:1, duration:1, ease: "Expo.easeInOut"});
+    gsap.to("#circ1",{duration:1, transform:"translate(0,0)", opacity:1, delay:1,  ease:"Expo.easeInOut"},);
+    gsap.to("#circ2",{duration:1, transform:"translate(0,0)", opacity:1, delay:1,  ease:"Expo.easeInOut"},);
 
-    gsap.to("#leftBigCirc",{top: 0, left: 0,opacity:1, duration:1, delay:2, ease:"Expo.easeInOut"})
-    gsap.to("#rightBigCirc",{bottom:0, right: 0,opacity:1, duration:1, delay:2, ease:"Expo.easeInOut"})
+    gsap.to("#leftBigCirc",{top: 0, left: 0,opacity:1, duration:1, delay:1, ease:"Expo.easeInOut"})
+    gsap.to("#rightBigCirc",{bottom:0, right: 0,opacity:1, duration:1, delay:1, ease:"Expo.easeInOut"})
 
 
     gsap.to("#animateMe",{y:0, opacity:1, delay:1, duration:1, stagger:.1, ease:"Expo.easeInOut"})
