@@ -100,7 +100,7 @@ function About() {
 
     return (
     <>
-        <PageTransition nameOfPage={nameOfPage} />
+        <PageTransition nameOfPage={nameOfPage}/>
 
         <div data-scroll-container className="hero-about" id="hero-about">
         
@@ -119,15 +119,15 @@ function About() {
                 </div>
 
                 <svg viewBox="0 0 7 223" fill="none" className="line line1">
-                    <line x1="3.5" y1="3.5" x2="3.49999" y2="219.5" stroke="#FD4157" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="219.5" stroke="#FD4157" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
 
                 <svg viewBox="0 0 7 235" fill="none" className="line line2">
-                    <line x1="3.5" y1="3.5" x2="3.49999" y2="231.5" stroke="#E7AF5B" stroke-opacity="0.91" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="231.5" stroke="#E7AF5B" strokeOpacity="0.91" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
 
                 <svg viewBox="0 0 7 232" fill="none" className="line line3">
-                    <line x1="3.5" y1="3.5" x2="3.5" y2="228.5" stroke="#7379FF" stroke-opacity="0.89" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="3.5" y1="3.5" x2="3.5" y2="228.5" stroke="#7379FF" strokeOpacity="0.89" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
 
 
@@ -137,16 +137,16 @@ function About() {
             <section className="second-about" data-scroll-section>
 
                 <svg viewBox="0 0 7 173" fill="none" className="line line4">
-                    <line x1="3.5" y1="3.5" x2="3.49999" y2="169.5" stroke="#F55858" stroke-opacity="0.91" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="169.5" stroke="#F55858" strokeOpacity="0.91" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
 
 
                 <svg viewBox="0 0 7 157" fill="none" className="line line5">
-                    <line x1="3.5" y1="3.5" x2="3.49999" y2="153.5" stroke="#50FF33" stroke-opacity="0.82" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="153.5" stroke="#50FF33" strokeOpacity="0.82" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
 
                 <svg viewBox="0 0 7 169" fill="none" className="line line6">
-                    <line x1="3.5" y1="3.5" x2="3.49999" y2="165.5" stroke="#FFDE33" stroke-opacity="0.86" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="3.5" y1="3.5" x2="3.49999" y2="165.5" stroke="#FFDE33" strokeOpacity="0.86" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
 
 
@@ -201,7 +201,7 @@ function About() {
                 </div>
 
                 <svg viewBox="0 0 218 218" fill="none" className="Circ_">
-                    <circle cx="109" cy="109" r="97" stroke="#4536F1" stroke-width="24"/>
+                    <circle cx="109" cy="109" r="97" stroke="#4536F1" strokeWidth="24"/>
                 </svg>
 
 

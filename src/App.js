@@ -62,9 +62,9 @@ function App() {
         <AnimatePresence exitBeforeEnter initial={false}>
           <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home counter={counter}/>} />
-              <Route path="/about" element={<About />} />
-              <Route path="/project" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About counter={counter} />} />
+              <Route path="/project" element={<Projects counter={counter} />} />
+              <Route path="/contact" element={<Contact counter={counter} />} />
           </Routes>
         </AnimatePresence>
       </Sidebar>

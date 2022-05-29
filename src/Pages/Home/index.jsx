@@ -53,76 +53,213 @@ function Home(props) {
 
 
   useEffect(()=>{
+      // console.log("Later")
+      // var t1 = gsap.timeline();
 
-    gsap.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"})
-    gsap.to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"})
+      // t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"+=2")
+      // .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
 
-    const tl = gsap.timeline();
-    const tl2 = gsap.timeline();
 
-    tl.from(".hero-home-content .title .desc", {
-      y:200,
-      ease:"Expo.easeOut",
-      delay:1.8,
-      opacity: 0,
-      skewY:10,
-      duration:1
-    })
-    .from(".hero-home-content .title h2",{
-      y:200,
-      ease:"Expo.easeOut",
-      delay:.2,
-      opacity: 0,
-      skewY:10,
-      duration:1
-    },"-=1")
-    .from(".hero-home-content .title h4",{
-      y:200,
-      ease:"Expo.easeOut",
-      delay:.2,
-      opacity: 0,
-      skewY:10,
-      duration:1
-    },"-=1.1")
-    .from(".hero-home-content .title .role",{
-      y:200,
-      ease:"Expo.easeOut",
-      delay:.2,
-      opacity: 0,
-      skewY:10,
-      duration:1
-    },"-=1.2")
-    .from(".semiColon",{
-      scale:0,
-      duration:1,
-      ease:"Expo.easeInOut"
-    })
-    tl2.from("#up",{
-      y:-50,
-      ease:"Expo.easeInOut",
-      delay:1.8,
-      opacity: 0,
-      skewY:-10,
-      duration:1
-    })
-    .from("#down",{
-      y:-50,
-      ease:"Expo.easeInOut",
-      opacity: 0,
-      skewY:-10,
-      duration:1
-    },"-=.7")
+      // .from(".hero-home-content .title .desc", {
+      //   y:200,
+      //   ease:"Expo.easeOut",
+      //   opacity: 0,
+      //   skewY:10,
+      //   duration:1
+      // },"-=.5")
+      // .from(".hero-home-content .title h2",{
+      //   y:200,
+      //   ease:"Expo.easeOut",
+      //   delay:.2,
+      //   opacity: 0,
+      //   skewY:10,
+      //   duration:1
+      // },"-=1")
+      // .from(".hero-home-content .title h4",{
+      //   y:200,
+      //   ease:"Expo.easeOut",
+      //   delay:.2,
+      //   opacity: 0,
+      //   skewY:10,
+      //   duration:1
+      // },"-=1.1")
+      // .from(".hero-home-content .title .role",{
+      //   y:200,
+      //   ease:"Expo.easeOut",
+      //   delay:.2,
+      //   opacity: 0,
+      //   skewY:10,
+      //   duration:1
+      // },"-=1.2")
+      // .from(".semiColon",{
+      //   scale:0,
+      //   duration:1,
+      //   ease:"Expo.easeInOut"
+      // })
 
-    const tl3 = gsap.timeline();
-    tl3.from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2})
-    .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-    .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-    .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-    .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      // .from("#up",{
+      //   y:-50,
+      //   ease:"Expo.easeInOut",
+      //   opacity: 0,
+      //   skewY:-10,
+      //   duration:1
+      // },"-=2.2")
+      // .from("#down",{
+      //   y:-50,
+      //   ease:"Expo.easeInOut",
+      //   opacity: 0,
+      //   skewY:-10,
+      //   duration:1
+      // },"-=2")
 
-    gsap.to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"});
+      // .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
+      // .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      // .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      // .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      // .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
 
-  })
+      // .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
+
+
+    if(props.counter >= 2){
+      console.log("Later")
+      var t1 = gsap.timeline();
+
+      t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"+=2")
+      .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
+
+
+      .from(".hero-home-content .title .desc", {
+        y:200,
+        ease:"Expo.easeOut",
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=.5")
+      .from(".hero-home-content .title h2",{
+        y:200,
+        ease:"Expo.easeOut",
+        delay:.2,
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=1")
+      .from(".hero-home-content .title h4",{
+        y:200,
+        ease:"Expo.easeOut",
+        delay:.2,
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=1.1")
+      .from(".hero-home-content .title .role",{
+        y:200,
+        ease:"Expo.easeOut",
+        delay:.2,
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=1.2")
+      .from(".semiColon",{
+        scale:0,
+        duration:1,
+        ease:"Expo.easeInOut"
+      })
+
+      .from("#up",{
+        y:-50,
+        ease:"Expo.easeInOut",
+        opacity: 0,
+        skewY:-10,
+        duration:1
+      },"-=2.2")
+      .from("#down",{
+        y:-50,
+        ease:"Expo.easeInOut",
+        opacity: 0,
+        skewY:-10,
+        duration:1
+      },"-=2")
+
+      .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
+      .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+
+      .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
+    }
+    else{
+      console.log("First time");
+      var t1 = gsap.timeline();
+
+      t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"})
+      .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
+
+
+      .from(".hero-home-content .title .desc", {
+        y:200,
+        ease:"Expo.easeOut",
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=.5")
+      .from(".hero-home-content .title h2",{
+        y:200,
+        ease:"Expo.easeOut",
+        delay:.2,
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=1")
+      .from(".hero-home-content .title h4",{
+        y:200,
+        ease:"Expo.easeOut",
+        delay:.2,
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=1.1")
+      .from(".hero-home-content .title .role",{
+        y:200,
+        ease:"Expo.easeOut",
+        delay:.2,
+        opacity: 0,
+        skewY:10,
+        duration:1
+      },"-=1.2")
+      .from(".semiColon",{
+        scale:0,
+        duration:1,
+        ease:"Expo.easeInOut"
+      })
+
+      .from("#up",{
+        y:-50,
+        ease:"Expo.easeInOut",
+        opacity: 0,
+        skewY:-10,
+        duration:1
+      },"-=2.2")
+      .from("#down",{
+        y:-50,
+        ease:"Expo.easeInOut",
+        opacity: 0,
+        skewY:-10,
+        duration:1
+      },"-=2")
+
+      .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
+      .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+
+      .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
+    }
+
+
+  },[initialDone])
 
 
 

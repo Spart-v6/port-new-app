@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react';
 import './style.scss';
 
 const blackBox = {
@@ -49,7 +50,10 @@ const text = {
 };
 
 
+
+
 const PageTransition = (props) => {
+    
     return (
         <div className="load-page">
             <motion.div
@@ -58,7 +62,7 @@ const PageTransition = (props) => {
                 animate="animate"
                 variants={blackBox}
                 // onAnimationStart={() => console.log("Started")}
-                // onAnimationComplete={() => console.log("Done")}
+                // onAnimationComplete={() => setIsDone(true)}
             >
 
             <motion.svg variants={textContainer}  className="motionSvg">
