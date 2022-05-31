@@ -4,7 +4,6 @@ import "./style.scss";
 import locomotiveScroll from "locomotive-scroll";
 import PageTransition from "../../Components/PageTransition";
 import $ from 'jquery';
-import * as PIXI from 'pixi.js'
 
 function Project() {
 
