@@ -47,6 +47,7 @@ function Project() {
                 // Concept
                 This project was a part of High Radius internship program, and the idea was to build an AI-Enabled FinTech B2B Invoice Management Application.
                 The project is a web app to help the people working in the Accounts Receivable departments in their day-to-day activities.
+                <br/>
 
                 // My role
                 I was responsible for creating full-stack application which utilizes the power of React and for backend, Java and Machine Learning.
@@ -69,7 +70,7 @@ function Project() {
               <p>
               // Concept
               The main aim was to be able to draw anything on screen by capturing the motion of hands with a webcam and an additional gesture recognition feature.
-
+              <br/>
               // My role
               I was responsible majorily for front-end to design the whole canvas using Python, Mediapipe and OpenCV and some part in training the model for gesture recognition.
               </p>
@@ -91,7 +92,7 @@ function Project() {
               <p>
               // Concept
               The goal was to create a simple and secure messaging app from scratch. 
-
+              <br/>
               // My role
               I was solely responsible for designing and creating the application. This is desktop application which is built  using C# and WPF and for storing messages, Firebase. For encryption/decryption, AES.
               </p>

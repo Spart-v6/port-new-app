@@ -104,29 +104,29 @@ body {
       width: 100%;
       height: 100%;
       z-index: -2;
-      .svg1{
+      .topLeftLines{
         position: absolute;
-        top: 70%;
-        left: 25%;
-        height: 5%;
-      }
-      .svg2{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        height: 20%;
-      }
-      .svg3{
-        position: absolute;
-        top: 20%;
-        left: 82%;
-        height: 20%;
-      }
-      .svg4{
-        position: absolute;
-        top: 30%;
+        top: 0%;
         left: 0%;
-        height: 100%;
+        height: 30%;
+      }
+      .underLine{
+        position: absolute;
+        top: 70%;
+        left: 15%;
+        height: 3%;
+      }
+      .line1{
+        position: absolute;
+        top: 25%;
+        right: 10%;
+        height: 10%;
+      }
+      .line2{
+        position: absolute;
+        top: 75%;
+        right: 30%;
+        height: 20%;
       }
     }
 
@@ -178,7 +178,7 @@ body {
         grid-template-rows: 0fr 1fr;
         width: fit-content;
         position: relative;
-        left: 35%;
+        left: 40%;
     
         h2{
           font-size: 4em;
@@ -204,35 +204,43 @@ body {
       z-index: -2;
       position: absolute;
 
-      .svg5{
+      .box1{
         position: absolute;
-        height: 20%;
-        left: 80%;
-        top: 15%;
-      }
-      .svg6{
-        position: absolute;
-        height: 7%;
-        left: 55%;
         top: 20%;
+        left: 50%;
+        height: 15%;
       }
-      .svg8{
+      .box2{
         position: absolute;
-        height: 7%;
+        top: 75%;
         left: 10%;
-        top: 70%;
+        height: 15%;
       }
-      .svg11{
+      .cir1{
         position: absolute;
+        top: 50%;
+        left: 10%;
         height: 5%;
-        left: 20%;
-        top: 90%;
       }
-      .svg12{
+      .cir2{
         position: absolute;
-        height: 40%;
-        right: 7%;
-        top: 100%;
+        bottom: 10%;
+        right: 10%;
+        height: 5%;
+      }
+      .line3{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 5%;
+      }
+      .sqlines{
+        position: absolute;
+        left: 83%;
+        right: -36%;
+        top: -66%;
+        bottom: 34%;
+        opacity: 0.72;
       }
     }
   }
@@ -288,29 +296,33 @@ body {
       position: absolute;
       z-index: -2;
 
-      .svg13{
+      .line4{
         position: absolute;
-        height: 7%;
-        top: 40%;
-        left: 50%;
+        left: 52.76%;
+        right: 35.82%;
+        top: 29.16%;
+        bottom: 83.89%;
       }
-      .svg14{
+      .cir3{
         position: absolute;
-        height: 10%;
-        top: 70%;
-        left: 12%;
+        left: 11.33%;
+        right: 80.34%;
+        top: 32.91%;
+        bottom: 61.88%;
       }
-      .svg15{
+      .bgCirc{
         position: absolute;
-        height: 55%;
-        top: 3%;
-        left: 3%;
+        left: 79.44%;
+        right: 0;
+        top: 74.61%;
+        bottom: 0;
       }
-      .svg16{
+      .bgCirc2{
         position: absolute;
-        height: 60%;
-        right: 0%;
-        bottom: 0%;
+        left: 76.18%;
+        right: 6.08%;
+        top: 22.56%;
+        bottom: 52.5%;
       }
     }
   }

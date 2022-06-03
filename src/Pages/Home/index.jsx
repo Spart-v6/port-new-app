@@ -3,7 +3,6 @@ import locomotiveScroll from "locomotive-scroll";
 import "./style.scss";
 import PageTransition from "../../Components/PageTransition";
 import { AnimatePresence, motion } from "framer-motion";
-import { CgArrowLongDown } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap-trial";
 import Particls from '../../Components/Particls';
@@ -53,74 +52,6 @@ function Home(props) {
 
 
   useEffect(()=>{
-      // console.log("Later")
-      // var t1 = gsap.timeline();
-
-      // t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"+=2")
-      // .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
-
-
-      // .from(".hero-home-content .title .desc", {
-      //   y:200,
-      //   ease:"Expo.easeOut",
-      //   opacity: 0,
-      //   skewY:10,
-      //   duration:1
-      // },"-=.5")
-      // .from(".hero-home-content .title h2",{
-      //   y:200,
-      //   ease:"Expo.easeOut",
-      //   delay:.2,
-      //   opacity: 0,
-      //   skewY:10,
-      //   duration:1
-      // },"-=1")
-      // .from(".hero-home-content .title h4",{
-      //   y:200,
-      //   ease:"Expo.easeOut",
-      //   delay:.2,
-      //   opacity: 0,
-      //   skewY:10,
-      //   duration:1
-      // },"-=1.1")
-      // .from(".hero-home-content .title .role",{
-      //   y:200,
-      //   ease:"Expo.easeOut",
-      //   delay:.2,
-      //   opacity: 0,
-      //   skewY:10,
-      //   duration:1
-      // },"-=1.2")
-      // .from(".semiColon",{
-      //   scale:0,
-      //   duration:1,
-      //   ease:"Expo.easeInOut"
-      // })
-
-      // .from("#up",{
-      //   y:-50,
-      //   ease:"Expo.easeInOut",
-      //   opacity: 0,
-      //   skewY:-10,
-      //   duration:1
-      // },"-=2.2")
-      // .from("#down",{
-      //   y:-50,
-      //   ease:"Expo.easeInOut",
-      //   opacity: 0,
-      //   skewY:-10,
-      //   duration:1
-      // },"-=2")
-
-      // .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
-      // .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      // .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      // .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      // .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-
-      // .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
-
-
     if(props.counter >= 2){
       console.log("Later")
       var t1 = gsap.timeline();
@@ -181,11 +112,11 @@ function Home(props) {
         duration:1
       },"-=2")
 
-      .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
-      .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".bigCirc",{scale: 0, transform:"translate(60px, 40px)" , opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
+      .from(".h-svg1",{scale: 0, rotate:"180deg", opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg2",{scale: 0, rotate:"130deg", opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg3",{scale: 0, rotate:"180deg", opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
 
       .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
     }
@@ -250,10 +181,10 @@ function Home(props) {
       },"-=2")
 
       .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
-      .from(".svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .from(".h-svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
 
       .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
     }
@@ -428,20 +359,20 @@ function Home(props) {
                 </svg>
 
 
-                <svg viewBox="0 0 44 47" fill="none" className="svg1">
+                <svg viewBox="0 0 44 47" fill="none" className="h-svg1">
                   <path d="M38.6673 3.06278C39.7302 2.6116 40.883 3.48024 40.7423 4.62634L36.0984 42.4474C35.9577 43.5935 34.6291 44.1575 33.7069 43.4626L3.27476 20.5303C2.35258 19.8354 2.52848 18.4028 3.59139 17.9516L38.6673 3.06278Z" stroke="#EF6243" strokeWidth="5"/>
                 </svg>
 
-                <svg viewBox="0 0 39 39" fill="none" className="svg2">
+                <svg viewBox="0 0 39 39" fill="none" className="h-svg2">
                   <rect x="3" y="3" width="33" height="33" rx="1" stroke="#9841DD" strokeWidth="5"/>
                 </svg>
 
-                <svg viewBox="0 0 61 69" fill="none" className="svg3">
+                <svg viewBox="0 0 61 69" fill="none" className="h-svg3">
                   <line x1="5.5" y1="-5.5" x2="73.5454" y2="-5.5" transform="matrix(0.721105 0.692826 -0.721105 0.692826 -2 6)" stroke="#62A643" strokeWidth="11" strokeLinecap="round"/>
                   <line x1="5.5" y1="-5.5" x2="73.5454" y2="-5.5" transform="matrix(-0.707107 0.707107 -0.734814 -0.678268 54.4468 7.6709)" stroke="#62A643" strokeWidth="11" strokeLinecap="round"/>
                 </svg>
 
-                <svg viewBox="0 0 63 63" fill="none" className="svg4">
+                <svg viewBox="0 0 63 63" fill="none" className="h-svg4">
                   <circle cx="31.5" cy="31.5" r="27.5" stroke="#E7A23B" strokeWidth="8"/>
                 </svg>
 
