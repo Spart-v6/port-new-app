@@ -1,6 +1,6 @@
-$dark-color: #101216;
+$dark-color: #1F1F1F;
 $secondary-color: #44358a;
-$primary-color: #884dff;
+$primary-color: #EB4A34;
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ body {
   width: 100vw;
 }
 .hero-about {
-  background: $dark-color;
+  background: $primary-color;
   font-family: "Poppins";
   height: 300vh;
 
@@ -26,33 +26,30 @@ body {
 
     h1 {
       position: absolute;
-      left: 11%;
-      top: 10%;
+      left: 18%;
+      top: 14%;
       
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 400;
-      font-size: 158px;
-      
-      background: linear-gradient(84.88deg, #7825FF 4.31%, #FF3E9B 134.64%);
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
+      font-size: 9em;
+      color: $dark-color;
+
     }
     .about-me {
       position: absolute;
-      width: 37%;
-      left: 12%;
-      top: 42%;
+      width: 35%;
+      left: 20%;
+      top: 45%;
       text-align: center;
       font-size: 30px;
-      color: #d7d7d7;
+      color: $dark-color;
     }
 
     .img-container {
       position: absolute;
       top: 38%;
-      right: 15%;
+      right: 10%;
 
       .featured-img {
         position: relative;
@@ -104,29 +101,36 @@ body {
       width: 100%;
       height: 100%;
       z-index: -2;
-      .topLeftLines{
+      .a-f-c1{
         position: absolute;
-        top: 0%;
-        left: 0%;
-        height: 30%;
+        height: 69%;
+        left: -15%;
+        top: -30%;
+        transform: rotate(20deg);
       }
-      .underLine{
+      .a-f-l1{
         position: absolute;
-        top: 70%;
-        left: 15%;
-        height: 3%;
+        left: 20%;
+        top: 74%;
+        width: 35%;
       }
-      .line1{
+      .a-f-w2{
         position: absolute;
-        top: 25%;
-        right: 10%;
+        height: 25%;
+        right: 24%;
+        bottom: 4%;
+      }
+      .a-pacman-1{
+        position: absolute;
         height: 10%;
+        left: 10%;
+        bottom: 6%;
       }
-      .line2{
+      .a-pacman-2{
         position: absolute;
-        top: 75%;
-        right: 30%;
-        height: 20%;
+        height: 10%;
+        right: 10%;
+        bottom: 6%;
       }
     }
 
@@ -204,44 +208,45 @@ body {
       z-index: -2;
       position: absolute;
 
-      .box1{
+
+      .a-s-c1{
         position: absolute;
-        top: 20%;
-        left: 50%;
-        height: 15%;
+        left: -5%;
+        top: 10%;
+        height: 40%;
       }
-      .box2{
+      .a-s-c2{
         position: absolute;
-        top: 75%;
-        left: 10%;
-        height: 15%;
-      }
-      .cir1{
-        position: absolute;
+        left: 15%;
         top: 50%;
-        left: 10%;
         height: 5%;
       }
-      .cir2{
+
+      .a-s-c3{
         position: absolute;
-        bottom: 10%;
+        left: 10%;
+        bottom: 5%;
+        height: 30%;
+      }
+      .a-s-c4{
+        position: absolute;
         right: 10%;
-        height: 5%;
+        top: 10%;
+        height: 30%;
       }
-      .line3{
+      .a-s-c5{
         position: absolute;
+        right: 50%;
         top: 50%;
-        left: 50%;
         height: 5%;
       }
-      .sqlines{
+      .a-s-c6{
         position: absolute;
-        left: 83%;
-        right: -36%;
-        top: -66%;
-        bottom: 34%;
-        opacity: 0.72;
+        right: 20%;
+        top: 90%;
+        height: 5%;
       }
+
     }
   }
 
@@ -296,34 +301,25 @@ body {
       position: absolute;
       z-index: -2;
 
-      .line4{
+      .a-t-c1{
         position: absolute;
-        left: 52.76%;
-        right: 35.82%;
-        top: 29.16%;
-        bottom: 83.89%;
+        bottom: 0%;
+        left: 5%;
+        height: 45%;
       }
-      .cir3{
+      .a-t-c2{
         position: absolute;
-        left: 11.33%;
-        right: 80.34%;
-        top: 32.91%;
-        bottom: 61.88%;
+        right: 10%;
+        top: 25%;
+        height: 45%;
       }
-      .bgCirc{
+      .a-t-l1{
         position: absolute;
-        left: 79.44%;
-        right: 0;
-        top: 74.61%;
-        bottom: 0;
+        top: 30%;
+        left: 50%;
+        width: 6%;
       }
-      .bgCirc2{
-        position: absolute;
-        left: 76.18%;
-        right: 6.08%;
-        top: 22.56%;
-        bottom: 52.5%;
-      }
+
     }
   }
 
