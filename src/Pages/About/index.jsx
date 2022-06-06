@@ -4,6 +4,7 @@ import locomotiveScroll from "locomotive-scroll";
 import "./style.scss";
 import './base.scss';
 import { gsap } from "gsap-trial";
+import { CgArrowLongDown } from "react-icons/cg";
 
 function About() {
     const [nameOfPage, setNameOfPage] = useState("About");
@@ -14,21 +15,7 @@ function About() {
             el: document.querySelector("[data-scroll-container]"),
             smooth: true
         });
-
-        scroll.on('scroll',e=>{
-            var scr = e.scroll.y;
-
-            if(scr > 400) {
-                gsap.to(".hero-about",{duration:1, ease:"Expo.easeOut", background:"#1f1f1f"})
-                // gsap.to("#down-arrow",{duration:.8, opacity:0});
-            }
-            else{
-                gsap.to(".hero-about",{duration:1, ease:"Expo.easeOut", background:"#EB4A34"})
-                // gsap.to("#down-arrow",{duration:.8, opacity:1});
-            }
-        })
         
-
     },[])  
     
 
@@ -87,6 +74,10 @@ function About() {
 
 
 
+                </div>
+
+                <div className="downArrow" id="down-arrow" >
+                    <CgArrowLongDown/>
                 </div>
 
 

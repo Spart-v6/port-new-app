@@ -1,5 +1,5 @@
 .projects-wrapper{
-    background-color: #8b3bdb;
+    background-color: #1F1F1F;
     font-family: 'Poppins';
     height: 600vh;
 
@@ -10,13 +10,13 @@
         align-items: center;
         flex-direction: column;
         height: 100vh;
+        background-color: #8b3bdb;
 
         h1{
             font-size: 9em;
             font-family: "Poppins";
-            letter-spacing: -10px;
             color: #fff;
-            transform: translate(-30%, -30%);
+            transform: translate(-20%, -30%);
         }
         span{
             font-family: 'Poppins';
@@ -87,6 +87,7 @@
         align-items: center;
         flex-direction: column;
         height: 100vh;
+        background-color: #1F1F1F;
 
         .pOne{
             position: absolute;
@@ -152,6 +153,8 @@
         flex-direction: column;
         height: 100vh;
         margin-top: 30%;
+        background-color: #1F1F1F;
+
         .pTwo{
             position: absolute;
             left: 10%;
@@ -210,6 +213,8 @@
         flex-direction: column;
         margin-top: 30%;
         height: 100vh;
+        background-color: #1F1F1F;
+
         
         .pThree{
             position: absolute;

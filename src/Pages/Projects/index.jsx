@@ -18,19 +18,6 @@ function Project() {
           el: document.querySelector("[data-scroll-container]"),
           smooth: true
       });
-      scroll.on('scroll',e=>{
-        var scr = e.scroll.y;
-
-        if(scr > 500) {
-          gsap.to(".projects-wrapper",{duration:1, ease:"Expo.easeOut", background:"#1f1f1f"})
-          gsap.to("#down-arrow",{duration:.8, opacity:0});
-        }
-        else{
-          gsap.to(".projects-wrapper",{duration:1, ease:"Expo.easeOut", background:"#8b3bdb"})
-          gsap.to("#down-arrow",{duration:.8, opacity:1});
-        }
-    })
-
   },[])  
   
 

@@ -13,7 +13,7 @@ $gray: #9b9b9b;
 //   font-weight: bold;
 // }
 $colors: (
-  up: #7d19bc,
+  up: #EB4A34,
 );
 
 .hero-contact {
@@ -25,7 +25,7 @@ $colors: (
   .contact-form {
     height: 70%;
     width: 82%;
-    background: #1d1c1d;
+    background: #1F1F1F;
     position: absolute;
     left: 8%;
     top: 15%;
@@ -53,7 +53,7 @@ $colors: (
           font-size: 2em;
           font-weight: 900;
           font-family: "Poppins";
-          color: #a347ff;
+          color: #EB4A34;
         }
         
         h4 {
@@ -176,7 +176,7 @@ $colors: (
         display: flex;
         align-items: center;
 
-        h4{
+        a{
           font-size: 15px;
           margin-left: 20px;
           font-family: 'Poppins';
@@ -191,7 +191,7 @@ $colors: (
         @each $button, $color in $colors {
           .#{$button} {
             --color: #{$color};
-            --hover: #{adjust-hue($color, 45deg)};
+            --hover: #{adjust-hue($color, 4deg)};
           }
         }
 
@@ -199,6 +199,7 @@ $colors: (
           color: var(--color);
           transition: 0.25s;
           cursor: pointer;
+          font-weight: bold;
 
 
           &:hover,
@@ -213,6 +214,7 @@ $colors: (
           font: inherit;
           line-height: 1;
           margin: 0.5em;
+          font-family: 'Poppins';
           padding: 1em 2em;
         }
       }
