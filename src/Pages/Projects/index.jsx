@@ -3,14 +3,43 @@ import { useEffect, useState } from "react";
 import "./style.scss";
 import locomotiveScroll from "locomotive-scroll";
 import PageTransition from "../../Components/PageTransition";
-import $ from 'jquery';
 import { CgArrowLongDown } from "react-icons/cg";
 import { gsap } from "gsap-trial";
-
+import anime from "animejs";
+import { useInView } from 'react-intersection-observer';
 
 function Project() {
 
   const [nameOfPage] = useState("Projects");
+
+
+  const { ref :onePro,    inView: oneProInView, } = useInView();
+  const { ref :oneProHead,    inView: oneProHeadInView, } = useInView();
+  
+  const { ref :twoPro,    inView: twoProInView, } = useInView();
+  const { ref :twoProHead,    inView: twoProHeadInView, } = useInView();
+  
+  const { ref :threePro,  inView: threeProInView, } = useInView();
+  const { ref :threeProHead,    inView: threeProHeadInView, } = useInView();
+  
+
+  const onePro_animate = ()=> gsap.to(".first-project .pOne h2",{duration: 1, ease:"Power4.easeOut", delay:2, opacity: 1,y: 0,});
+  const oneProHead_animate = ()=> gsap.to(".first-project .image-one h2",{duration: 1, ease:"Power4.easeOut", delay:2, opacity: 1,y: 0,});
+
+  const twoPro_animate = ()=> gsap.to(".second-project .pTwo h2",{duration: 1, ease:"Power4.easeOut", delay:2, opacity: 1,y: 0});
+  const twoProHead_animate = ()=> gsap.to(".second-project .image-two h2",{duration: 1, ease:"Power4.easeOut", opacity: 1,y: 0},);
+
+  useEffect(()=>{
+    if(oneProInView) onePro_animate()
+    if(oneProHeadInView) oneProHead_animate()
+
+    if(twoProInView) twoPro_animate()
+    if(twoProHeadInView) twoProHead_animate()
+
+
+  },[oneProInView,oneProHeadInView, twoProInView,twoProHeadInView, ])
+
+
 
   useEffect(()=>{
 
@@ -18,7 +47,29 @@ function Project() {
           el: document.querySelector("[data-scroll-container]"),
           smooth: true
       });
-  },[])  
+  },[])
+
+
+  useEffect(()=>{
+    var textWrapperP = document.querySelector('.ml6P .lettersP');
+    textWrapperP.innerHTML = textWrapperP.textContent.replace(/\S/g, "<span class='letterP'>$&</span>");
+    anime.timeline()
+    .add({
+      targets: '.ml6P .letterP',
+      translateY: ["1.5em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    },)
+    .add({
+      targets: '.ml6P',
+      opacity: 1,
+      duration: 1000,
+      easing: "easeOutExpo",
+      // delay: 1000
+    })
+    gsap.to(".project-heading .about-project",{duration:1, ease:"Expo.easeInOut",y:0, opacity: 1})
+  },[])
   
 
   return (
@@ -28,10 +79,15 @@ function Project() {
         <div data-scroll-container className="projects-wrapper">
 
         <section className="p-sec project-heading" data-scroll-section>
-            <h1 data-scroll>.projects()</h1>
-            <span data-scroll className="about-me" data-scroll-speed="3">
+            <h1 className="ml6P">
+              <span className="text-wrapper-p">
+                  <span className="lettersP">.projects()</span>
+              </span>
+            </h1>
+            
+            <div className="about-project">
               Over the course of my career, i've worked on several projects.<br/> Here are some of them:
-            </span>
+            </div>
             <div className="downArrow" id="down-arrow" >
               <CgArrowLongDown/>
             </div>
@@ -61,11 +117,11 @@ function Project() {
 
         <section className="p-sec first-project" data-scroll-section id="s2">
             <div data-scroll data-scroll-sticky data-scroll-target="#s2" data-scroll-speed="-2" data-scroll-repeat="true" className="pOne">
-              <h2>01</h2>
+              <h2 ref={onePro}>01</h2>
             </div>
 
             <div data-scroll data-scroll-sticky data-scroll-target="#s2" data-scroll-speed="-2" data-scroll-repeat="true" className="image-one">
-              <h2>Invoice App</h2>
+              <h2 ref={oneProHead}>Invoice App</h2>
               <img src="https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
             </div>
 
@@ -96,12 +152,12 @@ function Project() {
 
         <section className="p-sec second-project" data-scroll-section id="pin2">
             <div data-scroll data-scroll-sticky data-scroll-target="#pin2" data-scroll-speed="-5" data-scroll-class="appear" data-scroll-repeat="true" className="pTwo">
-              <h2>02</h2>
+              <h2 ref={twoPro}>02</h2>
             </div>
 
     
             <div className="image-two" id="one" data-scroll data-scroll-speed="3" data-scroll-sticky data-scroll-target="#pin2">
-              <h2>Air Canvas</h2>
+              <h2 ref={twoProHead}>Air Canvas</h2>
               <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
             </div>
 
