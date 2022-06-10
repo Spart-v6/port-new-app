@@ -10,7 +10,7 @@ import { gsap } from "gsap-trial";
 
 function Project() {
 
-  const [nameOfPage, setNameOfPage] = useState("Projects");
+  const [nameOfPage] = useState("Projects");
 
   useEffect(()=>{
 

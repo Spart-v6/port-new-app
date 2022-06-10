@@ -8,7 +8,7 @@ import { gsap } from "gsap-trial";
 import $ from "jquery";
 
 function Contact(props) {
-  const [nameOfPage, setNameOfPage] = useState("Contact");
+  const [nameOfPage] = useState("Contact");
 
 
   //Form

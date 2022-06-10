@@ -10,7 +10,7 @@ import anime from "animejs";
 
 
 function Home(props) {
-  const [nameOfPage, setNameOfPage] = useState("Home");
+  const [nameOfPage] = useState("Home");
   const [initialDone, setInitialDone] = useState(false);
 
   useEffect(()=>{
