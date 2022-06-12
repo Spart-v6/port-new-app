@@ -53,138 +53,138 @@ function Home(props) {
 
   useEffect(()=>{
     if(props.counter >= 2){
-      console.log("Later")
+      // console.log("Later")
       var t1 = gsap.timeline();
 
       t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"+=2")
       .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
 
 
-      .from(".hero-home-content .title .desc", {
-        y:200,
+      .to(".hero-home-content .title .desc", {
+        y:0,
         ease:"Expo.easeOut",
-        opacity: 0,
-        skewY:10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=.5")
-      .from(".hero-home-content .title h2",{
-        y:200,
+      .to(".hero-home-content .title h2",{
+        y:0,
         ease:"Expo.easeOut",
         delay:.2,
-        opacity: 0,
-        skewY:10,
+        transform:"skewY(0)",
+        opacity: 1,
         duration:1
       },"-=1")
-      .from(".hero-home-content .title h4",{
-        y:200,
+      .to(".hero-home-content .title h4",{
+        y:0,
         ease:"Expo.easeOut",
         delay:.2,
-        opacity: 0,
-        skewY:10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=1.1")
-      .from(".hero-home-content .title .role",{
-        y:200,
+      .to(".hero-home-content .title .role",{
+        y:0,
         ease:"Expo.easeOut",
         delay:.2,
-        opacity: 0,
-        skewY:10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=1.2")
-      .from(".semiColon",{
-        scale:0,
+      .to(".semiColon",{
+        scale:1,
         duration:1,
         ease:"Expo.easeInOut"
       })
 
-      .from("#up",{
-        y:-50,
+      .to("#up",{
+        y:0,
         ease:"Expo.easeInOut",
-        opacity: 0,
-        skewY:-10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=2.2")
-      .from("#down",{
-        y:-50,
+      .to("#down",{
+        y:0,
         ease:"Expo.easeInOut",
-        opacity: 0,
-        skewY:-10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=2")
 
-      .from(".bigCirc",{scale: 0, transform:"translate(60px, 40px)" , opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
-      .from(".h-svg1",{scale: 0, rotate:"180deg", opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".h-svg2",{scale: 0, rotate:"130deg", opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".h-svg3",{scale: 0, rotate:"180deg", opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".h-svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".bigCirc",{scale: 1, opacity: 1, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
+      .to(".h-svg1",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".h-svg2",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".h-svg3",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".h-svg4",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
 
       .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
     }
     else{
-      console.log("First time");
+      // console.log("First time");
       var t1 = gsap.timeline();
 
       t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"})
       .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
 
 
-      .from(".hero-home-content .title .desc", {
-        y:200,
+      .to(".hero-home-content .title .desc", {
+        y:0,
         ease:"Expo.easeOut",
-        opacity: 0,
-        skewY:10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=.5")
-      .from(".hero-home-content .title h2",{
-        y:200,
+      .to(".hero-home-content .title h2",{
+        y:0,
         ease:"Expo.easeOut",
         delay:.2,
-        opacity: 0,
-        skewY:10,
+        transform:"skewY(0)",
+        opacity: 1,
         duration:1
       },"-=1")
-      .from(".hero-home-content .title h4",{
-        y:200,
+      .to(".hero-home-content .title h4",{
+        y:0,
         ease:"Expo.easeOut",
         delay:.2,
-        opacity: 0,
-        skewY:10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=1.1")
-      .from(".hero-home-content .title .role",{
-        y:200,
+      .to(".hero-home-content .title .role",{
+        y:0,
         ease:"Expo.easeOut",
         delay:.2,
-        opacity: 0,
-        skewY:10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=1.2")
-      .from(".semiColon",{
-        scale:0,
+      .to(".semiColon",{
+        scale:1,
         duration:1,
         ease:"Expo.easeInOut"
       })
 
-      .from("#up",{
-        y:-50,
+      .to("#up",{
+        y:0,
         ease:"Expo.easeInOut",
-        opacity: 0,
-        skewY:-10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=2.2")
-      .from("#down",{
-        y:-50,
+      .to("#down",{
+        y:0,
         ease:"Expo.easeInOut",
-        opacity: 0,
-        skewY:-10,
+        opacity: 1,
+        transform:"skewY(0)",
         duration:1
       },"-=2")
 
-      .from(".bigCirc",{scale: 0, opacity: 0, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
-      .from(".h-svg1",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".h-svg2",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".h-svg3",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
-      .from(".h-svg4",{scale: 0, opacity: 0, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".bigCirc",{scale: 1, opacity: 1, delay:1.9, ease:"Expo.easeInOut", duration: 2},"-=4.2")
+      .to(".h-svg1",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".h-svg2",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".h-svg3",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
+      .to(".h-svg4",{scale: 1, opacity: 1, ease:"Expo.easeInOut", duration: 2},"-=2")
 
       .to("#particles",{duration:2, delay:3, opacity:1, ease:"Expo.easeInOut"},"-=4");
     }
@@ -339,14 +339,14 @@ function Home(props) {
                 <span className="desc">Full Stack Developer || Designer || Competitive Coder || Gamer</span>
 
                 <motion.div id="up" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-40%", left: "15%"}}>
-                  <Link to="/contact" className="hero-home-btn-1">
+                  <Link to="/contact" className="hero-home-btn">
                     <button className="up" >Say Hello &#8594;</button>
                   </Link>
                 </motion.div>
 
                 <motion.div id="down" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-40%", left: "55%"}}>
-                  <Link to="/project" className="hero-home-btn-2">
-                    <button className="down" >My work &#8594;</button>
+                  <Link to="/project" className="hero-home-btn">
+                    <button className="up" >My work &#8594;</button>
                   </Link>
                 </motion.div>
               </div>
