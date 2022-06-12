@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import PageTransition from '../../Components/PageTransition';
 import locomotiveScroll from "locomotive-scroll";
 import "./style.scss";
@@ -7,7 +7,8 @@ import { gsap } from "gsap-trial";
 import { CgArrowLongDown } from "react-icons/cg";
 import anime from "animejs";
 import { useInView } from 'react-intersection-observer';
-
+import Bagk from '../../Assets/img1.jpg';
+import $ from 'jquery';
 
 function About(props) {
     const [nameOfPage] = useState("About");
@@ -139,6 +140,17 @@ function About(props) {
     },[])
     
 
+    useEffect(()=>{
+        const tl = gsap.timeline();
+        const mask = $(".img-container .mask");
+        const img = $("#myPic");
+        tl.set(mask, {visibility: "visible"});
+
+        tl.to(mask, { transform:"translateX(0px)", duration:1.5, ease: "Power2.easeOut"})
+        .to(img, { transform:"translateX(0px) scale(1)", duration:1.5, ease: "Power2.easeOut"},"-=1.4");
+
+    },[])
+
 
     return (
     <>
@@ -158,9 +170,9 @@ function About(props) {
                     </p>
                 </div>
 
-                <div className="img-container" data-scroll data-scroll-speed="5">
-                    <div className="featured-img">
-                        <img src="https://picsum.photos/id/237/536/354"/>
+                <div className="img-container">
+                    <div className="mask">
+                        <img src={Bagk} alt="" id="myPic"/>
                     </div>
                 </div>
 
@@ -232,7 +244,7 @@ function About(props) {
                                 <h6 className="tools_stagger">Python | ~2 years</h6>
                                 <h6 className="tools_stagger">C/C++ | ~2 years</h6>
                             </div>
-                            <div cl className="tools_stagger"assName="grid3">
+                            <div className="tools_stagger grid3">
                                 <h6 className="tools_stagger">Figma | ~1 year</h6>
                                 <h6 className="tools_stagger">Adobe Photoshop | ~1 year</h6>
                             </div>
