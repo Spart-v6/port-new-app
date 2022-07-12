@@ -58,6 +58,12 @@
     left: 35%;
     width: 33%;
     z-index: 2;
+    @media screen and (max-width:450px){
+      top: 15%;
+      left: 5%;
+      width: 85%;
+      font-size: 14px;
+    }
 
     h4{
       color: #fff;
@@ -117,6 +123,10 @@
       top: 60%;
       left: 34%;
       width: 35%;
+      @media screen and (max-width: 450px){
+        left: 7%;
+        width: 85%;
+      }
       line{
         stroke-dasharray: 232;
         stroke-dashoffset: 232;
@@ -170,6 +180,9 @@
       height: 5%;
       transform: scale(0);
       opacity: 1;
+      @media screen and (max-width: 450px)  {
+        display: none;
+      }
     }
   }
 

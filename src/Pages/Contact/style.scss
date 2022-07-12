@@ -31,6 +31,11 @@ $colors: (
     top: 15%;
     z-index: 2;
     transform: scale(0);
+    @media screen and (max-width : 450px){
+      width: 100%;
+      left: 0%;
+      height: 69%;
+    }
 
     form {
       width: 60%;
@@ -40,6 +45,12 @@ $colors: (
       display: flex;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 450px){
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: -10%;
+      }
 
       .input-info {
         position: absolute;
@@ -47,7 +58,10 @@ $colors: (
         bottom: 0px;
         left: 55px;
         top: 45px;
-
+        @media screen and (max-width:450px){
+          font-size: 12px;
+          left: 60px;
+        }
 
         h2 {
           font-size: 2em;
@@ -175,6 +189,9 @@ $colors: (
         left: 55px;
         display: flex;
         align-items: center;
+        @media screen and (max-width:450px){
+          flex-direction: column;
+        }
 
         a{
           font-size: 15px;
@@ -228,6 +245,10 @@ $colors: (
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media screen and (max-width: 450px){
+        display: none;
+      }
 
       svg{
         width: 55%;

@@ -46,7 +46,11 @@ function Project(props) {
 
       const scroll = new locomotiveScroll({
           el: document.querySelector("[data-scroll-container]"),
-          smooth: true
+          smooth: true,
+          smartphone: {
+            smooth: false,
+          //  touchMultiplier: 2
+          },
       });
   },[])
 
@@ -118,9 +122,6 @@ function Project(props) {
             
             <div className="about-project">
               Over the course of my career, i've worked on several projects.<br/> Here are some of them:
-            </div>
-            <div className="downArrow" id="down-arrow" >
-              <CgArrowLongDown/>
             </div>
 
             <div className="shapes">

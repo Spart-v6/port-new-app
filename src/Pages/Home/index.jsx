@@ -192,7 +192,14 @@ function Home(props) {
 
   },[initialDone])
 
-
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  )
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 768px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
 
   return (
     <>
@@ -338,17 +345,36 @@ function Home(props) {
                 <h2>Ankur Singh</h2>
                 <span className="desc">Full Stack Developer || Designer || Competitive Coder || Gamer</span>
 
-                <motion.div id="up" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-40%", left: "15%"}}>
-                  <Link to="/contact" className="hero-home-btn">
-                    <button className="up" >Say Hello &#8594;</button>
-                  </Link>
-                </motion.div>
-
-                <motion.div id="down" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-40%", left: "55%"}}>
-                  <Link to="/project" className="hero-home-btn">
-                    <button className="up" >My work &#8594;</button>
-                  </Link>
-                </motion.div>
+                {
+                  !matches
+                  ?
+                    <motion.div id="up" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-55%", left: "5%"}}>
+                      <Link to="/contact" className="hero-home-btn">
+                        <button className="up" >Say Hello &#8594;</button>
+                      </Link>
+                    </motion.div>
+                  :
+                    <motion.div id="up" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-45%", left: "15%"}}>
+                    <Link to="/contact" className="hero-home-btn">
+                      <button className="up" >Say Hello &#8594;</button>
+                    </Link>
+                  </motion.div>
+                }
+                {
+                  !matches
+                  ? 
+                    <motion.div id="down" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-55%", left: "55%"}}>
+                      <Link to="/project" className="hero-home-btn">
+                        <button className="up" >My work &#8594;</button>
+                      </Link>
+                    </motion.div>
+                  :
+                  <motion.div id="down" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={{position: "absolute", bottom: "-45%", left: "55%"}}>
+                    <Link to="/project" className="hero-home-btn">
+                      <button className="up" >My work &#8594;</button>
+                    </Link>
+                  </motion.div>
+                }
               </div>
 
 
