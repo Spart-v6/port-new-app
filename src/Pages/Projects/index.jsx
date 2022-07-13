@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import "./style.scss";
 import locomotiveScroll from "locomotive-scroll";
 import PageTransition from "../../Components/PageTransition";
-import { CgArrowLongDown } from "react-icons/cg";
 import { gsap } from "gsap-trial";
 import anime from "animejs";
-import { useInView } from 'react-intersection-observer';
+import project1 from '../../Assets/project1.jpg';
+import project2 from '../../Assets/project2.png';
+import project3 from '../../Assets/project3.png';
+import project4 from '../../Assets/project4.png';
+// import { useInView } from 'react-intersection-observer';
 
 function Project(props) {
 
@@ -154,18 +157,19 @@ function Project(props) {
 
             <div data-scroll data-scroll-sticky data-scroll-target="#s2" data-scroll-speed="-2" data-scroll-repeat="true" className="image-one">
               <h2>Invoice App</h2>
-              <img src="https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
+              <img src={project1} alt=""/>
             </div>
 
             <div className="detailsOne">
                 <p>
-                // Concept
-                This project was a part of High Radius internship program, and the idea was to build an AI-Enabled FinTech B2B Invoice Management Application.
-                The project is a web app to help the people working in the Accounts Receivable departments in their day-to-day activities.
+                <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
+                This project was a part of High Radius internship program, and the idea was to build an AI-Enabled FinTech B2B Invoice Management Application. The project is a web app to help the people working in the Accounts Receivable departments in their day-to-day activities. I was responsible for creating full-stack application which utilizes the power of React and for backend, Java and Machine Learning.
                 <br/>
-
-                // My role
-                I was responsible for creating full-stack application which utilizes the power of React and for backend, Java and Machine Learning.
+                <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>
+                Front-end: ReactJs, NodeJs, HTML5, Material UI, JavaScript, CSS3 <br/>
+                Back-end: Java, Servlets, JDBC <br/>
+                Database: MySQL <br/>
+                Machine Learning: Python, Pandas, NumPy, Matplotlib, Scikit-learn 
                 </p>
             </div>
 
@@ -189,17 +193,20 @@ function Project(props) {
 
     
             <div className="image-two" id="one" data-scroll data-scroll-speed="3" data-scroll-sticky data-scroll-target="#pin2">
-              <h2>Air Canvas</h2>
-              <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
+              <h2>
+                <a href="https://github.com/machine-canvas-developers/air-canvas">Air Canvas</a>
+              </h2>
+              <img src={project2} alt=""/>
             </div>
 
             <div className="detailsTwo">
               <p>
-              // Concept
-              The main aim was to be able to draw anything on screen by capturing the motion of hands with a webcam and an additional gesture recognition feature.
+              <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
+              Air Canvas is a "draw anything on screen" app, it is done so by capturing the motion of hands with a webcam and has an additional gesture recognition feature. I was responsible for front-end part from designing the whole canvas using Python, Mediapipe and OpenCV to some part in training the model for gesture recognition.
               <br/>
-              // My role
-              I was responsible majorily for front-end to design the whole canvas using Python, Mediapipe and OpenCV and some part in training the model for gesture recognition.
+              <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>
+              Front-end: ReactJS, Electron JS, CSS3, HTML5 <br/>
+              Back-end: Python, Mediapipe, Tensorflow, Keras, OpenCV
               </p>
             </div>
 
@@ -219,17 +226,21 @@ function Project(props) {
 
     
             <div className="image-three" id="one" data-scroll data-scroll-speed="3" data-scroll-sticky data-scroll-target="#pin3">
-              <h2>Chat App</h2>
-              <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
+              <h2>
+                <a href="https://github.com/Spart-v6/ChatApp">Chat App</a>
+              </h2>
+              <img src={project3} alt=""/>
             </div>
 
             <div className="detailsThree">
               <p>
-              // Concept
-              The goal was to create a simple and secure messaging app from scratch. 
+              <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
+              The goal was to create a simple and secure messaging app from scratch. I was solely responsible for designing and creating the application. This is desktop application which is built using a UI framework, WPF (Windows Presentation Foundation).
               <br/>
-              // My role
-              I was solely responsible for designing and creating the application. This is desktop application which is built  using C# and WPF and for storing messages, Firebase. For encryption/decryption, AES.
+              <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>
+              Front-end: C#, WPF <br/>
+              Database: Firebase <br/>
+              Enc/Dec : AES algorithm
               </p>
             </div>
 
@@ -243,7 +254,34 @@ function Project(props) {
 
         </section>
 
+        <section className="p-sec fourth-project" data-scroll-section id="pin4">
+            <div data-scroll data-scroll-sticky data-scroll-target="#pin4" data-scroll-speed="-5" data-scroll-class="appear" data-scroll-repeat="true" className="pFour">
+              <h2>04</h2>
+            </div>
 
+    
+            <div className="image-four" id="one" data-scroll data-scroll-speed="3" data-scroll-sticky data-scroll-target="#pin4">
+              <h2>Portfolio App</h2>
+              <img src={project4} alt=""/>
+            </div>
+
+            <div className="detailsFour">
+              <p>
+              <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
+              Nothing much to describe about this project. It's all about myself contained inside a portfolio with a beautiful interface.
+              <br/>
+              <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>
+              React JS, React Router, AnimeJS, GSAP, Framer Motion, SCSS
+              </p>
+            </div>
+
+            <div className="p-shapes-4">
+              <svg viewBox="0 0 277 277" fill="none">
+                <circle cx="138.5" cy="138.5" r="138.5" fill="#8B3BDB"/>
+              </svg>
+            </div>
+
+        </section>
 
         </div>
     </>

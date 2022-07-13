@@ -1,7 +1,7 @@
 .projects-wrapper{
     background-color: #1F1F1F;
     font-family: 'Poppins';
-    height: 600vh;
+    height: 720vh;
 
 
     .project-heading{
@@ -112,12 +112,11 @@
         .pOne{
             position: relative;
             right: -30%;
-            top: 15%;
+            top: 24%;
             @media screen and (max-width: 450px) {
                 right: -5%;
-                top: 20%;
+                top: 24%;
             }
-
             h2{
                 font-size: 15em;
                 color: #a71aff;
@@ -126,7 +125,7 @@
         .image-one{
             position: relative;
             top: 10%;
-            left: 25%;
+            left: 15%;
             @media screen and (max-width: 450px) {
                 top: 15%;
                 left: 0%;
@@ -147,7 +146,7 @@
                 }
             }
             img{
-                width: 50%;
+                width: 69%;
                 @media screen and (max-width: 450px) {
                     width: 70%;
                     opacity: 0.7;
@@ -160,12 +159,13 @@
             p{
                 position: relative;
                 left: 5%;
-                top: 95%;
-                width: 24%;
+                top: 20%;
+                width: 32%;
                 color: #ddd;
+                text-align: justify;
                 @media screen and (max-width: 450px) {
                     left: 5%;
-                    top: 55%;
+                    top: 30%;
                     width: 85%;
                 }
             }
@@ -203,11 +203,14 @@
         height: 100vh;
         margin-top: 30%;
         background-color: #1F1F1F;
+        @media screen and (max-width: 450px){
+            margin-top: 70%;
+        }
 
         .pTwo{
             position: relative;
             left: -35%;
-            top: 15%;
+            top: 25%;
             @media screen and (max-width: 450px) {
                 left: -10%;
                 top: 30%;
@@ -221,7 +224,7 @@
         .image-two{
             position: relative;
             top: 0%;
-            left: 14%;
+            left: 1%;
             @media screen and (max-width: 450px) {
                 top: 25%;
                 left: 0%;
@@ -243,7 +246,8 @@
                 }
             }
             img{
-                width: 50%;
+                width: 75%;
+                height: 80%;
                 @media screen and (max-width: 450px) {
                     width: 70%;
                     opacity: 0.7;
@@ -259,9 +263,10 @@
                 top: 0%;
                 width: 26%;
                 color: #ddd;
+                text-align: justify;
                 @media screen and (max-width: 450px) {
                     left: 5%;
-                    top: 110%;
+                    top: 65%;
                     width: 85%;
                 }
             }
@@ -293,13 +298,16 @@
         margin-top: 30%;
         height: 100vh;
         background-color: #1F1F1F;
+        @media screen and (max-width: 450px){
+            margin-top: 60%;
+        }
         
         .pThree{
             position: relative;
             right: -30%;
             top: 10%;
             @media screen and (max-width: 450px) {
-                left: -12%;
+                right: -5%;
                 top: 35%;
             }
             h2{
@@ -331,7 +339,8 @@
                 }
             }
             img{
-                width: 50%; 
+                width: 60%;
+                height: 125%;
                 @media screen and (max-width: 450px) {
                     width: 70%;
                     opacity: 0.7;
@@ -344,12 +353,13 @@
             p{
                 position: relative;
                 left: 5%;
-                top: 98%;
-                width: 26%;
+                top: 40%;
+                width: 30%;
                 color: #ddd;
+                text-align: justify;
                 @media screen and (max-width: 450px){
                     left: 5%;
-                    top: 140%;
+                    top: 92%;
                     width: 80%;
                 }
             }
@@ -365,6 +375,99 @@
                 position: relative;
                 bottom: -60%;
                 left: 50%;
+                height: 35%;
+            }
+            @media screen and (max-width: 450px){
+                display: none;
+            }
+        }
+    }
+    
+    .fourth-project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30%;
+        height: 100vh;
+        background-color: #1F1F1F;
+        @media screen and (max-width: 450px){
+            margin-top: 55%;
+        }
+        
+        .pFour{
+            position: relative;
+            left: -30%;
+            top: 10%;
+            @media screen and (max-width: 450px) {
+                left: -5%;
+                top: 35%;
+            }
+            h2{
+                font-size: 15em;
+                color: #a71aff;
+            }
+        }
+        .image-four{
+            position: relative;
+            top: 0%;
+            left: 0%;
+            @media screen and (max-width: 450px) {
+                top: 30%;
+                left: 0%;
+            }
+            h2{
+                font-size: 3em;
+                color: #a71aff;
+                user-select: none;
+                position: relative;
+                right: 20%;
+                top: 20%;
+                @media screen and (max-width: 450px) {
+                    left: 10px;
+                    top: 0%;
+                    width: 80%;
+                    z-index: 1;
+                    font-size: 40px;
+                }
+            }
+            img{
+                width: 75%;
+                height: 60%;
+                @media screen and (max-width: 450px) {
+                    width: 70%;
+                    opacity: 0.7;
+                    position: relative;
+                    left: 12%;
+                }
+            }
+        }
+        .detailsFour{
+            p{
+                position: relative;
+                left: 84%;
+                top: -50%;
+                width: 41%;
+                color: #ddd;
+                text-align: justify;
+                @media screen and (max-width: 450px){
+                    left: 5%;
+                    top: 130%;
+                    width: 80%;
+                }
+            }
+        }
+        .p-shapes-4{
+            position: absolute;
+            top: 0;
+            z-index: -2;
+            left: 0;
+            height: 100vh;
+
+            svg{
+                position: relative;
+                bottom: -60%;
+                left: 75vw;
                 height: 35%;
             }
             @media screen and (max-width: 450px){

@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import PageTransition from '../../Components/PageTransition';
 import locomotiveScroll from "locomotive-scroll";
 import "./style.scss";
 import './base.scss';
 import { gsap } from "gsap-trial";
-import { CgArrowLongDown } from "react-icons/cg";
+// import { CgArrowLongDown } from "react-icons/cg";
 import anime from "animejs";
 import { useInView } from 'react-intersection-observer';
-import Bagk from '../../Assets/img1.jpg';
+import myself from "../../Assets/me2.jpg";
 import $ from 'jquery';
 
 function About(props) {
@@ -159,6 +159,11 @@ function About(props) {
         }
 
     },[])
+
+    const [myImage, setMyImage] = useState(0);
+    useEffect(()=>{
+        setMyImage(myself);
+    },[])
     
 
     return (
@@ -181,9 +186,12 @@ function About(props) {
 
                 <div className="img-container">
                     <div className="mask">
-                        <img src={Bagk} alt="" id="myPic"/>
+                        <img src={myImage} alt="" id="myPic"/>
                     </div>
                 </div>
+                <svg viewBox="0 0 299 299" fill="none" className="image_frame">
+                    <rect x="2" y="2" width="295" height="295" stroke="#1F1F1F" stroke-width="4" stroke-linecap="round"/>
+                </svg>
 
                 <div className="shapes-1">
                     <svg viewBox="0 0 451 451" fill="none" className="a-f-c1">

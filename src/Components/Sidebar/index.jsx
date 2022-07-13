@@ -69,10 +69,10 @@ const Sidebar = ({ children }) => {
         <div className="nav-social">
           <ul>
             <li>
-              <a href="#">Github</a>
+              <a href="https://github.com/Spart-v6">Github</a>
             </li>
             <li>
-              <a href="#">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/ankur-singh-8b91371a7/">LinkedIn</a>
             </li>
           </ul>
         </div>
