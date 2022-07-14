@@ -162,7 +162,8 @@ function Project(props) {
 
             <div className="detailsOne">
                 <p>
-                <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/> {/* // eslint-disable-line */}
+                  { /* eslint-disable */}
+                <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
                 This project was a part of High Radius internship program, and the idea was to build an AI-Enabled FinTech B2B Invoice Management Application. The project is a web app to help the people working in the Accounts Receivable departments in their day-to-day activities. I was responsible for creating full-stack application which utilizes the power of React and for backend, Java and Machine Learning.
                 <br/>
                 <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>
