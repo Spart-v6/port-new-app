@@ -45,7 +45,7 @@ function Contact(props) {
   useEffect(()=>{
     if(props.counter >= 2){
       console.log(props.counter);
-      initialDone = true;
+      initialDone = true; // eslint-disable-line
     } 
 
   },[props.counter])
@@ -92,7 +92,7 @@ function Contact(props) {
     }
 
 
-  },[])
+  },[]) // eslint-disable-line
 
 
 

@@ -188,7 +188,7 @@ function Home(props) {
     }
 
 
-  },[initialDone])
+  },[initialDone]) // eslint-disable-line
 
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches

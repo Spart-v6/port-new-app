@@ -85,7 +85,7 @@ function About(props) {
     useEffect(()=>{
       if(props.counter >= 2){
         console.log(props.counter);
-        initialDone = true;
+        initialDone = true; // eslint-disable-line
       } 
     },[props.counter])
 
@@ -158,7 +158,7 @@ function About(props) {
             .to(img, { transform:"translateX(0px) scale(1)", duration:1.5, ease: "Power2.easeOut"},"-=1.4");
         }
 
-    },[])
+    },[]) // eslint-disable-line
 
     const [myImage, setMyImage] = useState(0);
     useEffect(()=>{

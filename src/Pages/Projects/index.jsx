@@ -62,14 +62,14 @@ function Project(props) {
   useEffect(()=>{
     if(props.counter >= 2){
       console.log(props.counter);
-      initialDone = true;
+      initialDone = true; // eslint-disable-line
     } 
   },[props.counter])
 
 
   useEffect(()=>{
     if(initialDone){
-      var textWrapperP = document.querySelector('.ml6P .lettersP');
+      let textWrapperP = document.querySelector('.ml6P .lettersP');
       textWrapperP.innerHTML = textWrapperP.textContent.replace(/\S/g, "<span class='letterP'>$&</span>");
       anime.timeline()
       .add({
@@ -89,7 +89,7 @@ function Project(props) {
       gsap.to(".project-heading .about-project",{duration:1, ease:"Expo.easeInOut", delay:2.8, y:0, opacity: 1})
     }
     else{
-      var textWrapperP = document.querySelector('.ml6P .lettersP');
+      let textWrapperP = document.querySelector('.ml6P .lettersP'); // eslint-disable-line
       textWrapperP.innerHTML = textWrapperP.textContent.replace(/\S/g, "<span class='letterP'>$&</span>");
       anime.timeline()
       .add({
@@ -107,7 +107,7 @@ function Project(props) {
       })
       gsap.to(".project-heading .about-project",{duration:1, ease:"Expo.easeInOut",y:0, opacity: 1})
     }
-  },[])
+  },[]) // eslint-disable-line
 
 
   return (
@@ -162,7 +162,7 @@ function Project(props) {
 
             <div className="detailsOne">
                 <p>
-                <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
+                <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/> {/* // eslint-disable-line */}
                 This project was a part of High Radius internship program, and the idea was to build an AI-Enabled FinTech B2B Invoice Management Application. The project is a web app to help the people working in the Accounts Receivable departments in their day-to-day activities. I was responsible for creating full-stack application which utilizes the power of React and for backend, Java and Machine Learning.
                 <br/>
                 <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>

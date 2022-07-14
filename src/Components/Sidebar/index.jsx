@@ -23,7 +23,7 @@ const Sidebar = ({ children }) => {
       setActive(!isActive);
       setIsLink(!isLink);
     }
-  },[isLink])
+  },[isLink]) // eslint-disable-line
 
   return (
     <>
