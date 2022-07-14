@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import locomotiveScroll from "locomotive-scroll";
 import "./style.scss";
 import PageTransition from "../../Components/PageTransition";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap-trial";
 import Particls from '../../Components/Particls';
-import anime from "animejs";
 
 
 function Home(props) {
@@ -54,7 +52,7 @@ function Home(props) {
   useEffect(()=>{
     if(props.counter >= 2){
       // console.log("Later")
-      var t1 = gsap.timeline();
+      let t1 = gsap.timeline();
 
       t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"+=2")
       .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")
@@ -122,7 +120,7 @@ function Home(props) {
     }
     else{
       // console.log("First time");
-      var t1 = gsap.timeline();
+      let t1 = gsap.timeline();
 
       t1.to("#path1",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"})
       .to("#path2",{strokeDashoffset:0, duration:2, ease:"Expo.easeInOut"},"-=2")

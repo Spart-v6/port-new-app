@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap-trial";
 import "./style.scss";
-import $ from "jquery";
 
 
 const Sidebar = ({ children }) => {

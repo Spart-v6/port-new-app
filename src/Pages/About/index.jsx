@@ -73,7 +73,7 @@ function About(props) {
     //#endregion
     
     useEffect(()=>{
-        const scroll = new locomotiveScroll({
+        new locomotiveScroll({
           el: document.querySelector("[data-scroll-container]"),
           smooth: true,
           smoothMobile: false,
@@ -93,7 +93,7 @@ function About(props) {
     useEffect(()=>{
 
         if(initialDone){
-            var textWrapper = document.querySelector('.ml6 .letters');
+            let textWrapper = document.querySelector('.ml6 .letters');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             anime
               .timeline()
@@ -128,7 +128,7 @@ function About(props) {
         }
 
         else{
-            var textWrapper = document.querySelector('.ml6 .letters');
+            let textWrapper = document.querySelector('.ml6 .letters');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             anime.timeline()
             .add({

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -8,33 +8,15 @@ import {useState, useEffect} from 'react';
 import {AnimatePresence} from 'framer-motion';
 import { gsap } from "gsap-trial";
 import './App.scss';
-import anime from "animejs";
 
 function App() {
   gsap.config({nullTargetWarn:false});
-  const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
   const [counter,setCounter] = useState(0);
 
-  useEffect(()=>{
-    setTimeout(() => {
-        setIsLoading(true);
-    }, 10000000000);
-  })
-
-  const tl = gsap.timeline();
-  useEffect(()=>{
-    // tl.to("#work",{strokeDashoffset:0, duration:2, ease:"Circ.easeInOut"},"+=.5")
-    // .to("#circ",{y:"10",opacity:1,duration:1, ease:"Expo.easeInOut"},'-=.5')
-    // .to("#circ",{y:0, opacity:1, duration:1, ease:"Expo.easeInOut"},)
-    // .to("#workP",{scale:0, duration:.5,ease:"Circ.easeInOut"})
-    // .to("#circ",{scale:0, duration:.5,ease:"Circ.easeInOut"},"-=.2")
-    // .to(".Load",{duration:1.5, right:"100%", delay:1, ease:"Expo.easeInOut"},'-=1')
-  },[])
-
   useEffect(() => {
     setCounter(counter+1);
-  }, [location]);
+  }, [location]); // eslint-disable-line
 
 
   // useEffect(()=>{

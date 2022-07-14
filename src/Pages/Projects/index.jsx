@@ -47,7 +47,7 @@ function Project(props) {
 
   useEffect(()=>{
 
-      const scroll = new locomotiveScroll({
+      new locomotiveScroll({
           el: document.querySelector("[data-scroll-container]"),
           smooth: true,
           smartphone: {

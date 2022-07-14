@@ -1,7 +1,6 @@
 import PageTransition from "../../Components/PageTransition";
 import { useState, useEffect, useRef } from "react";
-import emailjs, { send } from "@emailjs/browser";
-import CustomCursor from '../../Components/CustomCursor';
+import emailjs from "@emailjs/browser";
 import "./style.scss";
 import {motion} from "framer-motion";
 import { gsap } from "gsap-trial";
