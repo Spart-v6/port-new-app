@@ -36,6 +36,12 @@ $colors: (
       left: 0%;
       height: 69%;
     }
+    @media screen and (max-height : 580px){
+      width: 100%;
+      left: 0%;
+      height: 100%;
+      top: 0;
+    }
 
     form {
       width: 60%;
@@ -43,24 +49,28 @@ $colors: (
       position: absolute;
       left: 40%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      padding-left: 10px;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-direction: column;
       @media screen and (max-width: 450px){
         width: 100%;
         height: 100%;
         top: 0%;
-        left: -10%;
+        left: 0%;
       }
 
       .input-info {
-        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
         opacity: 0.8;
         bottom: 0px;
-        left: 55px;
-        top: 45px;
         @media screen and (max-width:450px){
           font-size: 12px;
           left: 60px;
+          padding-left: 30px;
         }
 
         h2 {
@@ -79,10 +89,9 @@ $colors: (
       }
 
       .input-container {
-        position: relative;
         display: grid;
         width: 100%;
-        padding: 0 50px 0 50px;
+        padding: 0 50px 0 0px;
         grid-gap: 30px;
         grid: auto / 50% auto;
 
@@ -181,21 +190,26 @@ $colors: (
           top: -24px;
           color: #5e5e5f; // teext color
         }
-
+        @media screen and (max-width:450px){
+          padding-left: 20px;
+          display: flex;
+          grid-gap: 15px;
+          flex-direction: column;
+        }
       }
       .BtnParent {
-        position: absolute;
-        bottom: 10%;
-        left: 55px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        gap: 5px;
+        flex-direction: column;
+        padding-left: 10px;
         @media screen and (max-width:450px){
           flex-direction: column;
+          padding-left: 30px;
         }
 
         a{
           font-size: 15px;
-          margin-left: 20px;
           font-family: 'Poppins';
           color: #5e5e5f;
         }
@@ -230,7 +244,6 @@ $colors: (
           border: 2px solid;
           font: inherit;
           line-height: 1;
-          margin: 0.5em;
           font-family: 'Poppins';
           padding: 1em 2em;
         }
@@ -282,6 +295,9 @@ $colors: (
     top: 5%;
     left: 5%;
     opacity: 0;
+    @media screen and (max-width: 600px){
+      display: none;
+    }
   }
   #rightBigCirc{
     display: inline-block;
@@ -290,6 +306,9 @@ $colors: (
     bottom: 5%;
     right: 5%;
     opacity: 0;
+    @media screen and (max-width: 600px){
+      display: none;
+    }
   }
 }
 

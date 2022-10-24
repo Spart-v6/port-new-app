@@ -70,7 +70,7 @@ function Contact(props) {
       .to("#rightBigCirc",{bottom:0, right: 0,opacity:1, duration:1, delay:1, ease:"Expo.easeInOut"},'-=2')
       
       
-      .to("#animateMe",{y:0, opacity:1, delay:1, duration:1, stagger:.1, ease:"Expo.easeInOut"},'-=2')
+      .to("#animateMe",{y:0, opacity:1, duration:1, delay:1, stagger:.1, ease:"Expo.easeInOut"},'-=2')
     }
     else{
       // console.log("First time " + initialDone);
@@ -88,15 +88,11 @@ function Contact(props) {
       .to("#rightBigCirc",{bottom:0, right: 0,opacity:1, duration:1, delay:1, ease:"Expo.easeInOut"},'-=2')
 
 
-      .to("#animateMe",{y:0, opacity:1, delay:1, duration:1, stagger:.1, ease:"Expo.easeInOut"},'-=2')
+      .to("#animateMe",{y:0, opacity:1, duration:1, delay:1, stagger:.1, ease:"Expo.easeInOut"},'-=2')
     }
 
 
   },[]) // eslint-disable-line
-
-
-
-
 
   return (
     <>
@@ -113,7 +109,7 @@ function Contact(props) {
 
               <div className="input-info">
                 <h2 id="animateMe">Let's talk. </h2>
-                <h4 id="animateMe">Drop a message :)</h4>
+                <h4 id="animateMe">Drop a message</h4>
               </div>
 
               <div className="input-container">
