@@ -255,35 +255,6 @@ function Project(props) {
 
         </section>
 
-        <section className="p-sec fourth-project" data-scroll-section id="pin4">
-            <div data-scroll data-scroll-sticky data-scroll-target="#pin4" data-scroll-speed="-5" data-scroll-class="appear" data-scroll-repeat="true" className="pFour">
-              <h2>04</h2>
-            </div>
-
-    
-            <div className="image-four" id="one" data-scroll data-scroll-speed="3" data-scroll-sticky data-scroll-target="#pin4">
-              <h2>Portfolio App</h2>
-              <img src={project4} alt=""/>
-            </div>
-
-            <div className="detailsFour">
-              <p>
-              <span style={{fontWeight: 600, fontSize: '20px'}}> // Description </span> <br/>
-              Nothing much to describe about this project. It's all about myself contained inside a portfolio with a beautiful interface.
-              <br/>
-              <span style={{fontWeight: 600, fontSize: '20px'}}> // Tools </span> <br/>
-              React JS, React Router, AnimeJS, GSAP, Framer Motion, SCSS
-              </p>
-            </div>
-
-            <div className="p-shapes-4">
-              <svg viewBox="0 0 277 277" fill="none">
-                <circle cx="138.5" cy="138.5" r="138.5" fill="#8B3BDB"/>
-              </svg>
-            </div>
-
-        </section>
-
         </div>
     </>
   );
